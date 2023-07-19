@@ -1,33 +1,25 @@
 import PropTypes from 'prop-types';
-import { motion } from "framer-motion"
 import { useState } from 'react';
+
 import logo from "../assets/logo.svg";
-import { stylesMenu } from '../helpers/stylesMenu'
+import { stylesMenu, optionMenu } from '../modules/menu/helpers/stylesMenu'
 
 
 import Marquee from "react-fast-marquee";
-import { useHoverMenu } from '../hooks/useHoverMenu';
+import { AnimatePresence, motion } from "framer-motion"
+
 
 export const AppLayout = ({ children }) => {
   const [isOpen, setIsOpen] = useState(false)
-  const [ valueHover, setValueHover ] = useState(0)
-  //  Custom hook
-  const { title, imgInBg,imgInBgStyle, bg } = useHoverMenu(valueHover)
+  const [valueHover, setValueHover] = useState(0)
 
-  const hoverAction = (e,id) => {
+  //  FN: Hover sobre opciones de menu para mostrar imagenes
+  const hoverAction = (e, id) => {
     e.preventDefault()
     setValueHover(id)
   }
 
-
-  const optionMenu = [
-    { id: 0, text: '¿QUIÉNES SOMOS?', url: '/quienes-somos' },
-    { id: 1, text: 'SERVICIOS', url: '/servicios' },
-    { id: 2, text: 'CONTACTO', url: '/contacto' },
-  ]
-
-
-
+  // FN: Abrir/cerrar el menu
   const openAction = () => {
     setIsOpen(!isOpen)
   }
@@ -47,6 +39,7 @@ export const AppLayout = ({ children }) => {
       </div>
 
       <div style={stylesMenu.contentBg}>
+        {/* Opciones del menu ============================================================================*/}
         <motion.div style={stylesMenu.menuSection}
           initial={{ x: '100vw' }}
           animate={isOpen ? "open" : "closed"}
@@ -63,11 +56,12 @@ export const AppLayout = ({ children }) => {
                 duration: 0.2, delay: 0.6
               }}
               className='title-menu'
-              onMouseEnter={ e => hoverAction(e, item.id)}
+              onMouseEnter={e => hoverAction(e, item.id)}
             >{item.text}</motion.p>)
           }
         </motion.div>
 
+        {/* Imagenes del menu ============================================================================*/}
         <motion.div style={stylesMenu.imageSection}
           initial={{ x: '-100vw', opacity: 0 }}
           animate={isOpen ? "open" : "closed2"}
@@ -85,10 +79,24 @@ export const AppLayout = ({ children }) => {
             </Marquee>
           </div>
 
-          <div style={{ ...stylesMenu.imgContent, backgroundImage: `url(${bg})` }}>
-            <p style={stylesMenu.pTitle}>{title}</p>
-            <img src={imgInBg} alt="imgInBg" style={{ ...stylesMenu.imgItem, ...imgInBgStyle }} />
-          </div>
+          <AnimatePresence>
+            {
+              optionMenu.map((item) =>
+                valueHover === item.id && (
+                  <motion.div
+                    key={item.id}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                  >
+                    {<item.component />}
+                  </ motion.div>
+                )
+              )
+            }
+          </AnimatePresence>
+
+
         </motion.div>
         <motion.div style={{ ...stylesMenu.bgSection }}
           initial={{ x: '100vw' }}
