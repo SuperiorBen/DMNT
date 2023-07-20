@@ -9,7 +9,7 @@ const viewInicio = { width: '100vw', height: '100vh', display: 'flex', justifyCo
 
 // Titulos
 const contentTitles = { width: '90vw', height: '80vh', position: 'fixed', zIndex: 3, top: '7em', }
-const dotI = { borderRadius: '50%', background: degradadoPurple, width: '1.5em', height: '1.5em', margin: '0px 0.3em'}
+const dotI = { borderRadius: '50%', background: '#ff4147',border:'1px solid #fff9', width: '1.5em', height: '1.5em', margin: '0px 0.3em'}
 const subtitleMain = { margin: 0, fontFamily: "'Roboto', sans-serif", fontWeight: 400, fontSize: '1.2em', lineHeight: '1.2em', color: '#fff' }
 const titleMain = { margin: 0, fontFamily: "'Roboto', sans-serif", fontWeight: 700, fontSize: '7em', lineHeight: '0.8em', color: '#fff' }
 const btnDesk = {
@@ -26,10 +26,10 @@ const contentCamera = {
     width: '90vw', height: window.screen.width > 900 ? '80vh' : '85vh', position: 'fixed', zIndex: 2, top: '6.2em', display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)',
     gridTemplateRows: 'repeat(2, 1fr)'
   }
-  const cornerTopLeft = { width: widthMarco, height: heightMarco, borderTopLeftRadius: '10px', borderLeft: blanco, borderTop: blanco }
-  const cornerTopRight = { width: widthMarco, height: heightMarco, borderTopRightRadius: '10px', borderRight: blanco, borderTop: blanco, position: 'relative', right: rightMarco }
-  const cornerBottomLeft = { width: widthMarco, height: heightMarco, borderBottomLeftRadius: '10px', borderLeft: blanco, borderBottom: blanco, position: 'relative', top: topMarco }
-  const cornerBottomRight = { width: widthMarco, height: heightMarco, borderBottomRightRadius: '10px', borderRight: blanco, borderBottom: blanco, position: 'relative', right: rightMarco, top: topMarco }
+  const cornerTopLeft = { width: widthMarco, height: heightMarco, borderTopLeftRadius: '5px', borderLeft: blanco, borderTop: blanco }
+  const cornerTopRight = { width: widthMarco, height: heightMarco, borderTopRightRadius: '5px', borderRight: blanco, borderTop: blanco, position: 'relative', right: rightMarco }
+  const cornerBottomLeft = { width: widthMarco, height: heightMarco, borderBottomLeftRadius: '5px', borderLeft: blanco, borderBottom: blanco, position: 'relative', top: topMarco }
+  const cornerBottomRight = { width: widthMarco, height: heightMarco, borderBottomRightRadius: '5px', borderRight: blanco, borderBottom: blanco, position: 'relative', right: rightMarco, top: topMarco }
 
   const video = { width: window.screen.width > 900 ? '100vw' : 'auto', height: window.screen.width > 900 ? 'auto' : '100vh', maxWidth: '1920px', position: 'fixed', zIndex: 1 }
 export const stylesInicio = {

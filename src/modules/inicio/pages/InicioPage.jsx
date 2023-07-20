@@ -16,7 +16,7 @@ export const InicioPage = () => {
         <div style={stylesInicio.contentTitles}>
           <div style={{ width: '100%', height: '50%', position: 'relative', padding: '1em' }}>
             <div style={{ display: 'flex', alignItems: 'center' }}>
-              <motion.div style={stylesInicio.dotI} initial={{opacity:0}} animate={{ opacity:1 }} transition={{ repeat: Infinity, duration: 1 }} />
+              <motion.div style={stylesInicio.dotI} initial={{opacity:0}} animate={{ opacity:1 }} transition={{ repeatType: "reverse",repeat: Infinity, duration: 0.4 }} />
               <p className="subtTitle1" style={stylesInicio.subtitleMain}>Más allá de las buenas</p>
             </div>
             <p style={stylesInicio.titleMain}>IDEAS</p>
