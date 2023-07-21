@@ -171,7 +171,7 @@ export const stylesMenu = {
 }
 
 export const optionMenu = [
-    { id: 0, text: '¿QUIÉNES SOMOS?', url: '/quienes-somos', component: QuienesSomosMenu },
+    { id: 0, text: '¿QUIÉNES SOMOS?', url: '/quienesSomos', component: QuienesSomosMenu },
     { id: 1, text: 'SERVICIOS', url: '/servicios',  component: ServicioMenu},
     { id: 2, text: 'CONTACTO', url: '/contacto', component: ContactoMenu},
   ]

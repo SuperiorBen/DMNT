@@ -23,6 +23,7 @@ body {
   cursor: pointer;
   user-select: none;
   font-family: 'Prompt', sans-serif;
+  text-decoration: none;
 }
 
 .title-menu:hover {

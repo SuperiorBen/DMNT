@@ -1,0 +1,73 @@
+.astronaut{
+    background-image: url('../tarjetas/psyco-astro.webp');
+    position: absolute;
+    top: 20em;
+    left: 5em;
+    width: 10em;
+    height: 20em;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: initial;
+}
+
+.astronaut::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10em;
+    height: 20em;
+    mix-blend-mode: hard-light;
+    background-image: url('../tarjetas/psyco-astro.webp');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: initial;
+    animation: glitch 10s linear infinite;
+}
+
+@keyframes glitch {
+    0%{
+        background-position: 0 0;
+        filter: hue-rotate(0deg);
+    }
+    10%{
+        background-position: 5px 0;
+    }
+    20%{
+        background-position: -5px 0;
+    }
+    30%{
+        background-position: 15px 0;
+    }
+    31%{
+        background-position: 0 0;
+    }
+    40%{
+        background-position: 5px 0;
+    }
+    41%{
+        background-position: 0 0;
+    }
+    50%{
+        background-position: -2px 0;
+    }
+    60%{
+        background-position: -6px 0;
+    }
+    61%{
+        background-position: 0 0;
+    }
+    70%{
+        background-position: 0 -4px;
+    }
+    80%{
+        background-position: -6px -4px;
+    }
+    81%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: 0 0;
+        filter: hue-rotate(360deg);
+    }
+}
