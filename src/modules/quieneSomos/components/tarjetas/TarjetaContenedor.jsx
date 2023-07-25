@@ -36,12 +36,13 @@ export const TarjetaContenedor = ({ children, option }) => {
 
   return (
     <div style={{
-      marginTop: '5em',
-      width: '22em',
-      height: '40em',
+
+      margin: '0em 5vw 5% 5vw',
+      width: '90vw',
+      height: 'calc( 90% - 5em )',
       backgroundImage: `url(${tarjeta[option].bg})`,
       backgroundPosition: 'center',
-      backgroundSize: '225%',
+      backgroundSize: 'cover',
       backgroundRepeat: 'no-repeat',
       borderRadius: '5px',
       boxShadow: '3px 3px 5px #00000061',
@@ -59,10 +60,10 @@ export const TarjetaContenedor = ({ children, option }) => {
 
       <div style={{
         backdropFilter: 'blur(2px)', backgroundColor: 'rgba(255,255,255,0.1)', borderRadius: '10px', boxShadow: '2px 2px 2px rgba(0,0,0,0.1)',
-        width: '95%', margin: 'auto', marginTop: '1em', padding: '1em', display: 'grid', gridTemplateColumns: 'repeat( 2, 1fr )', gridTemplateRows: 'minmax(auto)', rowGap: '0.5em', columnGap: '1em'
+        width: '95%', margin: 'auto', marginTop: '1em', padding: '1em 0.5em', display: 'grid', gridTemplateColumns: 'repeat( 2, 1fr )', gridTemplateRows: 'minmax(auto)', rowGap: '0.5em', columnGap: '1em'
       }}>
         <p style={{ color: '#fff', margin: 0, fontSize: '1.8em', fontWeight: 600, lineHeight: '1em', width: '100%', gridColumn: '1/3' }}>{tarjeta[option].title}</p>
-        <img style={{ width: '6em', gridColumn: '1' }} src={tarjeta[option].icon} alt="icon" />
+        <img style={{ width: '4.5em', gridColumn: '1', margin:'auto'}} src={tarjeta[option].icon} alt="icon" />
         <p style={{ color: '#fff', margin: 0, fontSize: '1em', fontWeight: 100, lineHeight: '1.2em', width: '12em', gridColumn: '2' }}>{tarjeta[option].text}</p>
       </div>
 

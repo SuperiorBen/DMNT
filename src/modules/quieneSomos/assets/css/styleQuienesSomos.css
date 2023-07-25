@@ -1,10 +1,10 @@
 .astronaut{
     background-image: url('../tarjetas/psyco-astro.webp');
     position: absolute;
-    top: 20em;
-    left: 5em;
-    width: 10em;
-    height: 20em;
+    top: calc( 100% - 25em );
+    left: calc( (100% - 12em) / 2 );
+    width: 12em;
+    height: 25em;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: initial;
@@ -15,8 +15,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 10em;
-    height: 20em;
+    width: 12em;
+    height: 25em;
     mix-blend-mode: hard-light;
     background-image: url('../tarjetas/psyco-astro.webp');
     background-repeat: no-repeat;
