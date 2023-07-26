@@ -36,7 +36,6 @@ export const TarjetaContenedor = ({ children, option }) => {
 
   return (
     <div style={{
-
       margin: '0em 5vw 5% 5vw',
       width: '90vw',
       height: 'calc( 90% - 5em )',
@@ -63,8 +62,8 @@ export const TarjetaContenedor = ({ children, option }) => {
         width: '95%', margin: 'auto', marginTop: '1em', padding: '1em 0.5em', display: 'grid', gridTemplateColumns: 'repeat( 2, 1fr )', gridTemplateRows: 'minmax(auto)', rowGap: '0.5em', columnGap: '1em'
       }}>
         <p style={{ color: '#fff', margin: 0, fontSize: '1.8em', fontWeight: 600, lineHeight: '1em', width: '100%', gridColumn: '1/3' }}>{tarjeta[option].title}</p>
-        <img style={{ width: '4.5em', gridColumn: '1', margin:'auto'}} src={tarjeta[option].icon} alt="icon" />
-        <p style={{ color: '#fff', margin: 0, fontSize: '1em', fontWeight: 100, lineHeight: '1.2em', width: '12em', gridColumn: '2' }}>{tarjeta[option].text}</p>
+        <img style={{ width: '5em', gridColumn: '1', margin:'auto'}} src={tarjeta[option].icon} alt="icon" />
+        <p style={{ color: '#fff', margin: 0, fontSize: '1em', fontWeight: 100, lineHeight: '1.2em', width: '12em', gridColumn: '2', textShadow:'1px 1px 0px #9665FD'}}>{tarjeta[option].text}</p>
       </div>
 
       {children}
