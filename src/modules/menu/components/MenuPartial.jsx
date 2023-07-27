@@ -39,7 +39,7 @@ export const MenuPartial = () => {
                 </a>
             </div>
 
-            <div style={stylesMenu.contentBg}>
+            <div style={{...stylesMenu.contentBg, zIndex: isOpen ? 990 : -1}}>
                 {/* Opciones del menu ============================================================================*/}
                 <motion.div style={stylesMenu.menuSection}
                     initial={{ x: '100vw' }}
