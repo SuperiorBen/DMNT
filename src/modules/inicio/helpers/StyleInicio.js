@@ -18,7 +18,7 @@ const btnDesk = {
     boxShadow: '0px 0px 3px 2px rgba(255,255,255,0.6)', position: 'relative', bottom: '-1em', marginLeft: '0.3em'
   }
 const btnMobil = { ...btnDesk , position: 'absolute', bottom: '5em', marginLeft: '5%', textAlign:'center', fontSize: '1.5em', width: '90%'}
-const logoDemente = { width: '80%', position: 'absolute', bottom: '3em', zIndex: 2, margin: '0px 10%', opacity: 0.8 }
+const logoDemente = { width: '80%', position: 'absolute', bottom: window.screen.width > 900 ? '5em' : '3em', zIndex: 2, margin: '0px 10%', opacity: 0.8 }
 const logoCreativa = { width: '70%', position: 'absolute', bottom: '2em', zIndex: 2, margin: '0px 15%' }
 
 // Seccion de camara
