@@ -13,7 +13,7 @@ export default defineConfig({
         enabled: true
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,svg,webp,mp4}'],
+        globPatterns: ['**/*.{js,css,html,svg,webp,png,mp4}'],
         maximumFileSizeToCacheInBytes: 200000000
       },
       manifest: {
