@@ -5,10 +5,7 @@ import scrollarrow from "../../assets/background/animations/scrollarrow.json"
 
 import { motion } from "framer-motion"
 import Lottie from "lottie-react";
-import {
-    // useCallback,
-    useEffect, useRef, useState
-} from "react"
+import { useEffect, useRef, useState} from "react"
 import '../../assets/css/styleQuienesSomos.css'
 
 import { useMotionValueEvent, useScroll } from "framer-motion"
@@ -71,18 +68,14 @@ export const BackgroundAnimated = () => {
     setTimeout(runTextAnimate, 500);
     // END Letter animated funtions ===========================================================
 
+
+    // Control scroll 
     const { scrollYProgress } = useScroll()
-
-
     useMotionValueEvent(scrollYProgress, "change", (latest) => {
-        // console.log(latest.toFixed(2))
-
         const scrollPosition = latest.toFixed(2)
-
         if (scrollPosition <= 0.10 && section != 1) setSection(1)
         scrollPosition > 0.10 && setSection(2)
         scrollPosition > 0.50 && setSection(3)
-
     })
 
 
@@ -117,7 +110,8 @@ export const BackgroundAnimated = () => {
                     }}>{e.title}</p>)
                 }
 
-                <Lottie style={{ position: 'absolute', left: window.screen.width > 900 ? '-1.5em' : '-1em', bottom: 0, height: window.screen.width > 900 ? '20%' : '10%' }}
+                <Lottie style={{ position: 'absolute', left: window.screen.width > 900 ? '-1.5em' : '-1em', bottom: 0, height: window.screen.width > 900 ? '20%' : '10%',
+                opacity: section == 1 ? 1 : 0 }}
                     animationData={scrollarrow} />
 
             </motion.div>
