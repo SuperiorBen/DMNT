@@ -5,7 +5,10 @@ import scrollarrow from "../../assets/background/animations/scrollarrow.json"
 
 import { motion } from "framer-motion"
 import Lottie from "lottie-react";
-import { useEffect, useRef, useState } from "react"
+import {
+    // useCallback,
+    useEffect, useRef, useState
+} from "react"
 import '../../assets/css/styleQuienesSomos.css'
 
 import { useMotionValueEvent, useScroll } from "framer-motion"
@@ -16,9 +19,12 @@ const sizeAniText = window.screen.width > 900 ? (window.screen.width > 1536 ? '8
 
 export const BackgroundAnimated = () => {
 
+    const [section, setSection] = useState(1)
 
     // Twister background control 
-    const [isOpen, setOpen] = useState(false)
+    const [isOpen
+        , setOpen
+    ] = useState(false)
     // Text background animate control
     const [textAnimate, setTextAnimate] = useState(0)
     // content letter animate
@@ -26,7 +32,9 @@ export const BackgroundAnimated = () => {
 
 
     // Number of lines text control 
-    const [letter, setLetter] = useState('SOBRE NOSOTROS')
+    const [letter
+        , setLetter
+    ] = useState('SOBRE NOSOTROS')
     const controlTime = window.screen.width > 900 ? 6 : 1
     let textTimes = controlTime
     let textBg = []
@@ -41,13 +49,16 @@ export const BackgroundAnimated = () => {
         ref.current.children[textAnimate].style.color = 'rgb(150 101 253 / 80%)'
     }, [textAnimate])
 
-
     useEffect(() => {
+        setOpen(false)
         const timer = setTimeout(() => {
-            isOpen === false && setOpen(!isOpen)
+            setOpen(true)
+            section == 1 && setLetter('SOBRE NOSOTROS')
+            section == 2 && setLetter('¿QUIENES SOMOS?')
+            section == 3 && setLetter('')
         }, 1500);
         return () => clearTimeout(timer);
-    }, [isOpen]);
+    }, [section]);
 
     const runTextAnimate = () => {
         ref.current.children[textAnimate].style.color = 'transparent'
@@ -65,22 +76,19 @@ export const BackgroundAnimated = () => {
 
     useMotionValueEvent(scrollYProgress, "change", (latest) => {
         // console.log(latest.toFixed(2))
+
         const scrollPosition = latest.toFixed(2)
 
-        // Twiste background set
-        if (scrollPosition > 0.05 && scrollPosition < 0.08) (isOpen == true && setOpen(false))
-        if (scrollPosition > 0.50 && scrollPosition < 0.53) (isOpen == true && setOpen(false))
-
-        // Title Change 
-        scrollPosition <= 0.10 && setLetter('SOBRE NOSOTROS')
-        scrollPosition > 0.10 &&  setLetter('¿QUIENES SOMOS?')
-        scrollPosition > 0.55 &&  setLetter('')
+        if (scrollPosition <= 0.10 && section != 1) setSection(1)
+        scrollPosition > 0.10 && setSection(2)
+        scrollPosition > 0.50 && setSection(3)
 
     })
 
 
     return (
         <div className="background" style={{ height: '100vh', width: '100vw', position: 'fixed', top: 0, left: 0, zIndex: 0 }}>
+            <motion.div style={{ scaleX: scrollYProgress, position: 'fixed', height: '8px', bottom: 0, left: 0, right: 0, zIndex: 99, background: '#94CED9', transformOrigin: '0%' }} />
 
             <img src={bgCreativa} alt="bgCreativa" style={{ height: '100vh', width: window.screen.width > 900 ? '29em' : '27em', position: 'absolute', top: 0, left: window.screen.width > 900 ? "0em" : "-14em", zIndex: 1, mixBlendMode: 'multiply' }} />
 
@@ -95,8 +103,8 @@ export const BackgroundAnimated = () => {
                     src={bgTwist} alt="twister" style={{ height: window.screen.width > 900 ? '200%' : '120%' }} />
             </motion.div>
 
-            <div ref={ref} className="staggertext" style={{
-                height: '100vh', width: xTwister, position: 'absolute', top: 0, right: 0,
+            <motion.div layout ref={ref} transition={{ duration: 0.5 }} className="staggertext" style={{
+                height: '100vh', width: xTwister, position: 'absolute', top: 0, right: isOpen ? 0 : `calc(-1 * ${xTwister})`,
                 zIndex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column-reverse', overflow: 'hidden',
                 writingMode: window.screen.width > 900 ? 'horizontal-tb' : 'vertical-lr', textOrientation: 'mixed'
             }}>
@@ -112,7 +120,7 @@ export const BackgroundAnimated = () => {
                 <Lottie style={{ position: 'absolute', left: window.screen.width > 900 ? '-1.5em' : '-1em', bottom: 0, height: window.screen.width > 900 ? '20%' : '10%' }}
                     animationData={scrollarrow} />
 
-            </div>
+            </motion.div>
 
             <img style={{ height: '100vh', width: '100vw', position: 'absolute', top: 0, left: 0, zIndex: 0, opacity: 0.2 }} src={bgStars} alt="Fondo estrellas" />
         </div>
