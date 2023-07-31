@@ -11,7 +11,7 @@ export const AstronautJump = () => {
     const { scrollYProgress } = useScroll()
     useMotionValueEvent(scrollYProgress, "change", (latest) => {
         const scrollPosition = latest.toFixed(2)
-        scrollPosition > 0.2 ? setOpacity(true) : setOpacity(false)
+        scrollPosition > 0.1 ? setOpacity(true) : setOpacity(false)
     })
 
     return (
