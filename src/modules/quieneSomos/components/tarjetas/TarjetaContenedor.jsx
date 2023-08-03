@@ -53,8 +53,7 @@ export const TarjetaContenedor = ({ children, option, visible }) => {
         overflow: 'hidden',
         zIndex: option,
         opacity: visible == option ? 1 : 0,
-        transition:'opacity 0.5s ease-in-out, transform 1s ease-in-out',
-        transform: visible == option ? 'rotateY(0deg)' : 'rotateY(90deg)',
+        transition:'opacity 0.5s ease-in-out'
       }}>
 
       <motion.img animate={{ x: [-15, 10, 0], y: [-5, 0, -5] }}

@@ -39,8 +39,6 @@ export const TarjetasQuinesSomos = () => {
     scrollPosition > 0.26 && setSection(1)
     scrollPosition > 0.37 && setSection(2)
     scrollPosition > 0.50 && setSection(3)
-
-    console.log(section)
   })
 
   return (
@@ -80,7 +78,7 @@ export const TarjetasQuinesSomos = () => {
         <div style={{ width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'end', position: 'absolute', top: 0 }}>
           <motion.img animate={{ x: [0, 30, 10], y: [0, 25, 55] }}
             transition={{ repeatType: "reverse", repeat: Infinity, duration: 10, ease: "easeInOut" }}
-            src={flyAstronaut} alt="flyAstronaut" style={{ height: '60%', margin: 'auto', position: 'absolute', zIndex: 1 }} />
+            src={flyAstronaut} alt="flyAstronaut" style={{ height: '60%', margin: 'auto', marginBottom:'2em', position: 'absolute', zIndex: 1 }} />
           <motion.img animate={{ rotate: 360 }}
             transition={{ repeat: Infinity, duration: 50, ease: "linear" }}
             src={world} alt="world" style={{

@@ -104,7 +104,7 @@ export const BackgroundAnimated = () => {
 
                 {
                     textBg.map((e, i) => <p key={i} style={{
-                        margin: '0px', ontFamily: "'Roboto', sans-serif", fontWeight: 700, fontSize: sizeAniText,
+                        margin: '0px', fontFamily: "'Roboto', sans-serif", fontWeight: 700, fontSize: sizeAniText,
                         lineHeight: '1em', WebkitTextStroke: 'rgb(150 101 253 / 60%) 2px', color: 'transparent',
                         userSelect: 'none'
                     }}>{e.title}</p>)
