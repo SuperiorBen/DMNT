@@ -32,24 +32,30 @@ const tarjeta = [
   }
 ]
 
-export const TarjetaContenedor = ({ children, option }) => {
+export const TarjetaContenedor = ({ children, option, visible }) => {
 
   return (
-    <div style={{
-      margin: 'auto',
-      marginTop: window.screen.width > 900 ? 'none' : '8em',
-      width: window.screen.width > 900 ? '25em' :'90vw',
-      height: window.screen.width > 900 ? '95vh' : '80vh',
-      maxHeight:'720px',
-      backgroundImage: `url(${tarjeta[option].bg})`,
-      backgroundPosition: 'center',
-      backgroundSize: 'cover',
-      backgroundRepeat: 'no-repeat',
-      borderRadius: '5px',
-      boxShadow: '3px 3px 5px #00000061',
-      position: 'relative',
-      overflow: 'hidden'
-    }}>
+    <motion.div
+    layout
+      style={{
+        margin: 'auto',
+        marginTop: window.screen.width > 900 ? 'none' : '8em',
+        width: window.screen.width > 900 ? '25em' : '90vw',
+        height: window.screen.width > 900 ? '95vh' : '80vh',
+        maxHeight: '720px',
+        backgroundImage: `url(${tarjeta[option].bg})`,
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        borderRadius: '5px',
+        boxShadow: '3px 3px 5px #00000061',
+        position: 'absolute',
+        overflow: 'hidden',
+        zIndex: option,
+        opacity: visible == option ? 1 : 0,
+        transition:'opacity 0.5s ease-in-out, transform 1s ease-in-out',
+        transform: visible == option ? 'rotateY(0deg)' : 'rotateY(90deg)',
+      }}>
 
       <motion.img animate={{ x: [-15, 10, 0], y: [-5, 0, -5] }}
         transition={{ repeatType: "reverse", repeat: Infinity, duration: 10, ease: "easeInOut" }}
@@ -61,17 +67,17 @@ export const TarjetaContenedor = ({ children, option }) => {
 
       <div style={{
         backdropFilter: 'blur(2px)', background: 'linear-gradient(90deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.2) 50%, rgba(0,0,0,0.1) 100%)', borderRadius: '10px', boxShadow: '2px 2px 2px rgba(0,0,0,0.1)',
-        width: '95%', margin: 'auto', marginTop: '1em', padding: '1em 0.5em', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems:'center'
+        width: '95%', margin: 'auto', marginTop: '1em', padding: '1em 0.5em', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center'
       }}>
-        <p style={{ color: '#fff', margin: 0, fontSize: '1.8em', fontWeight: 600, lineHeight: '1em', width: '100%', textAlign:'center'}}>{tarjeta[option].title}</p>
-        <div style={{width:'100%', display:'flex', justifyContent:'space-around', alignItems:'center', marginTop:'0.5em'}}>
-        <img style={{ width: '7em'}} src={tarjeta[option].icon} alt="icon" />
-        <p style={{ color: '#fff', margin: 0, fontSize: '1em', fontWeight: 400, lineHeight: '1.3em', width: 'calc( 90% - 7em )'}}>{tarjeta[option].text}</p>
+        <p style={{ color: '#fff', margin: 0, fontSize: '1.8em', fontWeight: 600, lineHeight: '1em', width: '100%', textAlign: 'center' }}>{tarjeta[option].title}</p>
+        <div style={{ width: '100%', display: 'flex', justifyContent: 'space-around', alignItems: 'center', marginTop: '0.5em' }}>
+          <img style={{ width: '7em' }} src={tarjeta[option].icon} alt="icon" />
+          <p style={{ color: '#fff', margin: 0, fontSize: '1em', fontWeight: 400, lineHeight: '1.3em', width: 'calc( 90% - 7em )' }}>{tarjeta[option].text}</p>
         </div>
       </div>
 
       {children}
-    </div>
+    </motion.div>
   )
 }
 
@@ -79,5 +85,6 @@ export const TarjetaContenedor = ({ children, option }) => {
 // Props validation
 TarjetaContenedor.propTypes = {
   children: PropTypes.node,
-  option: PropTypes.string
+  option: PropTypes.string,
+  visible: PropTypes.number
 };
