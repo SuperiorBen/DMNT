@@ -32,7 +32,7 @@ const contentCamera = {
   const cornerBottomRight = { width: widthMarco, height: heightMarco, borderBottomRightRadius: '5px', borderRight: blanco, borderBottom: blanco, position: 'relative', right: rightMarco, top: topMarco }
 
   const video = { width: window.screen.width > 900 ? '100vw' : 'auto', height: window.screen.width > 900 ? 'auto' : '100vh', maxWidth: '1920px', position: 'fixed', zIndex: 1 }
-export const stylesInicio = {
+export const cssInicio = {
     viewInicio,
     contentTitles,
     dotI,

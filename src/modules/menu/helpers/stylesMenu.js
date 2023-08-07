@@ -149,7 +149,7 @@ const textVariants = {
 
 
 
-export const stylesMenu = {
+export const cssMenu = {
     contentToggle,
     btnStyle,
     pathLine,
