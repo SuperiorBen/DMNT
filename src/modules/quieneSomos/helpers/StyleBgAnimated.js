@@ -4,7 +4,7 @@ const sizeAniText = window.screen.width > 900 ? (window.screen.width > 1536 ? '8
 // Imagenes
 import bgCreativa from "../assets/background/bgTeamWork.png"
 import bgTwist from "../assets/background/psycoTwister.svg"
-import bgStars from "../assets/stars-bg.webp"
+import bgStars from "../../../assets/stars-bg.webp"
 // Animation JSON
 import scrollarrow from "../assets/background/animations/scrollarrow.json"
 

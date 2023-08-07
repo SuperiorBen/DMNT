@@ -11,7 +11,6 @@ export const CarnetsTeam = () => {
         ['0px', cssCarnets.widthContent]
     )
     useMotionValueEvent(positionDiv, "change", (latest) => {
-        console.log(latest)
         setMove(latest)
     })
     return (

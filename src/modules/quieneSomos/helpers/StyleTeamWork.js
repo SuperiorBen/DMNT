@@ -41,8 +41,8 @@ import carnet2 from '../assets/carnets/gafeteRojo.png'
 import carnet1 from '../assets/carnets/rodrigoHernandez.png'
 
 // CSS Variable
-const carnetStyle = { width: window.screen.width > 900 ? (window.screen.width > 1536 ? '20em' : '15em') : '15em', marginLeft: '1em' }
-const widthContent = window.screen.width > 900 ? (window.screen.width > 1536 ? '80em' : '80em') : '110em'
+const carnetStyle = { width: window.screen.width > 900 ? (window.screen.width > 1536 ? '20em' : '13em') : '15em', marginLeft: '1em' }
+const widthContent = window.screen.width > 900 ? (window.screen.width > 1536 ? '80em' : '65em') : '110em'
 
 // Styles
 const contentCarnets = { display: 'flex', justifyContent: 'space-between', alignItems: 'center', position: 'relative', width: widthContent }
