@@ -1,37 +1,67 @@
-import Lottie from "lottie-react";
 import { motion } from "framer-motion"
-import texture from "../assets/cardTexture.png"
+import { ItemCard } from "./ItemCard"
+
 import phone from "../assets/animations/phone.json"
-import { useState } from "react";
+import whatsapp from "../assets/animations/whatsapp.json"
+import instagram from "../assets/animations/instagram.json"
+import facebook from "../assets/animations/facebook.json"
+import email from "../assets/animations/mail.json"
+import location from "../assets/animations/location.json"
+
 export const ContactGroup = () => {
-    const [isOpen, setOpen] = useState(false)
-    const showInfo = (e) => {
-        e.preventDefault()
-        setOpen(!isOpen)
-    }
+
+    const infoContacts = [
+        {
+            title: 'Teléfono',
+            text: '2239-0908',
+            link: window.screen.width > 900 ? '#' : 'tel:+50322390908',
+            logo: phone
+        },
+        {
+            title: 'WhatsApp',
+            text: '7987-1094',
+            link: 'https://wa.me/79871094',
+            logo: whatsapp
+        },
+        {
+            title: 'Instagram',
+            text: '@dmntcreativa',
+            link: 'https://www.instagram.com/dmntcreativa/',
+            logo: instagram
+        },
+        {
+            title: 'Facebook',
+            text: '@DMNT Creativa Agency',
+            link: 'https://www.facebook.com/dementeagencia',
+            logo: facebook
+        },
+        {
+            title: 'Email',
+            text: 'demente@dmnt.com.sv',
+            link: 'mailto:demente@dmnt.com.sv',
+            logo: email
+        },
+        {
+            title: 'Ubicación',
+            text: 'Ver ubicación',
+            link: 'https://www.google.com/maps/place/DMNT+Creativa+Agency/@13.6968423,-89.2059652,15z/data=!4m6!3m5!1s0x8f633166f29b0225:0x8ebeda43fd224df3!8m2!3d13.6968423!4d-89.2059652!16s%2Fg%2F11rb5_0jv5?entry=ttu',
+            logo: location
+        }
+    ]
+
     return (
         <>
-            <motion.div style={{
-                display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', width: '15em', position: 'fixed', zIndex: 6, top: '8em', left: '30em',
-                backgroundImage: `url(${texture})`, backgroundPosition: 'center', backgroundSize: '150%', padding: '0.2em',
-                borderRadius: '10px', backgroundRepeat: 'no-repeat', transition: '1s'
-            }}>
-                <div onClick={showInfo} style={{
-                    display: 'flex', justifyContent: 'flex-start', alignItems: 'center', width: '15em',
-                    height: '2em', cursor: 'pointer', userSelect: 'none',position:'relative', zIndex:2
-                }}>
-                    <Lottie style={{ width: '2.5em', height: '2.5em' }} animationData={phone} />
-                    <p style={{ margin: '0em', fontSize: '1em', lineHeight: '1em', fontWeight: 700, color: '#9565fdd5' }}>Teléfono</p>
-                </div>
-                <div style={{ width: '98%', height: '2em', background: 'linear-gradient(90deg, rgba(150,101,253,0.8) 0%, rgba(8,199,209,0.25) 100%)', 
-                padding: '0.5em', borderRadius: '3px', marginTop: isOpen ? '0em' : '-2em', opacity: isOpen ? 1 : 0, position:'relative', zIndex:1,
-                transition: isOpen ? 'marginTop 1s, opacity 0.3s linear 0.1s' : 'marginTop 1s, opacity 0.3s linear 1s' }}>
-                    <p style={{ textAlign: 'center', margin: '0em', fontSize: '1em', lineHeight: '1em', fontWeight: 700, color: '#fff', textShadow: '1px 1px 0px rgb(0 0 0 / 31%)' }}>2239-0908</p>
-                </div>
-
-
-            </motion.div>
-
+            <div style={{ position: 'fixed', top: '10em', left: '30em', zIndex: 6, display: 'flex', flexDirection: 'column' }}>
+                {
+                    infoContacts.map((info, i) => <motion.div
+                        initial={{ opacity: 0, translateX: -50 }}
+                        animate={{ opacity: 1 , translateX: 0}}
+                        transition={{ duration: 1, delay: i == 0 ? 0.6 : i * 0.6 + 0.6 }}
+                        key={i}>
+                        <ItemCard info={info} />
+                    </motion.div>)
+                }
+            </div>
         </>
     )
 }

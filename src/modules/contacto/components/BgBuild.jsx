@@ -5,6 +5,8 @@ import bgBuilt3 from "../assets/Tbuild.svg"
 import billboard from "../assets/billboard.png"
 import Marquee from "react-fast-marquee";
 export const BgBuild = () => {
+
+const widthBilboard =  window.screen.width > 900 ? (window.screen.width > 1536 ? '40em' : '22em')    : '6em'
     return (
         <>
             <Marquee speed={5} autoFill style={{ position: 'fixed', zIndex: 1, width: '100vw', bottom: '0em' }}>
@@ -13,7 +15,7 @@ export const BgBuild = () => {
             <Marquee speed={5} autoFill direction="right" style={{ position: 'fixed', zIndex: 2, width: '100vw', bottom: '-3em' }}>
                 <img src={bgBuilt2} alt="bgBuilt2" style={{ width: '80vw' }} />
             </Marquee>
-            <img src={billboard} alt="billboard" style={{ position: 'fixed', zIndex: 3, width: '22em', bottom: '1em', left: '10em' }} />
+            <img src={billboard} alt="billboard" style={{ position: 'fixed', zIndex: 3, width: widthBilboard, bottom: '1em', left: '10em' }} />
             <Marquee speed={5} autoFill style={{ position: 'fixed', zIndex: 4, width: '100vw', bottom: '-6em' }}>
                 <img src={bgBuilt1} alt="bgBuilt1" style={{ width: '80vw' }} />
             </Marquee>
