@@ -51,7 +51,10 @@ export const ContactGroup = () => {
 
     return (
         <>
-            <div style={{ position: 'fixed', top: '10em', left: '30em', zIndex: 6, display: 'flex', flexDirection: 'column' }}>
+            <div style={{ position: 'fixed', 
+            top: window.screen.width > 900 ? (window.screen.width > 1536 ? '10em' : '2em') : '8em', 
+            left: window.screen.width > 900 ? (window.screen.width > 1536 ? 'calc( 60vw - 20em / 2 )' : 'calc( 60vw - 15em / 2 )') : '1em', 
+            zIndex: 6, display: 'flex', flexDirection: 'column' }}>
                 {
                     infoContacts.map((info, i) => <motion.div
                         initial={{ opacity: 0, translateX: -50 }}

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import logo from "../../../assets/logo.svg";
 import { cssMenu, optionMenu } from '../helpers/stylesMenu'
@@ -9,7 +9,18 @@ import { AnimatePresence, motion } from "framer-motion"
 
 export const MenuPartial = () => {
     const [isOpen, setIsOpen] = useState(false)
+    const [moveLayer, setMoveLayer] = useState()
     const [valueHover, setValueHover] = useState(0)
+
+    useEffect(() => {
+        setMoveLayer(990)
+        const timer = setTimeout(() => {
+            isOpen == false && setMoveLayer(-1)
+        }, 1000)
+        return () => clearTimeout(timer);
+    }, [isOpen])
+
+
 
     //  FN: Hover sobre opciones de menu para mostrar imagenes
     const hoverAction = (e, id) => {
@@ -35,11 +46,11 @@ export const MenuPartial = () => {
                     <motion.div animate={isOpen ? "open2" : "closed"} variants={cssMenu.btnVariants} style={cssMenu.pathLine} />
                 </div>
                 <a href="/" style={{ width: '65%' }} title='Home'>
-                <img src={logo} alt="logo" loading='lazy' style={{ width: '100%' }} />
+                    <img src={logo} alt="logo" loading='lazy' style={{ width: '100%' }} />
                 </a>
             </div>
 
-            <div style={{...cssMenu.contentBg, zIndex: isOpen ? 990 : -1}}>
+            <div style={{ ...cssMenu.contentBg, zIndex: isOpen ? 990 : moveLayer }}>
                 {/* Opciones del menu ============================================================================*/}
                 <motion.div style={cssMenu.menuSection}
                     initial={{ x: '100vw' }}
