@@ -1,6 +1,6 @@
 import { AppLayout } from "../../../layouts/AppLayout"
 import bgStars from "../../../assets/stars-bg.webp"
-import bgMenu from "../assets/backgroundMenu.svg"
+import bgMenu from "../../../assets/backgroundMenu.svg"
 import { BgBuild } from "../components/BgBuild"
 import { OvniAnimate } from "../components/OvniAnimate"
 import { ContactGroup } from "../components/ContactGroup"
