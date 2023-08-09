@@ -6,14 +6,14 @@ import bgBuilt3 from "../assets/Tbuild.svg"
 import billboard from "../assets/billboard.png"
 
 // css variables 
-const widthBilboard = window.screen.width > 900 ? (window.screen.width > 1536 ? '40em' : '22em') : '15em'
+const widthBilboard = window.screen.width > 900 ? (window.screen.width > 1536 ? '38em' : '22em') : '15em'
 
 //Styles
 const marquee3 = { position: 'fixed', zIndex: 1, width: '100vw', bottom: '0em', userSelect: 'none' }
 const build3 = { width: window.screen.width > 900 ? '100vw' : '250vw' }
 const marquee2 = { position: 'fixed', zIndex: 2, width: '100vw', bottom: '-3em', userSelect: 'none' }
 const build2 = { width: window.screen.width > 900 ? '80vw' : '180vw' }
-const marquee1 = { position: 'fixed', zIndex: 4, width: '100vw', bottom: window.screen.width > 900 ? '-6em' : '-3em', userSelect: 'none' }
+const marquee1 = { position: 'fixed', zIndex: 4, width: '100vw', bottom: window.screen.width > 900 ? (window.screen.width > 1536 ? '-10em' : '-8em') : '-6em', userSelect: 'none' }
 const build1 = { width: window.screen.width > 900 ? '80vw' : '160vw' }
 const billboardImg = {
     position: 'fixed', zIndex: 3, width: widthBilboard, bottom: '1em', left: window.screen.width > 900 ? '5%' : `calc( 50vw - ${widthBilboard} / 2 )`, userSelect: 'none'
@@ -78,7 +78,7 @@ import locationIcon from "../assets/animations/location.json"
 
 // Styles
 const contentCards = {
-    position: 'fixed', top: window.screen.width > 900 ? (window.screen.width > 1536 ? '10em' : '2em') : '8em',
+    position: 'fixed', top: window.screen.width > 900 ? (window.screen.width > 1536 ? '10em' : '6em') : '8em',
     left: window.screen.width > 900 ? (window.screen.width > 1536 ? 'calc( 60vw - 20em / 2 )' : 'calc( 60vw - 15em / 2 )') : '1em',
     zIndex: 6, display: 'flex', flexDirection: 'column'
 }
@@ -123,20 +123,22 @@ export const cssItemC = {
 // Tittle message =================================================================================================================
 
 // css variables
-const widthTitle = window.screen.width > 900 ? (window.screen.width > 1536 ? '30em' : '15em') : '80%'
+const widthTitle = window.screen.width > 900 ? (window.screen.width > 1536 ? '30em' : '20em') : '80%'
 
 // styles
 const contentTitle = {
     display: 'flex', flexDirection: 'column', position: 'fixed', zIndex: 2, width: widthTitle,
-    top: window.screen.width > 900 ? (window.screen.width > 1536 ? 'calc( 40vh - 15em / 2 )' : `calc( 40vh - 7em / 2 )`) : '27em',
-    left: window.screen.width > 900 ? (window.screen.width > 1536 ? `calc( 35vw - ${widthTitle} / 2 )` : `calc( 40vw - ${widthTitle} / 2 )`) : `calc( 50vw - ${widthTitle} / 2 )`, userSelect: 'none'
+    top: window.screen.width > 900 ? (window.screen.width > 1536 ? 'calc( 40vh - 15em / 2 )' : `calc( 35vh - 7em / 2 )`) : '27em',
+    left: window.screen.width > 900 ? (window.screen.width > 1536 ? `calc( 35vw - ${widthTitle} / 2 )` : `calc( 35vw - ${widthTitle} / 2 )`) : `calc( 50vw - ${widthTitle} / 2 )`, userSelect: 'none'
 }
 const lineTiny = {
-    padding: '0.5em 0em', margin: '0em', lineHeight: '1em', textAlign: 'center', background: '#9565fdd5', color: '#fff', fontWeight: 700, borderRadius: '5px', fontSize: window.screen.width > 1536 ? '2em' : '1em'
+    padding: '0.5em 0em', margin: '0em', lineHeight: '1em', textAlign: 'center', background: '#9565fdd5', color: '#fff', fontWeight: 700, borderRadius: '5px', 
+    fontSize: window.screen.width > 900 ? (window.screen.width > 1536 ? '2em' : '1.5em') : '1em'
 }
 
 const lineBig = {
-    margin: '0em', lineHeight: '0.9em', textAlign: 'center', color: '#9565fdd5', fontWeight: 700, fontSize: window.screen.width > 1536 ? '10em' : '5em'
+    margin: '0em', lineHeight: '0.9em', textAlign: 'center', color: '#9565fdd5', fontWeight: 700, 
+    fontSize: window.screen.width > 900 ? (window.screen.width > 1536 ? '10em' : '6em') : '5em'
 }
 
 const marqueeOvni = { position: 'fixed', zIndex: 3, width: '100vw', bottom: '20vh', userSelect: 'none' }
