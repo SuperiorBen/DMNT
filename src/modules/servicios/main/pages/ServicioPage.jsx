@@ -6,6 +6,7 @@ import { motion, useMotionValueEvent, useScroll, useTransform } from 'framer-mot
 
 import bgMenu from "../../../../assets/backgroundMenu.svg"
 import { useState } from "react"
+import { InfoSection } from "../components/InfoSection"
 
 
 export const ServicioPage = () => {
@@ -16,8 +17,8 @@ export const ServicioPage = () => {
     const { scrollYProgress } = useScroll()
     const positionDiv = useTransform(
         scrollYProgress,
-        [0.15, 0.2, 1],
-        ['110vh', '0vh', '-10vh']
+        [0.19, 0.21],
+        ['110vh', '0vh']
     )
 
     useMotionValueEvent(scrollYProgress, "change", (latest) => {
@@ -25,16 +26,19 @@ export const ServicioPage = () => {
         scrollPosition < 0.20 ? setIsShow([0, '60px 60px 0px 0px']) : setIsShow([1, '0px'])
     })
 
-
     return (
         <AppLayout>
             <div style={{ height: '500vh', width: '100vw', overflowX: 'hidden' }}>
                 <IntroSection />
-                <motion.div style={{ overflow: 'hidden', height: '110vh', width: '100vw', zIndex: 3, position: 'fixed', top: positionDiv, left: 0, backgroundColor: '#fff', borderRadius: isShow[1], transition: '1s ease-in-out' }}>
-                   {/* Components */}
+                <motion.div style={{
+                    overflow: 'hidden', height: '100vh', width: '100vw', zIndex: 3, position: 'fixed', top: positionDiv,
+                    left: 0, backgroundColor: '#fff', borderRadius: isShow[1], transition: '1s ease-in-out'
+                }}>
+                    {/* Components */}
+                    <InfoSection />
                     <img style={{ height: '110vh', width: window.screen.width > 900 ? '100vw' : '300vw', position: 'absolute', top: '-10vh', left: 0, zIndex: 0, opacity: 0.2 }} src={bgStars} alt="Fondo estrellas" />
                 </motion.div>
-                <img src={bgMenu} alt="bgMenu" style={{ position: 'fixed', top: 0, left: '-4em', width: '18em', zIndex: 990, opacity: isShow[0], transition: '1s ease-in-out' }} />
+                <img src={bgMenu} alt="bgMenu" style={{ backgroundColor: '#fff', borderRadius: '15px', position: 'fixed', top: 0, left: '-4em', width: '18em', zIndex: 990, opacity: isShow[0], transition: '1s ease-in-out' }} />
             </div>
         </AppLayout>
     )

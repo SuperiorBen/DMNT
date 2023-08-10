@@ -2,6 +2,7 @@
 // Images
 import stars from '../assets/animations/starsBg.json'
 import astro from '../assets/animations/astro.json'
+import scrollWhite from '../assets/animations/scroll-white.json'
 
 import aplicaciones from "../assets/iconosServicios/Aplicaciones.svg";
 import audiovisuales from "../assets/iconosServicios/AudioVisuales.svg";
@@ -78,6 +79,10 @@ const galaxyStars = {
     left: window.screen.width > 900 ? '0em' : '-12em'
 }
 
+const scrollAnimated = {
+    position: 'absolute', zIndex: 3, width:'5em', bottom:'0em', left:'calc( 50vw - 2.5em )'
+}
+
 export const cssIntro = {
     contentBgIcons,
     contentIcons,
@@ -91,9 +96,11 @@ export const cssIntro = {
     blueLight,
     purpleLight,
     galaxyStars,
+    scrollAnimated,
     //========
     stars,
     astro,
+    scrollWhite,
     aplicaciones,
     audiovisuales,
     bellowtheline,

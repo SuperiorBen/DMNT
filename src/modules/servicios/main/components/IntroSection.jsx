@@ -79,6 +79,7 @@ export const IntroSection = () => {
                     transition={{ duration: 3, delay: 1 }}
                     style={cssIntro.purpleLight}></motion.div>
                 <Lottie style={cssIntro.galaxyStars} animationData={cssIntro.stars} />
+                <Lottie style={cssIntro.scrollAnimated} animationData={cssIntro.scrollWhite} />
             </div>
         </>
     )
