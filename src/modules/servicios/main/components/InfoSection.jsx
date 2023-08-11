@@ -37,7 +37,8 @@ export const InfoSection = () => {
         <>
             <div style={{
                 backgroundImage: `url(${astroPose})`, backgroundPosition: 'center', backgroundOrigin: 'center', backgroundSize: 'cover',
-                zIndex: 1, position: 'absolute', top: '5em', left: 'calc( 38vw - 35em )', width: '35em', height: '45em', overflow: 'hidden', borderRadius: '50px'
+                zIndex: 1, position: 'relative', top: '5em', left: window.screen.width > 900 ?  'calc( 38vw - 35em )' : '0em', overflow: 'hidden', borderRadius: '50px',
+                width: '35em', height: '45em'
             }}>
                 {
                     printedtimes.map((item, i) => <img key={i} style={{
@@ -48,14 +49,14 @@ export const InfoSection = () => {
                 }
             </div>
 
-            <div style={{ width: '50vw', zIndex: 1, position: 'absolute', top: '5em', right: '8vw', }}>
+            <div style={{ width: '50vw', zIndex: 1, position: 'relative', top: '5em', right: '8vw', }}>
                 <div style={{
                     fontSize: '1.2em',
-                    backgroundColor: 'rgb(150, 101, 253,0.8)', width: '50vw', height: '25em', zIndex: 1, position: 'absolute', top: '0em', right: '0em', 
+                    backgroundColor: 'rgb(150, 101, 253,0.8)', width: '50vw', height: '25em', zIndex: 1, position: 'absolute', top: '0em', right: '0em',
                     borderRadius: '40px',
                     display: 'flex', justifyContent: 'space-around', alignItems: 'center'
                 }}>
-                    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '20em', fontSize:'1.2em' }}>
+                    <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', width: '20em', fontSize: '1.2em' }}>
                         <p style={{
                             fontSize: '3em', fontWeight: 700, lineHeight: '0.9em', color: '#fff',
                             flexWrap: 'wrap', margin: '0em', textShadow: '#0000004d 0px 4px 4px', width: '100%', textAlign: 'center'
@@ -75,20 +76,20 @@ export const InfoSection = () => {
 
                 </div>
 
-                <Marquee speed={5} autoFill style={{ width: '50vw', height:'5em', top: '30em', right:'0em', zIndex: 1, position: 'absolute', overflow:'hidden'}}>
+                <Marquee speed={5} autoFill style={{ width: '50vw', height: '5em', top: '30em', right: '0em', zIndex: 1, position: 'absolute', overflow: 'hidden' }}>
                     <p style={{ fontSize: '2em', fontWeight: 500, margin: 0, color: '#9665FD' }}
                     >¡Hacemos <span style={{ fontSize: '2em', fontWeight: 700 }}>realidad</span> tus ideas!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </p>
                 </Marquee>
 
-                <div style={{width: '50vw', height:'10em', top: '35em', right:'0em', zIndex: 1, position: 'absolute'}}>
-                    <div style={{width: '50vw', height:'10em', top: 0, right:0, zIndex: 2, position: 'absolute',display:'flex', justifyContent:'space-evenly', alignItems:'center'}}>
-                        <img src={dance} alt="dance" style={{width:'10em', height:'10em', borderRadius:15}} />
-                        <img src={mouth} alt="mouth" style={{width:'10em', height:'10em', borderRadius:15}} />
-                        <img src={triangle} alt="triangle" style={{width:'10em', height:'10em', borderRadius:15}} />
-                        <img src={purple} alt="purple" style={{width:'10em', height:'10em', borderRadius:15}} />
-                        <img src={ciclon} alt="ciclon" style={{width:'10em', height:'10em', borderRadius:15}} />
+                <div style={{ width: '50vw', height: '10em', top: '35em', right: '0em', zIndex: 1, position: 'absolute' }}>
+                    <div style={{ width: '50vw', height: '10em', top: 0, right: 0, zIndex: 2, position: 'absolute', display: 'flex', justifyContent: 'space-evenly', alignItems: 'center' }}>
+                        <img src={dance} alt="dance" style={{ width: '10em', height: '10em', borderRadius: 15 }} />
+                        <img src={mouth} alt="mouth" style={{ width: '10em', height: '10em', borderRadius: 15 }} />
+                        <img src={triangle} alt="triangle" style={{ width: '10em', height: '10em', borderRadius: 15 }} />
+                        <img src={purple} alt="purple" style={{ width: '10em', height: '10em', borderRadius: 15 }} />
+                        <img src={ciclon} alt="ciclon" style={{ width: '10em', height: '10em', borderRadius: 15 }} />
                     </div>
-                    <div style={{width:'4em', height:'10em', backgroundColor:'rgb(150, 101, 253,0.8)', position:'absolute', bottom:'-5em', left:0, zIndex: 1}} />
+                    <div style={{ width: '4em', height: '10em', backgroundColor: 'rgb(150, 101, 253,0.8)', position: 'absolute', bottom: '-5em', left: 0, zIndex: 1 }} />
                 </div>
 
 
