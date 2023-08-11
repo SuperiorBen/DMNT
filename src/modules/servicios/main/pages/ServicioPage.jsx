@@ -11,7 +11,7 @@ import { InfoSection } from "../components/InfoSection"
 
 export const ServicioPage = () => {
 
-    const [isShow, setIsShow] = useState([0, '60px 60px 0px 0px'])
+    const [isShow, setIsShow] = useState([0, '80px 80px 0px 0px'])
 
     // Control scroll 
     const { scrollYProgress } = useScroll()
@@ -23,7 +23,7 @@ export const ServicioPage = () => {
 
     useMotionValueEvent(scrollYProgress, "change", (latest) => {
         const scrollPosition = latest.toFixed(2)
-        scrollPosition < 0.20 ? setIsShow([0, '60px 60px 0px 0px']) : setIsShow([1, '0px'])
+        scrollPosition < 0.20 ? setIsShow([0, '80px 80px 0px 0px']) : setIsShow([1, '0px'])
     })
 
     return (
