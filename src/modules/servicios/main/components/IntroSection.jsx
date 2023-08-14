@@ -11,8 +11,8 @@ export const IntroSection = () => {
     const { scrollYProgress } = useScroll()
     useMotionValueEvent(scrollYProgress, "change", (latest) => {
         const scrollPosition = latest.toFixed(2)
-        scrollPosition < 0.08 && setMove(['100vh', 1])
-        scrollPosition > 0.08 && setMove(['0vh', 0])
+        scrollPosition < 0.07 && setMove(['100vh', 1])
+        scrollPosition > 0.07 && setMove(['0vh', 0])
     })
 
 
