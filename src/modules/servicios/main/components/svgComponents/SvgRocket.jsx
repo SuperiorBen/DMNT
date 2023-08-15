@@ -1,7 +1,8 @@
-import PropTypes from 'prop-types';
-export const SvgRocket = ({color}) => {
+
+import '../../assets/css/bannerStyle.css';
+export const SvgRocket = () => {
     return (
-        <svg style={{ fill: color }} viewBox="0 0 595.31 795.32">
+        <svg className='svgPurple' viewBox="0 0 595.31 795.32">
             <defs>
             </defs>
             <g id="Layer_2" data-name="Layer 2">
@@ -89,9 +90,3 @@ export const SvgRocket = ({color}) => {
         </svg>
     )
 }
-
-// Props validation
-SvgRocket.propTypes = {
-    color: PropTypes.string
-  };
-  

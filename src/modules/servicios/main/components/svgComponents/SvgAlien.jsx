@@ -1,7 +1,7 @@
-import PropTypes from 'prop-types';
-export const SvgAlien = ({ color }) => {
+import '../../assets/css/bannerStyle.css';
+export const SvgAlien = () => {
     return (
-        <svg style={{ fill: color }} version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 63 134">
+        <svg className='svgPurple' viewBox="0 0 63 134">
             <g id="Layer_2_1_">
                 <g id="Layer_1-2">
                     <path className="st0" d="M10.5,99.9c-0.7,1.2-1.1,2.6-1.2,4c-0.1,1.5,0.1,3,0.6,4.3c-0.1-0.8-0.1-1.6-0.1-2.3c-0.1-2.7,0.6-5.4,2-7.7
@@ -224,8 +224,3 @@ export const SvgAlien = ({ color }) => {
 
     )
 }
-
-// Props validation
-SvgAlien.propTypes = {
-    color: PropTypes.string
-};

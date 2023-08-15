@@ -11,7 +11,7 @@ const containerBanner = {
 const marqueeBanner = {
     height: '5em', right: '0em', zIndex: 1, position: 'absolute', overflow: 'hidden',
     width: window.screen.width > 900 ? '60vw' : '100vw',
-    top: window.screen.width > 900 ? (window.screen.width > 1536 ? '27em' : '20.5em') : '78vh'
+    top: window.screen.width > 900 ? (window.screen.width > 1536 ? '27em' : '19.5em') : '78vh'
 }
 const titleBanner = { fontSize: window.screen.width > 900 ? '1.5em' : '1.5em', fontWeight: 500, margin: 0, color: '#9665FD' }
 export const cssInfo = {
@@ -31,15 +31,16 @@ const printedtimes = [1, 0.9, 0.8, 0.7, 0.6]
 const containerAstro = {
     backgroundImage: `url(${astroPose})`, backgroundPosition: 'center', backgroundOrigin: 'center', backgroundSize: 'cover', zIndex: 1, position: 'relative', overflow: 'hidden',
     borderRadius: window.screen.width > 900 ? '20px' : '10px 10px 0px 0px',
-    width: window.screen.width > 900 ? '30vw' : '98vw',
-    height: window.screen.width > 900 ? '80vh' : '60vh',
+    width: window.screen.width > 900 ? (window.screen.width > 1536 ? '30vw' : '35vw') : '98vw',
+    height: window.screen.width > 900 ? (window.screen.width > 1536 ? '75vh' : '90vh') : '60vh',
     left: window.screen.width > 900 ? '2vw' : '1vw',
     top: window.screen.width > 900 ? '3em' : '0.5em',
 }
 const innerImg = {
     boxShadow: 'rgb(150, 101, 253, 0.5) 2px 2px 2px',
     borderRadius: window.screen.width > 900 ? '20px' : '10px', position: 'absolute', transition: '0.5s linear',
-    width: window.screen.width > 900 ? '30vw' : '95vw', height: window.screen.width > 900 ? '80vh' : '60vh'
+    width: window.screen.width > 900 ? (window.screen.width > 1536 ? '30vw' : '35vw') : '98vw',
+    height: window.screen.width > 900 ? (window.screen.width > 1536 ? '75vh' : '90vh') : '60vh'
 }
 
 export const cssAPose = {
@@ -117,7 +118,7 @@ const parentContainer = {
     right: '0em', zIndex: 1, position: 'absolute',
     width: window.screen.width > 900 ? '60vw' : '100vw',
     height: window.screen.width > 900 ? (window.screen.width > 1536 ? '12em' : '8em') : '10em',
-    top: window.screen.width > 900 ? (window.screen.width > 1536 ? '32em' : '26em') : '90vh'
+    top: window.screen.width > 900 ? (window.screen.width > 1536 ? '32em' : '24em') : '90vh'
 }
 const imgGifStyle = {
     width: window.screen.width > 900 ? (window.screen.width > 1536 ? '12em' : '8em') : '10em',
@@ -125,7 +126,7 @@ const imgGifStyle = {
     borderRadius: 15
 }
 const gifsContainer = {
-    zIndex: 2, position: 'absolute', display: 'flex', justifyContent: 'space-evenly', alignItems: 'center',top: 0,
+    zIndex: 2, position: 'absolute', display: 'flex', justifyContent: 'space-evenly', alignItems: 'center', top: 0,
     width: window.screen.width > 900 ? '60vw' : '55em',
     height: window.screen.width > 900 ? (window.screen.width > 1536 ? '12em' : '8em') : '10em',
     right: window.screen.width > 900 ? 0 : '-15em'

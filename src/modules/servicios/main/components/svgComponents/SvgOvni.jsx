@@ -1,7 +1,6 @@
-import PropTypes from 'prop-types';
-export const SvgOvni = ({ color }) => {
+export const SvgOvni = () => {
     return (
-        <svg style={{ fill: color }} viewBox="0 0 183.16 73.32">
+        <svg className='svgWhite' viewBox="0 0 183.16 73.32">
 <defs>
 </defs>
 <g id="Layer_2" data-name="Layer 2">
@@ -14,8 +13,3 @@ export const SvgOvni = ({ color }) => {
 </svg>
     )
 }
-
-// Props validation
-SvgOvni.propTypes = {
-    color: PropTypes.string
-};

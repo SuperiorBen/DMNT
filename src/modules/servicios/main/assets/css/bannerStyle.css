@@ -1,0 +1,103 @@
+.optionFormat {
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.textFormart {
+    line-height: 1em;
+    font-weight: 700;
+    margin: 0;
+    font-family: 'Prompt', sans-serif;
+    font-style: italic;
+    margin-left: 0.5em;
+    position: relative;
+    z-index: 1;
+    user-select: none;
+}
+
+.contentSvg{
+    position: relative;
+    z-index: 1;
+    user-select: none;
+}
+
+.textureBtn { 
+    background-image: url('../banners/RUIDO.png');
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 0;
+    top: 0;
+    left: 0;
+    mix-blend-mode: darken;
+    opacity: 0.2;
+}
+
+.blueOption {
+    background-color: #08C7D1;
+}
+
+.blueOption:hover {
+    background-color: #7E5ACA;
+    border: 3px solid #08C7D1;
+    transition: 0.5s linear;
+
+}
+
+.blueOption:hover>.textPurple {
+    color: #08C7D1;
+}
+
+.blueOption:hover>.contentSvg>.svgPurple {
+    fill: #08C7D1;
+}
+
+
+.textPurple {
+    color: #7E5ACA;
+}
+
+.svgPurple {
+    fill: #7E5ACA;
+    user-select: none;
+    width: inherit;
+}
+
+
+/* ========================= */
+
+
+.purpleOption {
+    background-color: #7E5ACA;
+}
+
+.purpleOption:hover {
+    background-color: #fff;
+    border: 3px solid #7E5ACA;
+    transition: 0.5s linear;
+
+}
+
+.purpleOption:hover>.textWhite {
+    color: #7E5ACA;
+}
+
+.purpleOption:hover>.contentSvg>.svgWhite {
+    fill: #7E5ACA;
+}
+
+
+.textWhite {
+    color: #fff;
+}
+
+.svgWhite {
+    fill: #fff;
+    user-select: none;
+    width: inherit;
+}
