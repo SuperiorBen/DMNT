@@ -22,7 +22,7 @@ import socialmedia from "../assets/iconosServicios/SocialMedia.svg";
 
 // Styles icons
 const contentBgIcons = {
-    width: '100vw', height: '100vh', position: 'fixed', zIndex: 2, top: 0, left: 0, display: 'flex',
+    width: '100vw', height: '100vh', position: 'fixed', zIndex: 2, left: 0, display: 'flex', transition:'0.5s linear',
     justifyContent: window.screen.width > 900 ? 'space-evenly' : 'center',
     alignItems: 'center', flexDirection: window.screen.width > 900 ? 'row' : 'column'
 }

@@ -1,6 +1,5 @@
 import { AppLayout } from "../../../../layouts/AppLayout"
 import { IntroSection } from "../components/IntroSection"
-import bgStars from "../../../../assets/stars-bg.webp"
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
 
 
@@ -35,7 +34,6 @@ export const ServicioPage = () => {
                 }}>
                     {/* Components */}
                     <InfoSection />
-                    <img style={{ height: '100vh', width: window.screen.width > 900 ? '100vw' : '300vw', position: 'absolute', top: '-10vh', left: 0, zIndex: 0, opacity: 0.2 }} src={bgStars} alt="Fondo estrellas" />
                 </motion.div>
                 <img src={bgMenu} alt="bgMenu" style={{ backgroundColor: '#fff', borderRadius: '15px', position: 'fixed', top: 0, left: '-4em', width: '18em', zIndex: 990, opacity: isShow, transition: '1s ease-in-out' }} />
             </div>

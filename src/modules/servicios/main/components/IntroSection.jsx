@@ -1,18 +1,20 @@
 import Lottie from "lottie-react";
-import { cssIntro } from '../helpers/StylesMainService'
+import { cssIntro } from '../helpers/StylesIntroService'
 
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
 import { useState } from "react";
 
 
 export const IntroSection = () => {
-    const [actions, setMove] = useState(['100vh', 1])
+    const [actions, setMove] = useState(['100vh', 1, 0])
     // Control scroll 
     const { scrollYProgress } = useScroll()
+
     useMotionValueEvent(scrollYProgress, "change", (latest) => {
         const scrollPosition = latest.toFixed(2)
-        scrollPosition < 0.07 && setMove(['100vh', 1])
-        scrollPosition > 0.07 && setMove(['0vh', 0])
+        scrollPosition < 0.07 && setMove(['100vh', 1, 0])
+        scrollPosition > 0.07 && setMove(['0vh', 0, 0])
+        scrollPosition > 0.1 && setMove(['0vh', 0, parseFloat(scrollPosition) * -10])
     })
 
 
@@ -35,7 +37,7 @@ export const IntroSection = () => {
     return (
         <>
             {/* Icons services */}
-            <div style={cssIntro.contentBgIcons}>
+            <div style={{ ...cssIntro.contentBgIcons, top: `${actions[2]}em` }}>
                 {
                     icons.map((items, i) => <div style={{ ...cssIntro.contentIcons, transitionDelay: `0.${i}s`, top: actions[0] }} key={i}>
                         {
