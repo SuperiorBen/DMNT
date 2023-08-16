@@ -25,10 +25,10 @@ export const ServicioPage = () => {
 
     return (
         <AppLayout>
-            <div style={{ height: '500vh', width: '100vw', overflowX: 'hidden' }}>
+            <div style={{ height: '380vh', width: '100vw', overflowX: 'hidden' }}>
                 <IntroSection />
                 <motion.div style={{
-                    overflow: 'hidden', height: '300vh', width: '100vw', zIndex: 3, position: 'absolute', top: '200vh',
+                    overflow: 'hidden', height: '250vh', width: '100vw', zIndex: 3, position: 'absolute', top: '200vh',
                     left: 0, backgroundColor: '#fff',
                     borderRadius: window.screen.width > 900 ? '40px 40px 0px 0px' : '10px 10px 0px 0px', transition: '1s ease-in-out'
                 }}>
