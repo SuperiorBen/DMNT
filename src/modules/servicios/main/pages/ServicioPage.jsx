@@ -25,14 +25,13 @@ export const ServicioPage = () => {
 
     return (
         <AppLayout>
-            <div style={{ height: '380vh', width: '100vw', overflowX: 'hidden' }}>
+            <div style={{ height: '370vh', width: '100vw', overflowX: 'hidden' }}>
                 <IntroSection />
                 <motion.div style={{
                     overflow: 'hidden', width: '100vw', zIndex: 3, position: 'absolute', top: '200vh', left: 0, backgroundColor: '#fff', transition: '1s ease-in-out',
-                    borderRadius: window.screen.width > 900 ? '40px 40px 0px 0px' : '10px 10px 0px 0px', 
-                    height: window.screen.width > 900 ? (window.screen.width > 1536 ? '190vh' : '200vh') : '345vh'
+                    borderRadius: window.screen.width > 900 ? '40px 40px 0px 0px' : '10px 10px 0px 0px',
+                    height: window.screen.width > 900 ? (window.screen.width > 1536 ? '170vh' : '265vh') : '348vh'
                 }}>
-                    {/* Components */}
                     <InfoSection />
                 </motion.div>
                 <img src={bgMenu} alt="bgMenu" style={{ backgroundColor: '#fff', borderRadius: '15px', position: 'fixed', top: 0, left: '-4em', width: '18em', zIndex: 990, opacity: isShow, transition: '1s ease-in-out' }} />
