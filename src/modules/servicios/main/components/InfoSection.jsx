@@ -32,11 +32,16 @@ export const InfoSection = () => {
             <MenuService />
 
             <div style={{
-                width: '100vw', height:'18em', display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', alignItems: 'flex-start',
-                position: 'relative', top: '38em',
+                position: 'relative', display: 'flex',
+                flexDirection: window.screen.width > 900 ? 'row' : 'column',
+                justifyContent: 'space-evenly',
+                alignItems: window.screen.width > 900 ? 'flex-start' : 'center',
+                top: window.screen.width > 900 ? (window.screen.width > 1536 ? '38em' : '38em') : '63em',
+                width: '100vw',
+                height: window.screen.width > 900 ? (window.screen.width > 1536 ? '18em' : '18em') : 'auto',
             }}>
                 <LinkCard />
-                <StepsProcess/>
+                <StepsProcess />
             </div>
 
 

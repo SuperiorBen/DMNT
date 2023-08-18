@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import avatar from "../../assets/multimediaForm/lic.svg";
+import Lottie from "lottie-react";
+import avatar from "../../assets/animations/lic.json";
 import arrow from "../../assets/multimediaForm/rightArrow.svg";
 import { useState } from "react";
 export const LinkCard = () => {
@@ -10,13 +11,24 @@ export const LinkCard = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.5 }}
-            style={{ width: '25em', height: '15em', position: 'relative' }}>
+            style={{
+                width: window.screen.width > 900 ? (window.screen.width > 1536 ? '14em' : '14em') : '100vw',
+                height: window.screen.width > 900 ? (window.screen.width > 1536 ? '14em' : '14em') : '22em',
+                position: 'relative'
+            }}>
             <div style={{
-                width: '25em', height: '13em', position: 'absolute', top: '0em', zIndex: 2,
+                width: window.screen.width > 900 ? (window.screen.width > 1536 ? '25em' : '25em') : '100vw',
+                height: window.screen.width > 900 ? (window.screen.width > 1536 ? '14em' : '14em') : '13em',
+                position: 'absolute', top: '0em', zIndex: 2,
                 display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', flexWrap: 'wrap', borderRadius: '5px'
             }}>
                 {/* Titles */}
-                <div style={{ position: 'relative', height: '7em', zIndex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                <div style={{
+                    position: 'relative',
+                    paddingLeft: window.screen.width > 900 ? (window.screen.width > 1536 ? 'none' : 'none') : '0.6em',
+                    height: window.screen.width > 900 ? (window.screen.width > 1536 ? '14em' : '14em') : '7em',
+                    zIndex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between'
+                }}>
                     <p style={{ fontSize: '1.5em', fontWeight: 700, margin: 0, lineHeight: '1em', color: '#9665FD', width: '15em' }}>El diseño es el embajador silencioso de tu marca.</p>
                     <p style={{ fontSize: '3em', fontWeight: 700, margin: 0, lineHeight: '1em', color: '#9665FD' }}>Contáctanos</p>
                 </div>
@@ -25,7 +37,11 @@ export const LinkCard = () => {
                     onMouseLeave={() => setHover(false)}
                     style={{
                         background: isHover ? 'rgba(150,101,253,0.6)' : 'rgba(150,101,253,0.8)',
-                        borderRadius: '5px', height: '3em', width: '20em', textDecoration: 'none',
+                        borderRadius: '5px',
+                        height: window.screen.width > 900 ? (window.screen.width > 1536 ? '14em' : '14em') : '3em',
+                        width: window.screen.width > 900 ? (window.screen.width > 1536 ? '14em' : '14em') : '16em',
+                        marginLeft: window.screen.width > 900 ? (window.screen.width > 1536 ? 'none' : 'none') : '0.6em',
+                        textDecoration: 'none',
                         position: 'relative', zIndex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', transition: 'all 0.2s ease-in-out 0s',
                         boxShadow: isHover ? '0px 3px 1px rgba(150, 101, 253, 0.8)' : 'none'
                     }}>
@@ -33,17 +49,33 @@ export const LinkCard = () => {
                         color: '#fff', fontSize: '1.2em', fontWeight: 700, textShadow: '1px 1px 2px #9665FD', width: '8em',
                         marginLeft: isHover ? '2em' : '0em', transition: '1s'
                     }}>Realizar consulta</p>
-                    <img src={arrow} alt="arrow" style={{ position: 'absolute', top: '0.5em', left: isHover ? '4em' : '-2em', opacity: isHover ? 1 : 0, width: '2em', height: '2em', transition: '1s' }} />
+                    <img src={arrow} alt="arrow" style={{
+                        position: 'absolute', top: '0.5em',
+                        left: window.screen.width > 900 ? (window.screen.width > 1536 ? isHover ? '4em' : '-2em' : isHover ? '4em' : '-2em') : isHover ? '2em' : '-2em',
+                        opacity: isHover ? 1 : 0, width: '2em', height: '2em', transition: '1s'
+                    }} />
                 </motion.a>
             </div>
-            <img src={avatar} alt="avatar" style={{ width: '6em', height: '14em', position: 'absolute', top: '0em', right: 0, zIndex: 2 }} />
-
+            <Lottie style={{
+                width: window.screen.width > 900 ? (window.screen.width > 1536 ? '6em' : '6em') : '10em',
+                height: window.screen.width > 900 ? (window.screen.width > 1536 ? '14em' : '14em') : '22em',
+                position: 'absolute', 
+                top: window.screen.width > 900 ? (window.screen.width > 1536 ? '0em' : '0em') : '-2em',
+                right: window.screen.width > 900 ? (window.screen.width > 1536 ? '14em' : '14em') : '0.5em',
+                zIndex: 2
+            }} animationData={avatar} />
             <div style={{
                 background: 'linear-gradient(360deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0.4) 100%)',
                 backdropFilter: 'blur(5px)', position: 'absolute', top: 0, left: 0,
-                width: '25em', height: '16em', zIndex: 1
+                width: window.screen.width > 900 ? (window.screen.width > 1536 ? '6em' : '6em') : '100vw',
+                height: window.screen.width > 900 ? (window.screen.width > 1536 ? '6em' : '6em') : '12em', zIndex: 1
             }} />
-            <div style={{ width: '20em', height: '15em', position: 'absolute', top: '-1em', right: '3em', zIndex: 0, }}>
+            <div style={{
+                width: window.screen.width > 900 ? (window.screen.width > 1536 ? '6em' : '6em') : '15em',
+                height: window.screen.width > 900 ? (window.screen.width > 1536 ? '6em' : '6em') : '12em',
+                position: 'absolute', top: '-1em', 
+                right: window.screen.width > 900 ? (window.screen.width > 1536 ? '6em' : '6em') : '5em', zIndex: 0,
+            }}>
                 <svg viewBox="0 0 1000 1000" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                         <linearGradient id="b" gradientTransform="rotate(270 .5 .5)">

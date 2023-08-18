@@ -28,9 +28,9 @@ export const ServicioPage = () => {
             <div style={{ height: '380vh', width: '100vw', overflowX: 'hidden' }}>
                 <IntroSection />
                 <motion.div style={{
-                    overflow: 'hidden', height: '250vh', width: '100vw', zIndex: 3, position: 'absolute', top: '200vh',
-                    left: 0, backgroundColor: '#fff',
-                    borderRadius: window.screen.width > 900 ? '40px 40px 0px 0px' : '10px 10px 0px 0px', transition: '1s ease-in-out'
+                    overflow: 'hidden', width: '100vw', zIndex: 3, position: 'absolute', top: '200vh', left: 0, backgroundColor: '#fff', transition: '1s ease-in-out',
+                    borderRadius: window.screen.width > 900 ? '40px 40px 0px 0px' : '10px 10px 0px 0px', 
+                    height: window.screen.width > 900 ? (window.screen.width > 1536 ? '190vh' : '200vh') : '345vh'
                 }}>
                     {/* Components */}
                     <InfoSection />
