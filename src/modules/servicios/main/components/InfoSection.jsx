@@ -11,6 +11,16 @@ import { StepsProcess } from "./componentsInfoSection/StepsProcess";
 
 
 export const InfoSection = () => {
+    const contentFooter = {
+        position: 'relative', display: 'flex', justifyContent: 'space-evenly',
+        flexDirection: window.screen.width > 900 ? 'row' : 'column',
+        alignItems: window.screen.width > 900 ? 'flex-start' : 'center',
+        left: window.screen.width > 1536 ? '15vw' : '0vw',
+        width: window.screen.width > 1536 ? '70vw' : '100vw',
+        top: window.screen.width > 900 ? (window.screen.width > 1536 ? '42em' : '38em') : '63em',
+        height: window.screen.width > 900 ? (window.screen.width > 1536 ? '26em' : '40em') : 'auto',
+    }
+    
     return (
         <>
             {/* AstroPose Image */}
@@ -31,15 +41,7 @@ export const InfoSection = () => {
             </div>
             <MenuService />
 
-            <div style={{
-                position: 'relative', display: 'flex', justifyContent: 'space-evenly',
-                flexDirection: window.screen.width > 900 ? 'row' : 'column',
-                alignItems: window.screen.width > 900 ? 'flex-start' : 'center',
-                left: window.screen.width > 1536 ? '15vw' : '0vw',
-                width: window.screen.width > 1536 ? '70vw' : '100vw',
-                top: window.screen.width > 900 ? (window.screen.width > 1536 ? '35em' : '38em') : '63em',
-                height: window.screen.width > 900 ? (window.screen.width > 1536 ? '26em' : '40em') : 'auto',
-            }}>
+            <div style={contentFooter}>
                 <LinkCard />
                 <StepsProcess />
             </div>

@@ -91,7 +91,51 @@ const listAnimate = [
     { img: img3, animate: number3 },
 ]
 
+// Variables
+const contentMain = {
+    position: 'relative', overflowX: 'hidden',
+    width: window.screen.width > 900 ? (window.screen.width > 1536 ? '40vw' : '60vw') : '100vw',
+    height: window.screen.width > 900 ? (window.screen.width > 1536 ? '23em' : '23em') : 'auto',
+    marginTop: window.screen.width > 900 ? '0em' : '-6em'
+}
+const contentButtons = {
+    position: 'absolute', width: '8em', height: '2em', display: 'flex', justifyContent: 'space-evenly', alignItems: 'center', zIndex: 1,
+    top: window.screen.width > 900 ? (window.screen.width > 1536 ? '0em' : '1em') : '-2em',
+    right: window.screen.width > 900 ? (window.screen.width > 1536 ? 'calc( ( 40vw - 4em ) / 2 )' : 'calc( ( 60vw - 4em )  / 2 )') : 'calc( (100vw - 4em) / 2)'
+}
+const btnStyle = { width: '1.5em', border: '2px solid #9665FD', cursor: 'pointer', transition: '0.2s linear' }
+const animationContent = {
+    position: 'relative', zIndex: 0, display: 'flex', flexDirection: 'row', alignItems: 'center', transition: '1s ease-in-out',
+    width: window.screen.width > 900 ? (window.screen.width > 1536 ? '120vw' : '180vw') : '300vw',
+    height: window.screen.width > 900 ? (window.screen.width > 1536 ? '22em' : '22em') : 'auto',
+    justifyContent: window.screen.width > 900 ? 'flex-start' : 'center'
+}
+const divAnimate = {
+    position: 'relative', display: 'flex',
+    width: window.screen.width > 900 ? (window.screen.width > 1536 ? '40vw' : '60vw') : '100vw',
+    height: window.screen.width > 900 ? (window.screen.width > 1536 ? '22em' : '22em') : 'auto',
+    flexDirection: window.screen.width > 900 ? 'row' : 'column',
+    justifyContent: 'center', alignItems: window.screen.width > 900 ? 'center' : 'flex-start'
+}
+const lottieAnimate = {
+    position: 'relative', zIndex: 1, marginTop: '-2em',
+    width: window.screen.width > 900 ? (window.screen.width > 1536 ? '20vw' : '30vw') : '100vw',
+}
+const stepImage = {
+    position: 'relative', zIndex: 0,
+    width: window.screen.width > 900 ? (window.screen.width > 1536 ? '20vw' : '30vw') : '90vw',
+    marginLeft: window.screen.width > 900 ? '-2em' : '5vw',
+    marginTop: window.screen.width > 900 ? '0em' : '-2em'
+}
+
 
 export const cssStepsPro = {
-    listAnimate
+    listAnimate,
+    contentMain,
+    contentButtons,
+    btnStyle,
+    animationContent,
+    divAnimate,
+    lottieAnimate,
+    stepImage
 }
