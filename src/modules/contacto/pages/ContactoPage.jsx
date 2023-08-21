@@ -6,7 +6,7 @@ import { OvniAnimate } from "../components/OvniAnimate"
 import { ContactGroup } from "../components/ContactGroup"
 import { TitleMessage } from "../components/TitleMessage"
 
-export const ContactoPage = () => {
+export default function ContactoPage() {
 
   return (
     <AppLayout>

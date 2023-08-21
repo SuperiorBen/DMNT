@@ -1,7 +1,7 @@
 
 import { motion } from "framer-motion";
 import { cssBanner } from '../../helpers/StylesInfoService'
-export const BannerTitle = () => {
+export default function BannerTitle () {
     return (
         <div style={cssBanner.purpleBanner}>
             <div style={cssBanner.titleContainer}>

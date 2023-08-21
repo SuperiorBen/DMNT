@@ -13,7 +13,7 @@ export default defineConfig({
         enabled: true
       },
       workbox: {
-        globPatterns: ['**/*.{js,css,html,svg,webp,png,mp4}'],
+        globPatterns: ['**/*.{js,css,html,svg,webp,png,mp4,gif}'],
         maximumFileSizeToCacheInBytes: 200000000
       },
       manifest: {
@@ -28,6 +28,7 @@ export default defineConfig({
         lang: "es",
         orientation: "portrait",
         prefer_related_application: false,
+        start_url: "/",
         icons: [
           {
             src: "icon64x64.webp",

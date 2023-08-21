@@ -5,7 +5,7 @@ import { TarjetasQuinesSomos } from "../components/tarjetas/TarjetasQuinesSomos"
 import { TeamWork } from "../components/teamWork/TeamWork"
 
 
-export const QuienesSomosPage = () => {
+export default function QuienesSomosPage() {
   return (
     <AppLayout>
       <div style={{ height: '500vh', width: '100vw', overflowX: 'hidden' }}>

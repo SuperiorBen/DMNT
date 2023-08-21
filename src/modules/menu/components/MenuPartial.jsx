@@ -46,7 +46,7 @@ export const MenuPartial = () => {
                     <motion.div animate={isOpen ? "open2" : "closed"} variants={cssMenu.btnVariants} style={cssMenu.pathLine} />
                 </div>
                 <a href="/" style={{ width: '65%' }} title='Home'>
-                    <img src={logo} alt="logo" loading='lazy' style={{ width: '100%' }} />
+                    <img src={logo} alt="logo" loading='lazy' style={{ width: '100%', height:'auto' }} />
                 </a>
             </div>
 

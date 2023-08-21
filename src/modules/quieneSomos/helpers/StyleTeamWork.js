@@ -1,6 +1,6 @@
 // Images
 import bgAnimated from '../assets/carnets/bgAnimated.webp'
-import sticker from '../assets/carnets/workteamSticker.png'
+import sticker from '../assets/carnets/workteamSticker.webp'
 
 // CSS variables
 const sizeAniText = window.screen.width > 900 ? (window.screen.width > 1536 ? '10em' : '8em') : '6em'
@@ -31,14 +31,14 @@ export const cssTeamWork = {
 // Carnets
 
 // Images
-import carnet8 from '../assets/carnets/gafeteChriestian.png'
-import carnet7 from '../assets/carnets/gafeteAndrea.png'
-import carnet6 from '../assets/carnets/gafeteErika.png'
-import carnet5 from '../assets/carnets/gafeteAlejandraBatrez.png'
-import carnet4 from '../assets/carnets/gafeteAlejandraCortez.png'
-import carnet3 from '../assets/carnets/gafeteGisel.png'
-import carnet2 from '../assets/carnets/gafeteRojo.png'
-import carnet1 from '../assets/carnets/rodrigoHernandez.png'
+import carnet8 from '../assets/carnets/gafeteChriestian.webp'
+import carnet7 from '../assets/carnets/gafeteAndrea.webp'
+import carnet6 from '../assets/carnets/gafeteErika.webp'
+import carnet5 from '../assets/carnets/gafeteAlejandraBatrez.webp'
+import carnet4 from '../assets/carnets/gafeteAlejandraCortez.webp'
+import carnet3 from '../assets/carnets/gafeteGisel.webp'
+import carnet2 from '../assets/carnets/gafeteRojo.webp'
+import carnet1 from '../assets/carnets/rodrigoHernandez.webp'
 
 // CSS Variable
 const carnetStyle = { width: window.screen.width > 900 ? (window.screen.width > 1536 ? '20em' : '14em') : '15em', marginLeft: '1em' }

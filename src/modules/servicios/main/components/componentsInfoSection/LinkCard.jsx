@@ -5,7 +5,7 @@ import { cssLinkCard } from '../../helpers/StylesInfoService3'
 import { SvgBlob } from "../svgComponents/SvgBlob";
 
 
-export const LinkCard = () => {
+export default function LinkCard () {
     const [isHover, setHover] = useState(false)
     return (
         <motion.div

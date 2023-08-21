@@ -3,7 +3,7 @@
 import bgBuilt1 from "../assets/Fbuild.svg"
 import bgBuilt2 from "../assets/Sbuild.svg"
 import bgBuilt3 from "../assets/Tbuild.svg"
-import billboard from "../assets/billboard.png"
+import billboard from "../assets/billboard.webp"
 
 // css variables 
 const widthBilboard = window.screen.width > 900 ? (window.screen.width > 1536 ? '38em' : '22em') : '15em'

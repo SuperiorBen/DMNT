@@ -1,9 +1,6 @@
 import { cssMenuService } from '../../helpers/StylesInfoService2'
 import '../../assets/css/bannerStyle.css'
-export const MenuService = () => {
-
-
-
+export default function MenuService () {
     return (
         <div style={cssMenuService.contentMain}>
             <p style={cssMenuService.titleAction}>Consulta y cotiza</p>

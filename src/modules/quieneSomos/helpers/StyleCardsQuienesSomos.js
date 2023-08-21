@@ -3,8 +3,8 @@
 import logoDmnt from '../../../assets/logoFull.svg'
 import sitAstronaut from '../assets/tarjetas/sitAstronaut.webp'
 import flyAstronaut from '../assets/tarjetas/psyco-halo.webp'
-import world from '../assets/tarjetas/world.png'
-import glitchAstronaut from '../assets/tarjetas/psyco-astro.gif'
+import world from '../assets/tarjetas/world.webp'
+import glitchAstronaut from '../assets/tarjetas/psyco-astro2.gif'
 import chunk1 from '../assets/tarjetas/chunksVision/chunk-1.webp'
 import chunk2 from '../assets/tarjetas/chunksVision/chunk-2.webp'
 import chunk3 from '../assets/tarjetas/chunksVision/chunk-3.webp'
@@ -50,7 +50,7 @@ export const cssCardsQS = {
 }
 
 // Tarjeta contenedor
-import bgQuienesSomos from '../assets/tarjetas/psyco-patron2.webp'
+import bgQuienesSomos from '../assets/tarjetas/psyco-patron.webp'
 import bgVision from '../assets/tarjetas/bgVision.webp'
 import bgMision from '../assets/tarjetas/bgMision.webp'
 import bubblePurple from '../assets/tarjetas/bubblePurple.svg'

@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 import { MenuPartial } from '../modules/menu/components/MenuPartial';
 import { motion } from 'framer-motion';
+import { Suspense } from 'react';
 
 export const AppLayout = ({ children }) => {
 
@@ -8,13 +9,15 @@ export const AppLayout = ({ children }) => {
     <motion.div initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
-      transition={{duration:2}}
-      >
+      transition={{ duration: 2 }}
+    >
       <MenuPartial />
 
       {/* Content pages */}
       <div style={{ position: 'absolute', top: 0, left: 0, zIndex: 1 }}>
-        {children}
+        <Suspense fallback={<h2>Loading...</h2>}>
+          {children}
+        </Suspense>
       </div>
     </ motion.div>
 

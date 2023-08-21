@@ -3,7 +3,7 @@ import { useMotionValueEvent, useScroll, useTransform } from "framer-motion";
 import { cssAPose } from '../../helpers/StylesInfoService'
 
 
-export const AstroPose = () => {
+export default function AstroPose () {
     const [valRest, setValRest] = useState(0)
     // Control scroll 
     const { scrollYProgress } = useScroll()

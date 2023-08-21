@@ -1,9 +1,12 @@
+import { lazy } from "react"
 import { Route, Routes, useLocation } from "react-router-dom"
-import { InicioPage } from "../modules/inicio/pages/InicioPage"
-import { QuienesSomosPage } from "../modules/quieneSomos/pages/QuienesSomosPage"
 import { AnimatePresence } from "framer-motion"
-import { ContactoPage } from "../modules/contacto/pages/ContactoPage"
-import { ServicioPage } from "../modules/servicios/main/pages/ServicioPage"
+
+const InicioPage = lazy( ()=> import("../modules/inicio/pages/InicioPage") )
+const QuienesSomosPage = lazy( ()=> import("../modules/quieneSomos/pages/QuienesSomosPage") )
+const ServicioPage = lazy( ()=> import("../modules/servicios/main/pages/ServicioPage") )
+const ContactoPage = lazy( ()=> import("../modules/contacto/pages/ContactoPage") )
+
 
 export const AppRouter = () => {
     const location = useLocation()
@@ -12,8 +15,8 @@ export const AppRouter = () => {
             <Routes location={location} key={location.pathname}>
                 <Route path="/" element={< InicioPage />} />
                 <Route path="/quienesSomos" element={< QuienesSomosPage />} />
-                <Route path="/contacto" element={< ContactoPage />} />
                 <Route path="/servicios" element={< ServicioPage />} />
+                <Route path="/contacto" element={< ContactoPage />} />
             </Routes>
         </AnimatePresence>
     )

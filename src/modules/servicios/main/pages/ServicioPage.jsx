@@ -9,7 +9,7 @@ import { InfoSection } from "../components/InfoSection"
 
 
 
-export const ServicioPage = () => {
+export default function ServicioPage () {
 
 
     const [isShow, setIsShow] = useState(0)

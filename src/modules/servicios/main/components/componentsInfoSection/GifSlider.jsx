@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 
 import { cssGifs } from '../../helpers/StylesInfoService'
-export const GifSlider = () => {
+export default function GifSlider () {
     const constraintsRef = useRef(null)
    
     

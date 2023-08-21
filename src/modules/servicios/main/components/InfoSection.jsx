@@ -1,12 +1,20 @@
 import Marquee from "react-fast-marquee";
-import { AstroPose } from "./componentsInfoSection/AstroPose";
-import { BannerTitle } from "./componentsInfoSection/BannerTitle";
-import { GifSlider } from "./componentsInfoSection/GifSlider";
-import { cssInfo } from '../helpers/StylesInfoService'
+// import { AstroPose } from "./componentsInfoSection/AstroPose";
+// import { BannerTitle } from "./componentsInfoSection/BannerTitle";
+// import { GifSlider } from "./componentsInfoSection/GifSlider";
+// import { MenuService } from "./componentsInfoSection/MenuService";
+// import { LinkCard } from "./componentsInfoSection/LinkCard";
+// import { StepsProcess } from "./componentsInfoSection/StepsProcess";
 
-import { MenuService } from "./componentsInfoSection/MenuService";
-import { LinkCard } from "./componentsInfoSection/LinkCard";
-import { StepsProcess } from "./componentsInfoSection/StepsProcess";
+const AstroPose = lazy(() => import("./componentsInfoSection/AstroPose"))
+const BannerTitle = lazy(() => import("./componentsInfoSection/BannerTitle"))
+const GifSlider = lazy(() => import("./componentsInfoSection/GifSlider"))
+const MenuService = lazy(() => import("./componentsInfoSection/MenuService"))
+const LinkCard = lazy(() => import("./componentsInfoSection/LinkCard"))
+const StepsProcess = lazy(() => import("./componentsInfoSection/StepsProcess"))
+
+import { cssInfo } from '../helpers/StylesInfoService'
+import { Suspense, lazy } from "react";
 
 
 
@@ -20,9 +28,9 @@ export const InfoSection = () => {
         top: window.screen.width > 900 ? (window.screen.width > 1536 ? '42em' : '38em') : '63em',
         height: window.screen.width > 900 ? (window.screen.width > 1536 ? '26em' : '40em') : 'auto',
     }
-    
+
     return (
-        <>
+        <Suspense fallback={<h2>Loading...</h2>}>
             {/* AstroPose Image */}
             <AstroPose />
 
@@ -45,8 +53,6 @@ export const InfoSection = () => {
                 <LinkCard />
                 <StepsProcess />
             </div>
-
-
-        </>
+        </Suspense >
     )
 }
