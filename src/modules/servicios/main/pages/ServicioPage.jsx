@@ -6,10 +6,11 @@ import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
 import bgMenu from "../../../../assets/backgroundMenu.svg"
 import { useState } from "react"
 import { InfoSection } from "../components/InfoSection"
+import { Helmet } from "react-helmet";
 
 
 
-export default function ServicioPage () {
+export default function ServicioPage() {
 
 
     const [isShow, setIsShow] = useState(0)
@@ -31,6 +32,12 @@ export default function ServicioPage () {
     }
     return (
         <AppLayout>
+            {/* SEO */}
+            <Helmet>
+                <title>DMNT Creative Agency - Inicio</title>
+                <meta name="description" content="Inicio" />
+            </Helmet>
+            {/* SEO END =============================================================================== */}
             <div style={{ height: '370vh', width: '100vw', overflowX: 'hidden' }}>
                 <IntroSection />
                 <motion.div style={whiteSpace}>

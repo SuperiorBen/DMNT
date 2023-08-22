@@ -5,11 +5,18 @@ import { BgBuild } from "../components/BgBuild"
 import { OvniAnimate } from "../components/OvniAnimate"
 import { ContactGroup } from "../components/ContactGroup"
 import { TitleMessage } from "../components/TitleMessage"
+import { Helmet } from "react-helmet";
 
 export default function ContactoPage() {
 
   return (
     <AppLayout>
+      {/* SEO */}
+      <Helmet>
+        <title>DMNT Creative Agency - Inicio</title>
+        <meta name="description" content="Inicio" />
+      </Helmet>
+      {/* SEO END =============================================================================== */}
       <TitleMessage />
       <ContactGroup />
       <OvniAnimate />

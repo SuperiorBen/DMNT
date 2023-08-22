@@ -3,6 +3,7 @@ import videoSea from '../assets/bg.mp4'
 import creativaLogo from "../assets/creativa-agency.svg";
 import DEMENTElogo from "../assets/DEMENTE.svg";
 import { cssInicio } from "../helpers/StyleInicio"
+import { Helmet } from "react-helmet";
 
 import { motion } from "framer-motion"
 
@@ -11,6 +12,12 @@ export default function InicioPage() {
 
   return (
     <AppLayout>
+      {/* SEO */}
+      <Helmet>
+        <title>DMNT Creative Agency - Inicio</title>
+        <meta name="description" content="Inicio" />
+      </Helmet>
+      {/* SEO END =============================================================================== */}
       <div className="InicioPage" style={cssInicio.viewInicio}>
         {/* Titulos */}
         <div style={cssInicio.contentTitles}>
@@ -19,7 +26,7 @@ export default function InicioPage() {
               <motion.div style={cssInicio.dotI} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ repeatType: "reverse", repeat: Infinity, duration: 0.4 }} />
               <p className="subtTitle1" style={cssInicio.subtitleMain}>Más allá de las buenas</p>
             </div>
-            <p style={cssInicio.titleMain}>IDEAS</p>
+            <h1 style={cssInicio.titleMain}>IDEAS</h1>
             <p style={{ ...cssInicio.subtitleMain, marginLeft: '0.3em' }}>Marketing fuera de este mundo</p>
             {window.screen.width > 900 && <a href="/" style={cssInicio.btnDesk}>VER SERVICIOS  DMNT</a>}
           </div>
