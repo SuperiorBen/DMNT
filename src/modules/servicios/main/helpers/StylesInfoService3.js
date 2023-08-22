@@ -26,7 +26,7 @@ const titleTiny = {
 }
 const titleBig = {
     ...titleFormat,
-    fontSize: window.screen.width > 900 ? (window.screen.width > 1536 ? '4em' : '1.8em') : '3em',
+    fontSize: window.screen.width > 900 ? (window.screen.width > 1536 ? '4em' : '3.5em') : '3em',
 }
 const buttonContact = {
     borderRadius: '5px',
@@ -93,7 +93,7 @@ const listAnimate = [
 
 // Variables
 const contentMain = {
-    position: 'relative', overflowX: 'hidden',
+    position: 'relative', overflowX: window.screen.width > 900 ? 'hidden' : 'visible',
     width: window.screen.width > 900 ? (window.screen.width > 1536 ? '40vw' : '60vw') : '100vw',
     height: window.screen.width > 900 ? (window.screen.width > 1536 ? '23em' : '23em') : 'auto',
     marginTop: window.screen.width > 900 ? '0em' : '-6em'
