@@ -1,10 +1,6 @@
+import { Suspense, lazy } from "react";
 import Marquee from "react-fast-marquee";
-// import { AstroPose } from "./componentsInfoSection/AstroPose";
-// import { BannerTitle } from "./componentsInfoSection/BannerTitle";
-// import { GifSlider } from "./componentsInfoSection/GifSlider";
-// import { MenuService } from "./componentsInfoSection/MenuService";
-// import { LinkCard } from "./componentsInfoSection/LinkCard";
-// import { StepsProcess } from "./componentsInfoSection/StepsProcess";
+
 
 const AstroPose = lazy(() => import("./componentsInfoSection/AstroPose"))
 const BannerTitle = lazy(() => import("./componentsInfoSection/BannerTitle"))
@@ -14,7 +10,7 @@ const LinkCard = lazy(() => import("./componentsInfoSection/LinkCard"))
 const StepsProcess = lazy(() => import("./componentsInfoSection/StepsProcess"))
 
 import { cssInfo } from '../helpers/StylesInfoService'
-import { Suspense, lazy } from "react";
+
 
 
 
