@@ -9,6 +9,7 @@ import { SvgAlien } from "../components/svgComponents/svgAlien";
 const optionsMenu = [
     {
         title: 'MARKETING DIGITAL',
+        url:'/servicios/marketing-digital',
         linkClass: 'blueOption optionFormat',
         pClass: 'textPurple textFormart',
         contentSvgStyle: {
@@ -19,6 +20,7 @@ const optionsMenu = [
     },
     {
         title: 'SITIOS WEB / APLICACIONES',
+        url:'/servicios/desarrollo-web-aplicaciones',
         linkClass: 'purpleOption optionFormat',
         pClass: 'textWhite textFormart',
         contentSvgStyle: {
@@ -28,6 +30,7 @@ const optionsMenu = [
     },
     {
         title: 'AUDIOVISUALES',
+        url:'/servicios/audiovisuales',
         linkClass: 'purpleOption optionFormat',
         pClass: 'textWhite textFormart',
         contentSvgStyle: {
@@ -37,6 +40,7 @@ const optionsMenu = [
     },
     {
         title: 'MATERIAL POP',
+        url:'/servicios/material-pop',
         linkClass: 'blueOption optionFormat',
         pClass: 'textPurple textFormart',
         contentSvgStyle: {
@@ -66,6 +70,7 @@ const titleAction = {
     fontSize: window.screen.width > 900 ? '3em' : '2em'
 }
 const linkStyle = {
+    textDecoration:'none',
     width: window.screen.width > 900 ? '50%' : '100%',
     height: window.screen.width > 900 ? '10em' : '8em'
 }

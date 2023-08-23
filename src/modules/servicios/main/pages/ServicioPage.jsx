@@ -6,7 +6,7 @@ import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
 import bgMenu from "../../../../assets/backgroundMenu.svg"
 import { useState } from "react"
 import { InfoSection } from "../components/InfoSection"
-import { Helmet } from "react-helmet";
+import { Helmet } from 'react-helmet-async'
 
 
 
@@ -34,7 +34,7 @@ export default function ServicioPage() {
         <AppLayout>
             {/* SEO */}
             <Helmet>
-                <title>DMNT Creative Agency - Inicio</title>
+                <title>DMNT Creative Agency - Servicios</title>
                 <meta name="description" content="Inicio" />
             </Helmet>
             {/* SEO END =============================================================================== */}

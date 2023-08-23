@@ -3,7 +3,7 @@ import videoSea from '../assets/bg.mp4'
 import creativaLogo from "../assets/creativa-agency.svg";
 import DEMENTElogo from "../assets/DEMENTE.svg";
 import { cssInicio } from "../helpers/StyleInicio"
-import { Helmet } from "react-helmet";
+import { Helmet } from 'react-helmet-async'
 
 import { motion } from "framer-motion"
 

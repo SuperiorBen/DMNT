@@ -3,6 +3,7 @@ import { cssIntro } from '../helpers/StylesIntroService'
 
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
 import { useState } from "react";
+import { GalaxyBg } from "../../../../layouts/utils/GalaxyBg";
 
 
 export const IntroSection = () => {
@@ -69,20 +70,7 @@ export const IntroSection = () => {
             </div>
 
             {/* BackgroundStars */}
-            <div style={cssIntro.contentGalaxy}>
-                <motion.div
-                    initial={{ opacity: 0, translateY: -50 }}
-                    animate={{ opacity: 0.2, translateY: 0 }}
-                    transition={{ duration: 3, delay: 1 }}
-                    style={cssIntro.blueLight}></motion.div>
-                <motion.div
-                    initial={{ opacity: 0, translateY: 50 }}
-                    animate={{ opacity: 0.3, translateY: 0 }}
-                    transition={{ duration: 3, delay: 1 }}
-                    style={cssIntro.purpleLight}></motion.div>
-                <Lottie style={cssIntro.galaxyStars} animationData={cssIntro.stars} />
-                <Lottie style={cssIntro.scrollAnimated} animationData={cssIntro.scrollWhite} />
-            </div>
+            <GalaxyBg />
         </>
     )
 }

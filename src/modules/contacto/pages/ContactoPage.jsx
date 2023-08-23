@@ -5,7 +5,7 @@ import { BgBuild } from "../components/BgBuild"
 import { OvniAnimate } from "../components/OvniAnimate"
 import { ContactGroup } from "../components/ContactGroup"
 import { TitleMessage } from "../components/TitleMessage"
-import { Helmet } from "react-helmet";
+import { Helmet } from 'react-helmet-async'
 
 export default function ContactoPage() {
 
@@ -13,7 +13,7 @@ export default function ContactoPage() {
     <AppLayout>
       {/* SEO */}
       <Helmet>
-        <title>DMNT Creative Agency - Inicio</title>
+        <title>DMNT Creative Agency - Contacto</title>
         <meta name="description" content="Inicio" />
       </Helmet>
       {/* SEO END =============================================================================== */}

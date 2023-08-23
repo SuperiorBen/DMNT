@@ -7,7 +7,7 @@ export default function MenuService () {
             <div style={cssMenuService.contentMenu}>
                 {/* Options =======================================================================================*/}
                 {
-                    cssMenuService.optionsMenu.map((option, i) => <a key={i} className={option.linkClass} style={cssMenuService.linkStyle}>
+                    cssMenuService.optionsMenu.map((option, i) => <a href={option.url} key={i} className={option.linkClass} style={cssMenuService.linkStyle}>
                         <p className={option.pClass} style={cssMenuService.pStyle}>{option.title}</p>
                         <div className="contentSvg" style={option.contentSvgStyle}><option.component /></div>
                         <div className="textureBtn"></div>

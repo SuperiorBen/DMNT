@@ -3,7 +3,7 @@ import { AstronautJump } from "../components/AstronautJump"
 import { BackgroundAnimated } from "../components/background/BackgroundAnimated"
 import { TarjetasQuinesSomos } from "../components/tarjetas/TarjetasQuinesSomos"
 import { TeamWork } from "../components/teamWork/TeamWork"
-import { Helmet } from "react-helmet";
+import { Helmet } from 'react-helmet-async'
 
 
 export default function QuienesSomosPage() {
@@ -11,7 +11,7 @@ export default function QuienesSomosPage() {
     <AppLayout>
       {/* SEO */}
       <Helmet>
-        <title>DMNT Creative Agency - Inicio</title>
+        <title>DMNT Creative Agency - Quienes somos?</title>
         <meta name="description" content="Inicio" />
       </Helmet>
       {/* SEO END =============================================================================== */}
