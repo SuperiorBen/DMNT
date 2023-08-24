@@ -5,7 +5,7 @@ export const servicesDMNT = [
         description: 'Conectamos marcas y consumidores a través del mundo digital. Creamos estrategias de alto impacto que generan a nuestros clientes incrementar sus ventas de inmediato.',
         steps: [
             {
-                title: 'Investigación',
+                title: 'Estudio',
                 description: 'Primero, investigamos tu público objetivo y el mercado, luego analizamos la competencia.'
             },
             {
@@ -32,7 +32,7 @@ export const servicesDMNT = [
         description: 'Comuníquese con nosotros si está buscando una solución personalizada. Tenemos un proceso de desarrollo personalizado para cada proyecto, y nuestro equipo está altamente capacitado en la construcción de sitios web/aplicaciones.',
         steps: [
             {
-                title: 'Descubrimiento',
+                title: 'Invención',
                 description: 'Comienza con una evaluación cuidadosa de las necesidades, planes y objetivos de su sitio web comercial.'
             },
             {
@@ -59,11 +59,11 @@ export const servicesDMNT = [
         description: 'Desarrollar una identidad de marca sólida es una de las claves del éxito y sin duda podemos ayudarlo a diseñar una marca única que será recordada en los años venideros a travez de sus elementos multimedia',
         steps: [
             {
-                title: 'Descubrimiento',
+                title: 'Invención',
                 description: 'Nos gustaría conocerlo a usted y sus objetivos comerciales, metas y planes.'
             },
             {
-                title: 'Investigación',
+                title: 'Estudio',
                 description: 'Analizamos las tendencias y la competencia y desarrollamos una estrategia clara para diferenciar su negocio.'
             },
             {
@@ -71,7 +71,7 @@ export const servicesDMNT = [
                 description: 'Nuestros diseñadores/editores crean conceptos en torno a su marca, cualquier elemento multimedia fuera de este mundo.'
             },
             {
-                title: 'Refinamiento',
+                title: 'Distinción',
                 description: 'Las ideas se prueban y refinan hasta lograr el diseño perfecto.'
             },
             {
@@ -90,7 +90,7 @@ export const servicesDMNT = [
                 description: 'El primer paso es conocer a tu visión y cuáles son tus necesidades y objetivos que buscas con tus clientes.'
             },
             {
-                title: 'Investigación',
+                title: 'Estudio',
                 description: 'Investigamos a sus competidores y diseñamos tendencias para garantizar que esté preparado para el éxito.'
             },
             {
@@ -98,7 +98,7 @@ export const servicesDMNT = [
                 description: 'La fase de diseño es cuando damos vida a sus sueños a través de maquetas o estructuras.'
             },
             {
-                title: 'Refinamiento',
+                title: 'Distinción',
                 description: 'Las ideas se prueban y refinan hasta lograr el diseño perfecto.'
             },
             {

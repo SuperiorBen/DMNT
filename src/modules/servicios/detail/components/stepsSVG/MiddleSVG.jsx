@@ -1,27 +1,61 @@
 import PropTypes from 'prop-types';
 
 export const MiddleSVG = ({ item, title }) => {
-
     return (
-        <div style={{ position: 'relative', width: '18em', height: '4em' }}>
-            <p style={{ fontSize: '1.5em', fontWeight: 700, color: '#fff', margin: 0, lineHeight: '1em', position: 'absolute', zIndex: 1, top: '0.8em', left: '3.5em', userSelect:'none' }}>{title}</p>
+        <div style={{
+            position: 'relative',display: 'flex', justifyContent: 'center', alignItems: 'center',
+            width: window.screen.width > 1536 ? '18em' : '12em',
+            height: window.screen.width > 1536 ? '4em' : '3em',
+        }}>
+            <p style={{ fontSize:  window.screen.width > 1536 ? '1.5em' : '1.2em', fontWeight: 700, color: '#fff', margin: 0, lineHeight: '1em', position: 'absolute', zIndex: 1, 
+             userSelect: 'none' }}>{title}</p>
 
-            <svg viewBox="0 0 275 62" style={{ width: '18em', height: '4em', fill: item.fillColor, position: 'absolute', zIndex: 0, transition:'0.2s' }}>
-                <mask id="path-1-inside-1_1197_84" style={{ fill: item.fillColor, transition:'0.2s' }}>
+            <svg viewBox="0 0 274 62" style={{
+                width: window.screen.width > 1536 ? '18em' : '12em',
+                height: window.screen.width > 1536 ? '4em' : '3em',
+                fill: item.fillColor, position: 'absolute', zIndex: 0, transition: '0.2s'
+            }}>
+                <mask id="path-1-inside-1_1197_84" style={{ fill: item.fillColor, transition: '0.2s' }}>
                     <path fillRule="evenodd" clipRule="evenodd" d="M0 60.5162L65 31L0 1.48378V1.0001H208.25V0.689209L208.935 1.0001H209V1.02978L275 31.0001L209 60.9704V61.0001H208.935L208.25 61.311V61.0001H0V60.5162Z" />
                 </mask>
                 <path fillRule="evenodd" clipRule="evenodd" d="M0 60.5162L65 31L0 1.48378V1.0001H208.25V0.689209L208.935 1.0001H209V1.02978L275 31.0001L209 60.9704V61.0001H208.935L208.25 61.311V61.0001H0V60.5162Z"
-                    style={{ fill: item.fillColor, fillOpacity: item.opacityColor, transition:'0.2s' }} />
+                    style={{ fill: item.fillColor, fillOpacity: item.opacityColor, transition: '0.2s' }} />
                 <path d="M65 31L65.8269 32.821L69.8372 31L65.8269 29.179L65 31ZM0 60.5162L-0.826927 58.6952L-2 59.2279V60.5162H0ZM0 1.48378H-2V2.77213L-0.826927 3.30482L0 1.48378ZM0 1.0001V-0.9999H-2V1.0001H0ZM208.25 1.0001V3.0001H210.25V1.0001H208.25ZM208.25 0.689209L209.077 -1.13183L206.25 -2.41554V0.689209H208.25ZM208.935 1.0001L208.108 2.82114L208.502 3.0001H208.935V1.0001ZM209 1.0001H211V-0.9999H209V1.0001ZM209 1.02978H207V2.31813L208.173 2.85082L209 1.02978ZM275 31.0001L275.827 32.8211L279.837 31.0001L275.827 29.1791L275 31.0001ZM209 60.9704L208.173 59.1494L207 59.6821V60.9704H209ZM209 61.0001V63.0001H211V61.0001H209ZM208.935 61.0001V59.0001H208.502L208.108 59.1791L208.935 61.0001ZM208.25 61.311H206.25V64.4157L209.077 63.132L208.25 61.311ZM208.25 61.0001H210.25V59.0001H208.25V61.0001ZM0 61.0001H-2V63.0001H0V61.0001ZM64.1731 29.179L-0.826927 58.6952L0.826927 62.3373L65.8269 32.821L64.1731 29.179ZM-0.826927 3.30482L64.1731 32.821L65.8269 29.179L0.826927 -0.337265L-0.826927 3.30482ZM-2 1.0001V1.48378H2V1.0001H-2ZM208.25 -0.9999H0V3.0001H208.25V-0.9999ZM206.25 0.689209V1.0001H210.25V0.689209H206.25ZM209.762 -0.820938L209.077 -1.13183L207.423 2.51025L208.108 2.82114L209.762 -0.820938ZM209 -0.9999H208.935V3.0001H209V-0.9999ZM211 1.02978V1.0001H207V1.02978H211ZM275.827 29.1791L209.827 -0.79126L208.173 2.85082L274.173 32.8211L275.827 29.1791ZM209.827 62.7915L275.827 32.8211L274.173 29.1791L208.173 59.1494L209.827 62.7915ZM211 61.0001V60.9704H207V61.0001H211ZM208.935 63.0001H209V59.0001H208.935V63.0001ZM209.077 63.132L209.762 62.8211L208.108 59.1791L207.423 59.49L209.077 63.132ZM206.25 61.0001V61.311H210.25V61.0001H206.25ZM0 63.0001H208.25V59.0001H0V63.0001ZM-2 60.5162V61.0001H2V60.5162H-2Z"
-                    style={{ fill: item.fillBorderColor, fillOpacity: item.opacityBorderColor, transition:'0.2s' }} mask="url(#path-1-inside-1_1197_84)" />
+                    style={{ fill: item.fillBorderColor, fillOpacity: item.opacityBorderColor, transition: '0.2s' }} mask="url(#path-1-inside-1_1197_84)" />
             </svg>
+        </div >
+    )
+}
 
+export const MiddleSVGmobil = ({ item, title }) => {
+    return (
+        <div style={{ position: 'relative', width: '7em', height: '6em', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+            <p style={{
+                fontSize: '1em', fontWeight: 700, color: '#fff', margin: 0, lineHeight: '1em', position: 'absolute', zIndex: 1,
+                userSelect: 'none', width: '7em', height: '6em', display: 'flex', justifyContent: 'center', alignItems: 'center'
+            }}>{title}</p>
+
+            <svg viewBox="0 0 112 99" style={{ width: '7em', height: '6em', fill: item.fillColor, position: 'absolute', zIndex: 0, transition: '0.2s' }}>
+                <mask id="path-1-inside-1_1199_171" style={{ fill: item.fillColor, transition: '0.2s' }}>
+                    <path fillRule="evenodd" clipRule="evenodd" d="M56.0001 98.5304L1.19709 75.01L1.14308 75.01L1.14308 74.9868L0.574437 74.7427L1.14308 74.7427L1.14308 0.528682L2.02747 0.528682L56.0001 23.6927L109.973 0.528686L110.857 0.528686L110.857 74.7427L111.426 74.7427L110.857 74.9866L110.857 75.01L110.803 75.01L56.0001 98.5304Z" />
+                </mask>
+                <path fillRule="evenodd" clipRule="evenodd"
+                    d="M56.0001 98.5304L1.19709 75.01L1.14308 75.01L1.14308 74.9868L0.574437 74.7427L1.14308 74.7427L1.14308 0.528682L2.02747 0.528682L56.0001 23.6927L109.973 0.528686L110.857 0.528686L110.857 74.7427L111.426 74.7427L110.857 74.9866L110.857 75.01L110.803 75.01L56.0001 98.5304Z"
+                    style={{ fill: item.fillColor, fillOpacity: item.opacityColor, transition: '0.2s' }} />
+                <path d="M1.19709 75.01L1.98588 73.1721L1.60815 73.01L1.19709 73.01L1.19709 75.01ZM56.0001 98.5304L55.2113 100.368L56.0001 100.707L56.7889 100.368L56.0001 98.5304ZM1.14308 75.01L-0.856922 75.01L-0.856922 77.01L1.14308 77.01L1.14308 75.01ZM1.14308 74.9868L3.14308 74.9868L3.14308 73.6687L1.93186 73.1489L1.14308 74.9868ZM0.574437 74.7427L0.574437 72.7427L-0.214344 76.5806L0.574437 74.7427ZM1.14308 74.7427L1.14308 76.7427L3.14308 76.7427L3.14308 74.7427L1.14308 74.7427ZM1.14308 0.528682L1.14308 -1.47132L-0.856918 -1.47132L-0.856918 0.528682L1.14308 0.528682ZM2.02747 0.528682L2.81626 -1.3092L2.43853 -1.47132L2.02747 -1.47132L2.02747 0.528682ZM56.0001 23.6927L55.2113 25.5306L56.0001 25.8692L56.7889 25.5306L56.0001 23.6927ZM109.973 0.528686L109.973 -1.47131L109.562 -1.47131L109.184 -1.3092L109.973 0.528686ZM110.857 0.528686L112.857 0.528687L112.857 -1.47131L110.857 -1.47131L110.857 0.528686ZM110.857 74.7427L108.857 74.7427L108.857 76.7427L110.857 76.7427L110.857 74.7427ZM111.426 74.7427L112.215 76.5806L111.426 72.7427L111.426 74.7427ZM110.857 74.9866L110.069 73.1488L108.857 73.6686L108.857 74.9866L110.857 74.9866ZM110.857 75.01L110.857 77.01L112.857 77.01L112.857 75.01L110.857 75.01ZM110.803 75.01L110.803 73.01L110.392 73.01L110.014 73.1721L110.803 75.01ZM0.408307 76.8478L55.2113 100.368L56.7889 96.6925L1.98588 73.1721L0.408307 76.8478ZM1.14308 77.01L1.19709 77.01L1.19709 73.01L1.14308 73.01L1.14308 77.01ZM-0.856922 74.9868L-0.856922 75.01L3.14308 75.01L3.14308 74.9868L-0.856922 74.9868ZM-0.214344 76.5806L0.354298 76.8246L1.93186 73.1489L1.36322 72.9048L-0.214344 76.5806ZM1.14308 72.7427L0.574437 72.7427L0.574437 76.7427L1.14308 76.7427L1.14308 72.7427ZM-0.856918 0.528682L-0.856922 74.7427L3.14308 74.7427L3.14308 0.528682L-0.856918 0.528682ZM2.02747 -1.47132L1.14308 -1.47132L1.14308 2.52868L2.02747 2.52868L2.02747 -1.47132ZM56.7889 21.8549L2.81626 -1.3092L1.23869 2.36657L55.2113 25.5306L56.7889 21.8549ZM109.184 -1.3092L55.2113 21.8549L56.7889 25.5306L110.762 2.36657L109.184 -1.3092ZM110.857 -1.47131L109.973 -1.47131L109.973 2.52869L110.857 2.52869L110.857 -1.47131ZM112.857 74.7427L112.857 0.528687L108.857 0.528686L108.857 74.7427L112.857 74.7427ZM111.426 72.7427L110.857 72.7427L110.857 76.7427L111.426 76.7427L111.426 72.7427ZM111.646 76.8245L112.215 76.5806L110.637 72.9048L110.069 73.1488L111.646 76.8245ZM112.857 75.01L112.857 74.9866L108.857 74.9866L108.857 75.01L112.857 75.01ZM110.803 77.01L110.857 77.01L110.857 73.01L110.803 73.01L110.803 77.01ZM56.7889 100.368L111.592 76.8478L110.014 73.1721L55.2113 96.6925L56.7889 100.368Z"
+                    style={{ fill: item.fillBorderColor, fillOpacity: item.opacityBorderColor, transition: '0.2s' }} mask="url(#path-1-inside-1_1199_171)" />
+            </svg>
         </div >
     )
 }
 
 // Props validation
 MiddleSVG.propTypes = {
+    item: PropTypes.object,
+    title: PropTypes.string,
+};
+
+MiddleSVGmobil.propTypes = {
     item: PropTypes.object,
     title: PropTypes.string,
 };
