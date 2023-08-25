@@ -1,20 +1,12 @@
 import PropTypes from 'prop-types';
+import { cssSteps } from "../../helpers/StylesSvg";
 
 export const MiddleSVG = ({ item, title }) => {
     return (
-        <div style={{
-            position: 'relative',display: 'flex', justifyContent: 'center', alignItems: 'center',
-            width: window.screen.width > 1536 ? '18em' : '12em',
-            height: window.screen.width > 1536 ? '4em' : '3em',
-        }}>
-            <p style={{ fontSize:  window.screen.width > 1536 ? '1.5em' : '1.2em', fontWeight: 700, color: '#fff', margin: 0, lineHeight: '1em', position: 'absolute', zIndex: 1, 
-             userSelect: 'none' }}>{title}</p>
+        <div style={cssSteps.contentStep}>
+            <p style={cssSteps.titleStep}>{title}</p>
 
-            <svg viewBox="0 0 274 62" style={{
-                width: window.screen.width > 1536 ? '18em' : '12em',
-                height: window.screen.width > 1536 ? '4em' : '3em',
-                fill: item.fillColor, position: 'absolute', zIndex: 0, transition: '0.2s'
-            }}>
+            <svg viewBox="0 0 274 62" style={{ ...cssSteps.svgMain, fill: item.fillColor }}>
                 <mask id="path-1-inside-1_1197_84" style={{ fill: item.fillColor, transition: '0.2s' }}>
                     <path fillRule="evenodd" clipRule="evenodd" d="M0 60.5162L65 31L0 1.48378V1.0001H208.25V0.689209L208.935 1.0001H209V1.02978L275 31.0001L209 60.9704V61.0001H208.935L208.25 61.311V61.0001H0V60.5162Z" />
                 </mask>
@@ -29,13 +21,10 @@ export const MiddleSVG = ({ item, title }) => {
 
 export const MiddleSVGmobil = ({ item, title }) => {
     return (
-        <div style={{ position: 'relative', width: '7em', height: '6em', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <p style={{
-                fontSize: '1em', fontWeight: 700, color: '#fff', margin: 0, lineHeight: '1em', position: 'absolute', zIndex: 1,
-                userSelect: 'none', width: '7em', height: '6em', display: 'flex', justifyContent: 'center', alignItems: 'center'
-            }}>{title}</p>
+        <div style={cssSteps.contentStep}>
+            <p style={cssSteps.titleStep}>{title}</p>
 
-            <svg viewBox="0 0 112 99" style={{ width: '7em', height: '6em', fill: item.fillColor, position: 'absolute', zIndex: 0, transition: '0.2s' }}>
+            <svg viewBox="0 0 112 99" style={{ ...cssSteps.svgMain, fill: item.fillColor }}>
                 <mask id="path-1-inside-1_1199_171" style={{ fill: item.fillColor, transition: '0.2s' }}>
                     <path fillRule="evenodd" clipRule="evenodd" d="M56.0001 98.5304L1.19709 75.01L1.14308 75.01L1.14308 74.9868L0.574437 74.7427L1.14308 74.7427L1.14308 0.528682L2.02747 0.528682L56.0001 23.6927L109.973 0.528686L110.857 0.528686L110.857 74.7427L111.426 74.7427L110.857 74.9866L110.857 75.01L110.803 75.01L56.0001 98.5304Z" />
                 </mask>
