@@ -96,7 +96,7 @@ const contentMain = {
     position: 'relative', overflowX: window.screen.width > 900 ? 'hidden' : 'visible',
     width: window.screen.width > 900 ? (window.screen.width > 1536 ? '40vw' : '60vw') : '100vw',
     height: window.screen.width > 900 ? (window.screen.width > 1536 ? '23em' : '23em') : 'auto',
-    marginTop: window.screen.width > 900 ? '0em' : '-6em'
+    marginTop: window.screen.width > 900 ? '0em' : '-4em'
 }
 const contentButtons = {
     position: 'absolute', width: '8em', height: '2em', display: 'flex', justifyContent: 'space-evenly', alignItems: 'center', zIndex: 1,

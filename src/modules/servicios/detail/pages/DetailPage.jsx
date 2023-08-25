@@ -102,26 +102,26 @@ export default function ServicioPage() {
             <Lottie style={{
                 position: 'fixed', zIndex: '2',
                 width:  window.screen.width > 900 ? (window.screen.width > 1536 ? '35em' : '25em') : '15em',
-                top: window.screen.width > 900 ? (window.screen.width > 1536 ? '35em' : '0em') : '5em',
-                right: window.screen.width > 900 ? (window.screen.width > 1536 ? '35em' : '0em') : '5em',
+                top: window.screen.width > 900 ? (window.screen.width > 1536 ? '-4em' : '0em') : '8em',
+                right: window.screen.width > 900 ? (window.screen.width > 1536 ? '1em' : '0em') : '2em',
             }} animationData={planet} />
             <Lottie style={{
                 position: 'fixed', zIndex: '2',
-                width: window.screen.width > 900 ? (window.screen.width > 1536 ? '35em' : '7em') : '8em',
-                top: window.screen.width > 900 ? (window.screen.width > 1536 ? '35em' : '5em') : '0em',
-                right: window.screen.width > 900 ? (window.screen.width > 1536 ? '35em' : '40em') : '5em',
+                width: window.screen.width > 900 ? (window.screen.width > 1536 ? '15em' : '7em') : '8em',
+                top: window.screen.width > 900 ? (window.screen.width > 1536 ? '1em' : '5em') : '0em',
+                right: window.screen.width > 900 ? (window.screen.width > 1536 ? '50em' : '40em') : '5em',
             }} animationData={satelite} />
             <Lottie style={{
                 position: 'fixed', zIndex: '3',
-                width: window.screen.width > 900 ? (window.screen.width > 1536 ? '35em' : '5em') : '6em',
-                top: window.screen.width > 900 ? (window.screen.width > 1536 ? '35em' : '5em') : '8em',
+                width: window.screen.width > 900 ? (window.screen.width > 1536 ? '10em' : '5em') : '6em',
+                top: window.screen.width > 900 ? (window.screen.width > 1536 ? '8em' : '5em') : '15em',
                 right: '5em'
             }} animationData={astronaut} />
             <Lottie style={{
                 position: 'fixed', zIndex: '2',
-                width: window.screen.width > 900 ? (window.screen.width > 1536 ? '35em' : '20em') : '25em',
-                top: window.screen.width > 900 ? (window.screen.width > 1536 ? '35em' : '16em') : '16em',
-                left: window.screen.width > 900 ? (window.screen.width > 1536 ? '35em' : '5em') : '-1em',
+                width: window.screen.width > 900 ? (window.screen.width > 1536 ? '30em' : '20em') : '20em',
+                top: window.screen.width > 900 ? (window.screen.width > 1536 ? '28em' : '16em') : '19em',
+                left: window.screen.width > 900 ? (window.screen.width > 1536 ? '20em' : '5em') : '1em',
                 transform: 'rotateZ(90deg)'
             }} animationData={rocket} />
             <GalaxyBg />

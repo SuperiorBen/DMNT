@@ -21,7 +21,7 @@ export const InfoSection = () => {
         alignItems: window.screen.width > 900 ? 'flex-start' : 'center',
         left: window.screen.width > 1536 ? '15vw' : '0vw',
         width: window.screen.width > 1536 ? '70vw' : '100vw',
-        top: window.screen.width > 900 ? (window.screen.width > 1536 ? '42em' : '38em') : '63em',
+        top: window.screen.width > 900 ? (window.screen.width > 1536 ? '42em' : '38em') : '65em',
         height: window.screen.width > 900 ? (window.screen.width > 1536 ? '26em' : '40em') : 'auto',
     }
 
