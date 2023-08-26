@@ -1,11 +1,16 @@
 import { AppLayout } from "../../../layouts/AppLayout"
-import videoSea from '../assets/bg.mp4'
 import creativaLogo from "../assets/creativa-agency.svg";
 import DEMENTElogo from "../assets/DEMENTE.svg";
 import { cssInicio } from "../helpers/StyleInicio"
 import { Helmet } from 'react-helmet-async'
-
 import { motion } from "framer-motion"
+
+import videoSea from '../assets/bg.mp4'
+import videoSeaSmall from '../assets/bgMobil.mp4'
+
+const screen = window.screen.width > 900 ? true : false
+
+
 
 
 export default function InicioPage() {
@@ -44,7 +49,8 @@ export default function InicioPage() {
           <div style={cssInicio.cornerBottomRight}></div>
         </div>
         {/* Video */}
-        <video style={cssInicio.video} src={videoSea} autoPlay muted loop></video>
+        <video style={cssInicio.video} src={screen ? videoSea : videoSeaSmall} autoPlay muted loop></video>
+
       </div>
     </AppLayout>
   );

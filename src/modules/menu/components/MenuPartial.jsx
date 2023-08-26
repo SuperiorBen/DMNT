@@ -1,9 +1,6 @@
 import { useState, useEffect } from 'react';
-
 import logo from "../../../assets/logo.svg";
 import { cssMenu, optionMenu } from '../helpers/stylesMenu'
-
-
 import Marquee from "react-fast-marquee";
 import { AnimatePresence, motion } from "framer-motion"
 
@@ -46,7 +43,7 @@ export const MenuPartial = () => {
                     <motion.div animate={isOpen ? "open2" : "closed"} variants={cssMenu.btnVariants} style={cssMenu.pathLine} />
                 </div>
                 <a href="/" style={{ width: '65%' }} title='Home'>
-                    <img src={logo} alt="logo" loading='lazy' style={{ width: '100%', height:'auto' }} />
+                    <img src={logo} alt="logo" loading='lazy' style={{ width: '100%', height:'100%' }} />
                 </a>
             </div>
 
