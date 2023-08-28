@@ -14,7 +14,7 @@ export const QuienesSomosMenu = () => {
   return (
     <div style={{ ...cssMenu.imgContent, backgroundImage: `url(${screen ? bgWhoiam : bgWhoiamSmall})` }}>
       <p style={cssMenu.pTitle}>“No existe realidad alguna excepto en la acción”</p>
-      <img src={screen ? astroWhoiam : astroWhoiamSmall} alt="imgInBg" style={{ ...cssMenu.imgItem }} />
+      <img src={screen ? astroWhoiam : astroWhoiamSmall} alt="imgInBg" style={{ ...cssMenu.imgItem, width:'auto' }} />
 
 
     </div >

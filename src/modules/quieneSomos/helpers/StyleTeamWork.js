@@ -1,6 +1,9 @@
 // Images
 import bgAnimated from '../assets/carnets/bgAnimated.webp'
-import sticker from '../assets/carnets/workteamSticker.webp'
+import goat from '../assets/carnets/workteamSticker.webp'
+import goatSmall from '../assets/carnets/workteamStickerSmall.webp'
+
+const sticker = window.screen.width > 900 ? goat : goatSmall
 
 // CSS variables
 const sizeAniText = window.screen.width > 900 ? (window.screen.width > 1536 ? '10em' : '8em') : '6em'
@@ -31,17 +34,34 @@ export const cssTeamWork = {
 // Carnets
 
 // Images
-import carnet8 from '../assets/carnets/gafeteChriestian.webp'
-import carnet7 from '../assets/carnets/gafeteAndrea.webp'
-import carnet6 from '../assets/carnets/gafeteErika.webp'
-import carnet5 from '../assets/carnets/gafeteAlejandraBatrez.webp'
-import carnet4 from '../assets/carnets/gafeteAlejandraCortez.webp'
-import carnet3 from '../assets/carnets/gafeteGisel.webp'
-import carnet2 from '../assets/carnets/gafeteRojo.webp'
-import carnet1 from '../assets/carnets/rodrigoHernandez.webp'
+import c8 from '../assets/carnets/normal/gafeteChriestian.webp'
+import c7 from '../assets/carnets/normal/gafeteAndrea.webp'
+import c6 from '../assets/carnets/normal/gafeteErika.webp'
+import c5 from '../assets/carnets/normal/gafeteAlejandraBatrez.webp'
+import c4 from '../assets/carnets/normal/gafeteAlejandraCortez.webp'
+import c3 from '../assets/carnets/normal/gafeteGisel.webp'
+import c2 from '../assets/carnets/normal/gafeteRojo.webp'
+import c1 from '../assets/carnets/normal/gafeteRodrigoHernandez.webp'
+import c8Small from '../assets/carnets/small/gafeteChriestianSmall.webp'
+import c7Small from '../assets/carnets/small/gafeteAndreaSmall.webp'
+import c6Small from '../assets/carnets/small/gafeteErikaSmall.webp'
+import c5Small from '../assets/carnets/small/gafeteAlejandraBatrezSmall.webp'
+import c4Small from '../assets/carnets/small/gafeteAlejandraCortezSmall.webp'
+import c3Small from '../assets/carnets/small/gafeteGiselSmall.webp'
+import c2Small from '../assets/carnets/small/gafeteRojoSmall.webp'
+import c1Small from '../assets/carnets/small/gafeteRodrigoHernandezSmall.webp'
+
+const carnet1 = window.screen.width > 900 ? c1 : c1Small
+const carnet2 = window.screen.width > 900 ? c2 : c2Small
+const carnet3 = window.screen.width > 900 ? c3 : c3Small
+const carnet4 = window.screen.width > 900 ? c4 : c4Small
+const carnet5 = window.screen.width > 900 ? c5 : c5Small
+const carnet6 = window.screen.width > 900 ? c6 : c6Small
+const carnet7 = window.screen.width > 900 ? c7 : c7Small
+const carnet8 = window.screen.width > 900 ? c8 : c8Small
 
 // CSS Variable
-const carnetStyle = { width: window.screen.width > 900 ? (window.screen.width > 1536 ? '20em' : '14em') : '15em', marginLeft: '1em' }
+const carnetStyle = { width: window.screen.width > 900 ? (window.screen.width > 1536 ? '20em' : '14em') : '15em', height:'auto', marginLeft: '1em' }
 const widthContent = window.screen.width > 900 ? (window.screen.width > 1536 ? '80em' : '65em') : '110em'
 
 // Styles

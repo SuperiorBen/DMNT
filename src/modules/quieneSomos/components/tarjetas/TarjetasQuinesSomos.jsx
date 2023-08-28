@@ -28,7 +28,7 @@ export const TarjetasQuinesSomos = () => {
       {/* Tarjeta #1 ===================================================================================================== */}
       <TarjetaContenedor option="0" visible={section}>
         <img src={cssCardsQS.logoDmnt} alt="logoDmnt" style={cssCardsQS.card1Logo} />
-        <img src={cssCardsQS.glitchAstronaut} style={cssCardsQS.astroGlitch} />
+        <img src={cssCardsQS.glitchAstronaut} alt='glitchAstronaut' style={cssCardsQS.astroGlitch} />
       </TarjetaContenedor>
 
 

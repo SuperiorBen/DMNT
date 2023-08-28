@@ -1,19 +1,39 @@
 // Tarjetas Quienes Somos
 // Images
 import logoDmnt from '../../../assets/logoFull.svg'
-import sitAstronaut from '../assets/tarjetas/sitAstronaut.webp'
-import flyAstronaut from '../assets/tarjetas/psyco-halo.webp'
-import world from '../assets/tarjetas/world.webp'
-import glitchAstronaut from '../assets/tarjetas/psyco-astro2.gif'
-import chunk1 from '../assets/tarjetas/chunksVision/chunk-1.webp'
-import chunk2 from '../assets/tarjetas/chunksVision/chunk-2.webp'
-import chunk3 from '../assets/tarjetas/chunksVision/chunk-3.webp'
-import chunk4 from '../assets/tarjetas/chunksVision/chunk-4.webp'
-import chunk5 from '../assets/tarjetas/chunksVision/chunk-5.webp'
-import chunk6 from '../assets/tarjetas/chunksVision/chunk-6.webp'
+import sitA from '../assets/tarjetas/normal/sitAstronaut.webp'
+import sitASmall from '../assets/tarjetas/small/sitAstronautSmall.webp'
+import flyA from '../assets/tarjetas/normal/psyco-halo.webp'
+import flyASmall from '../assets/tarjetas/small/psyco-haloSmall.webp'
+import w from '../assets/tarjetas/normal/world.webp'
+import wSmall from '../assets/tarjetas/small/worldSmall.webp'
+import glitchAstronaut from '../assets/tarjetas/psyco-astro.gif'
+import ck1 from '../assets/tarjetas/chunksVision/chunk-1.webp'
+import ck2 from '../assets/tarjetas/chunksVision/chunk-2.webp'
+import ck3 from '../assets/tarjetas/chunksVision/chunk-3.webp'
+import ck4 from '../assets/tarjetas/chunksVision/chunk-4.webp'
+import ck5 from '../assets/tarjetas/chunksVision/chunk-5.webp'
+import ck6 from '../assets/tarjetas/chunksVision/chunk-6.webp'
+import ck1Small from '../assets/tarjetas/chunksVision/small/chunk-1Small.webp'
+import ck2Small from '../assets/tarjetas/chunksVision/small/chunk-2Small.webp'
+import ck3Small from '../assets/tarjetas/chunksVision/small/chunk-3Small.webp'
+import ck4Small from '../assets/tarjetas/chunksVision/small/chunk-4Small.webp'
+import ck5Small from '../assets/tarjetas/chunksVision/small/chunk-5Small.webp'
+import ck6Small from '../assets/tarjetas/chunksVision/small/chunk-6Small.webp'
+
+const sitAstronaut = window.screen.width > 900 ? sitA : sitASmall
+const flyAstronaut = window.screen.width > 900 ? flyA : flyASmall
+const world = window.screen.width > 900 ? w : wSmall
+
+const chunk1 = window.screen.width > 900 ? ck1 : ck1Small
+const chunk2 = window.screen.width > 900 ? ck2 : ck2Small
+const chunk3 = window.screen.width > 900 ? ck3 : ck3Small
+const chunk4 = window.screen.width > 900 ? ck4 : ck4Small
+const chunk5 = window.screen.width > 900 ? ck5 : ck5Small
+const chunk6 = window.screen.width > 900 ? ck6 : ck6Small
 
 // Css variable
-const chunkStyle = { height: '8em', borderRadius: '5px', opacity: 0.8, margin: '0em 1.5em', boxShadow: '0px 0px 2px rgba(150, 101, 253, 0.8), 0px 0px 10px rgba(150, 101, 253, 0.3)' }
+const chunkStyle = { height: '8em', width:'auto', borderRadius: '5px', opacity: 0.8, margin: '0em 1.5em', boxShadow: '0px 0px 2px rgba(150, 101, 253, 0.8), 0px 0px 10px rgba(150, 101, 253, 0.3)' }
 
 // Styles
 const contentCards = { height: '100vh', width: window.screen.width > 900 ? `calc(100vw - 29em)` : '100vw', position: 'fixed', top: 0, right: 0, zIndex: 2, display: 'flex', justifyContent: 'center', alignItems: 'center' }
@@ -23,8 +43,8 @@ const astroGlitch = { width: '10em', height: '20em', position: 'absolute', botto
 const astroSit = { width: '75%', margin: '3em', position: 'absolute', bottom: '-5em', left: '-5em', zIndex: 2 }
 
 const card3Content = { width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'end', position: 'absolute', top: 0 }
-const astroFly = { height: '60%', margin: 'auto', marginBottom: '2em', position: 'absolute', zIndex: 1 }
-const dmntWorld = { width: window.screen.width > 900 ? '50vw' : '200vw', margin: 'auto', opacity: 0.9, position: 'absolute', zIndex: 0, bottom: window.screen.width > 900 ? '-25vw' : '-100vw' }
+const astroFly = { height: '60%', width:'auto', margin: 'auto', marginBottom: '2em', position: 'absolute', zIndex: 1 }
+const dmntWorld = { width: window.screen.width > 900 ? '50vw' : '200vw', height:'auto', margin: 'auto', opacity: 0.9, position: 'absolute', zIndex: 0, bottom: window.screen.width > 900 ? '-25vw' : '-100vw' }
 
 export const cssCardsQS = {
     chunkStyle,
@@ -55,9 +75,16 @@ import bgVision from '../assets/tarjetas/bgVision.webp'
 import bgMision from '../assets/tarjetas/bgMision.webp'
 import bubblePurple from '../assets/tarjetas/bubblePurple.svg'
 import bubbleBlue from '../assets/tarjetas/bubbleBlue.svg'
-import iconQuienesSomos from '../assets/tarjetas/iconQuienesSomos.webp'
-import iconVision from '../assets/tarjetas/iconVision.webp'
-import iconMision from '../assets/tarjetas/iconMision.webp'
+import iQS from '../assets/tarjetas/normal/iconQuienesSomos.webp'
+import iQSSmall from '../assets/tarjetas/small/iconQuienesSomosSmall.webp'
+import iV from '../assets/tarjetas/normal/iconVision.webp'
+import iVSmall from '../assets/tarjetas/small/iconVisionSmall.webp'
+import iM from '../assets/tarjetas/normal/iconMision.webp'
+import iMSmall from '../assets/tarjetas/small/iconMisionSmall.webp'
+
+const iconQuienesSomos = window.screen.width > 900 ? iQS : iQSSmall
+const iconVision = window.screen.width > 900 ? iV : iVSmall
+const iconMision = window.screen.width > 900 ? iM : iMSmall
 
 const cardContainer = {
     margin: 'auto', marginTop: window.screen.width > 900 ? 'none' : '8em', width: window.screen.width > 900 ? '25em' : '90vw', height: window.screen.width > 900 ? '95vh' : '80vh',

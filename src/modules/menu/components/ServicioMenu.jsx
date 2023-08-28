@@ -12,7 +12,7 @@ export const ServicioMenu = () => {
   return (
     <div style={{ ...cssMenu.imgContent, backgroundImage: `url(${screen ? bgService : bgServiceSmall})` }}>
       <p style={cssMenu.pTitle}>“La única manera de hacer un gran trabajo es amar lo que se hace”</p>
-      <img src={screen ? wallPublicity : wallPublicitySmall} alt="imgInBg" style={{ ...cssMenu.imgItem }} />
+      <img src={screen ? wallPublicity : wallPublicitySmall} alt="imgInBg" style={{ ...cssMenu.imgItem, width:'auto'  }} />
     </div >
   )
 }

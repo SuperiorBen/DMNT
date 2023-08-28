@@ -5,7 +5,7 @@ import { cssCardContainer } from "../../helpers/StyleCardsQuienesSomos"
 const tarjeta = [
   {
     title: '¿QUIENES SOMOS?',
-    text: 'Nos llaman DEMENTES, rebeldes, quiénes inventan las reglas somos genios, vamos más alla de las de las ideas.',
+    text: 'Nos llaman DEMENTES, rebeldes, quiénes inventan las reglas somos genios, vamos más alla de las buenas ideas.',
     icon: cssCardContainer.iconQuienesSomos,
     bg: cssCardContainer.bgQuienesSomos
   },
