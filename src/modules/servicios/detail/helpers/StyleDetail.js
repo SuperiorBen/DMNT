@@ -15,20 +15,23 @@ const notActive = {
 
 // Css variables
 const mainContent = {
-    position: 'absolute', top: 0, left: 0, zIndex: 3, display: 'flex', width: '100vw', height: '100vh', flexDirection: 'column', justifyContent: 'center', overflow: 'hidden',
+    flexDirection: 'column',
+    flexWrap: 'wrap',
+    position: 'absolute', top: 0, left: 0, zIndex: 3, display: 'flex', width: '100vw', height: '100vh',
+    justifyContent: 'center', overflow: 'hidden',
     alignItems: window.screen.width > 900 ? 'center' : 'flex-start',
 }
 
 // Title and description
 const contentTitles = {
-    display: 'flex', position: 'absolute',
+    display: 'flex', position: 'relative',
     width: window.screen.width > 900 ? (window.screen.width > 1536 ? '80vw' : '80vw') : '60vw',
-    height: window.screen.width > 900 ? (window.screen.width > 1536 ? '16em' : '16em') : '25em',
-    top: window.screen.width > 900 ? (window.screen.width > 1536 ? '10em' : '7em') : '7em',
-    left: window.screen.width > 900 ? (window.screen.width > 1536 ? '10vw' : '10vw') : '5vw', 
+    height: window.screen.width > 900 ? (window.screen.width > 1536 ? '16em' : '16em') : 'auto',
     flexDirection: window.screen.width > 900 ? 'row' : 'column-reverse',
     justifyContent: window.screen.width > 900 ? 'center' : 'flex-end',
-    alignItems: window.screen.width > 900 ? 'flex-start' : 'flex-end'
+    alignItems: window.screen.width > 900 ? 'flex-start' : 'flex-end',
+    marginTop: window.screen.width > 900 ? (window.screen.width > 1536 ? '10em' : '4em') : '0em',
+    marginLeft: window.screen.width > 900 ? (window.screen.width > 1536 ? '8em' : 'none') : '1em'
 }
 
 const contentDescription = {
@@ -43,7 +46,7 @@ const titleDescription = {
 }
 const descriptionTitle = {
     fontWeight: 500, lineHeight: '1.4em', color: '#fff', margin: 0, textAlign: 'justify',
-    fontSize: window.screen.width > 900 ? (window.screen.width > 1536 ? '1.2em' : '1em') : '0.8em'
+    fontSize: window.screen.width > 900 ? (window.screen.width > 1536 ? '1.2em' : '1em') : '0.9em'
 }
 const mainTitle = {
     fontWeight: 700, lineHeight: '1em', color: '#fff', margin: 0, textShadow: '4px 4px 0px rgb(150 101 253 / 80%)', WebkitTextStroke: '1px rgb(150 101 253 / 80%)',
@@ -55,10 +58,10 @@ const mainTitle = {
 // Steps
 const contentSteps = {
     display: 'flex', justifyContent: 'center', alignItems: 'flex-end',
-    position: window.screen.width > 900 ? 'relative' : 'absolute', zIndex: 3,
-    top: window.screen.width > 900 ? (window.screen.width > 1536 ? '8em' : '9em') : '1em',
-    right: window.screen.width > 900 ? (window.screen.width > 1536 ? 'none' : 'none') : '2vw',
+    position: 'relative', zIndex: 3,
     flexDirection: window.screen.width > 900 ? 'row' : 'column',
+    marginTop: window.screen.width > 900 ? (window.screen.width > 1536 ? '8em' : '-2em') : '-6em',
+    marginLeft: window.screen.width > 900 ? (window.screen.width > 1536 ? '8em' : 'none') : '1em',
 }
 const contentBtn = {
     cursor: 'pointer',
@@ -70,9 +73,9 @@ const contentBtn = {
 const contentInfoStep = {
     width: window.screen.width > 900 ? (window.screen.width > 1536 ? '50em' : '45em') : '90vw',
     height: window.screen.width > 900 ? (window.screen.width > 1536 ? '10em' : '8em') : '10em',
-    bottom: window.screen.width > 900 ? (window.screen.width > 1536 ? '-12em' : '-11em') : '2em',
-    right: window.screen.width > 900 ? (window.screen.width > 1536 ? '-25em' : '-15em') : '5vw',
-    position: window.screen.width > 900 ? 'relative' : 'absolute', zIndex: 3
+    position: 'relative', zIndex: 3,
+    marginTop: window.screen.width > 900 ? (window.screen.width > 1536 ? '-25em' : '1em') : '2em',
+    marginLeft: window.screen.width > 900 ? (window.screen.width > 1536 ? '8em' : 'none') : '1em',
 }
 const headerInfo = {
     width: '100%', position: 'absolute', top: 0, right: 0, backgroundColor: '#7A4ADE', zIndex: 1, borderRadius: 10, display: 'flex', justifyContent: 'center', alignItems: 'center',

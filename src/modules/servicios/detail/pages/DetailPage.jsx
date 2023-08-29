@@ -55,38 +55,41 @@ export default function ServicioPage() {
             {/* SEO END =============================================================================== */}
             {/* Title and description */}
             <div style={cssMainDetail.mainContent}>
-                <div style={cssMainDetail.contentTitles}>
-                    <div style={cssMainDetail.contentDescription}>
-                        <p style={cssMainDetail.titleDescription}>{subtitle}</p>
-                        <p style={cssMainDetail.descriptionTitle}>{description}</p>
+                <div style={{
+                    marginTop: window.screen.width > 900 ? (window.screen.width > 1536 ? '8em' : 'none') : '-2em',
+                    display:'flex', flexDirection:window.screen.width > 900 ? 'column' : 'row', justifyContent:'center', alignItems:'center'}}>
+                    <div style={cssMainDetail.contentTitles}>
+                        <div style={cssMainDetail.contentDescription}>
+                            <p style={cssMainDetail.titleDescription}>{subtitle}</p>
+                            <p style={cssMainDetail.descriptionTitle}>{description}</p>
+                        </div>
+                        <p style={cssMainDetail.mainTitle}>{title}</p>
                     </div>
-                    <p style={cssMainDetail.mainTitle}>{title}</p>
-                </div>
 
 
-                <div style={cssMainDetail.contentSteps}>
-                    {
-                        steps.map((step, i) => {
-                            if (i == 0) {
-                                return <div onClick={() => clickStep(i)} key={i} style={{ cursor: 'pointer' }}>
-                                    {
-                                        window.screen.width > 900 ? <BeginSVG item={stepSelected(i)} title={step.title} /> : <BeginSVGmobil item={stepSelected(i)} title={step.title} />
-                                    }
-                                </div>
+                    <div style={cssMainDetail.contentSteps}>
+                        {
+                            steps.map((step, i) => {
+                                if (i == 0) {
+                                    return <div onClick={() => clickStep(i)} key={i} style={{ cursor: 'pointer' }}>
+                                        {
+                                            window.screen.width > 900 ? <BeginSVG item={stepSelected(i)} title={step.title} /> : <BeginSVGmobil item={stepSelected(i)} title={step.title} />
+                                        }
+                                    </div>
 
-                            }
-                            if (i == 4) {
+                                }
+                                if (i == 4) {
+                                    return <div onClick={() => clickStep(i)} key={i} style={cssMainDetail.contentBtn}>{
+                                        window.screen.width > 900 ? <EndSVG item={stepSelected(i)} title={step.title} /> : <EndSVGmobil item={stepSelected(i)} title={step.title} />
+                                    }</div>
+                                }
                                 return <div onClick={() => clickStep(i)} key={i} style={cssMainDetail.contentBtn}>{
-                                    window.screen.width > 900 ? <EndSVG item={stepSelected(i)} title={step.title} /> : <EndSVGmobil item={stepSelected(i)} title={step.title} />
+                                    window.screen.width > 900 ? <MiddleSVG item={stepSelected(i)} title={step.title} /> : <MiddleSVGmobil item={stepSelected(i)} title={step.title} />
                                 }</div>
-                            }
-                            return <div onClick={() => clickStep(i)} key={i} style={cssMainDetail.contentBtn}>{
-                                window.screen.width > 900 ? <MiddleSVG item={stepSelected(i)} title={step.title} /> : <MiddleSVGmobil item={stepSelected(i)} title={step.title} />
-                            }</div>
-                        })
-                    }
+                            })
+                        }
+                    </div>
                 </div>
-
 
                 {/* Info Step */}
                 <div style={cssMainDetail.contentInfoStep}>
@@ -101,7 +104,7 @@ export default function ServicioPage() {
 
             <Lottie style={{
                 position: 'fixed', zIndex: '2',
-                width:  window.screen.width > 900 ? (window.screen.width > 1536 ? '35em' : '25em') : '15em',
+                width: window.screen.width > 900 ? (window.screen.width > 1536 ? '35em' : '25em') : '15em',
                 top: window.screen.width > 900 ? (window.screen.width > 1536 ? '-4em' : '0em') : '8em',
                 right: window.screen.width > 900 ? (window.screen.width > 1536 ? '1em' : '0em') : '2em',
             }} animationData={planet} />
@@ -119,9 +122,9 @@ export default function ServicioPage() {
             }} animationData={astronaut} />
             <Lottie style={{
                 position: 'fixed', zIndex: '2',
-                width: window.screen.width > 900 ? (window.screen.width > 1536 ? '30em' : '20em') : '20em',
-                top: window.screen.width > 900 ? (window.screen.width > 1536 ? '28em' : '16em') : '19em',
-                left: window.screen.width > 900 ? (window.screen.width > 1536 ? '20em' : '5em') : '1em',
+                width: window.screen.width > 900 ? (window.screen.width > 1536 ? '30em' : '20em') : '10em',
+                top: window.screen.width > 900 ? (window.screen.width > 1536 ? '28em' : '16em') : '37em',
+                left: window.screen.width > 900 ? (window.screen.width > 1536 ? '20em' : '5em') : '0em',
                 transform: 'rotateZ(90deg)'
             }} animationData={rocket} />
             <GalaxyBg />

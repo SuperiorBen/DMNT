@@ -3,8 +3,9 @@ import logo from "../../../assets/logo.svg";
 import { cssMenu, optionMenu } from '../helpers/stylesMenu'
 import Marquee from "react-fast-marquee";
 import { AnimatePresence, motion } from "framer-motion"
+import portafolioDMNT from "../assets/PortafolioDMNT.pdf"
 
-export default function MenuPartial () {
+export default function MenuPartial() {
     const [isOpen, setIsOpen] = useState(false)
     const [moveLayer, setMoveLayer] = useState()
     const [valueHover, setValueHover] = useState(0)
@@ -16,8 +17,6 @@ export default function MenuPartial () {
         }, 1000)
         return () => clearTimeout(timer);
     }, [isOpen])
-
-
 
     //  FN: Hover sobre opciones de menu para mostrar imagenes
     const hoverAction = (e, id) => {
@@ -32,7 +31,6 @@ export default function MenuPartial () {
 
     const marqueeContent = ['', '', '', '', '', '', '', '', '']
 
-
     return (
         <>
             {/* Toggle btn */}
@@ -43,7 +41,7 @@ export default function MenuPartial () {
                     <motion.div animate={isOpen ? "open2" : "closed"} variants={cssMenu.btnVariants} style={cssMenu.pathLine} />
                 </div>
                 <a href="/" style={{ width: '65%' }} title='Home'>
-                    <img src={logo} alt="logo" loading='lazy' style={{ width: '100%', height:'100%' }} />
+                    <img src={logo} alt="logo" loading='lazy' style={{ width: '100%', height: '100%' }} />
                 </a>
             </div>
 
@@ -64,12 +62,28 @@ export default function MenuPartial () {
                             variants={cssMenu.textVariants}
                             transition={{
                                 ease: "easeIn",
-                                duration: 0.2, delay: 0.6
+                                duration: 0.2,
+                                delay: 0.6
                             }}
                             className='title-menu'
                             onMouseEnter={e => hoverAction(e, item.id)}
                         >{item.text}</motion.a>)
                     }
+
+                    <motion.a
+                        href={portafolioDMNT}
+                        download='Portafolio 2023 DMNT'
+                        key={3}
+                        initial={{ opacity: 0 }}
+                        animate={isOpen ? "open" : "closed"}
+                        variants={cssMenu.textVariants}
+                        transition={{
+                            ease: "easeIn",
+                            duration: 0.2,
+                            delay: 0.6
+                        }}
+                        className='title-menu'
+                    >PORTAFOLIO</motion.a>
                 </motion.div>
 
                 {/* Imagenes del menu ============================================================================*/}
@@ -82,10 +96,7 @@ export default function MenuPartial () {
                         <Marquee speed={5} style={cssMenu.marqueStyle}>
                             {
                                 marqueeContent.map((value, index) => <img key={index} src={logo} alt="logo" loading='lazy'
-                                    style={{
-                                        width: '10em',
-                                        margin: '1em'
-                                    }} />)
+                                    style={{ width: '10em', margin: '1em' }} />)
                             }
                         </Marquee>
                     </div>
