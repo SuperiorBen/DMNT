@@ -14,6 +14,7 @@ import planet from "../assets/planet.json";
 import satelite from "../assets/satelite.json";
 import astronaut from "../assets/astronaut.json";
 import rocket from "../assets/rocket.json";
+import { Button, Menu, MenuItem } from "@mui/material";
 
 const showService = (val) => {
     switch (val) {
@@ -28,6 +29,25 @@ const showService = (val) => {
     }
 }
 
+//Array menu
+const optionsMenu = [
+    {
+        title: 'MARKETING DIGITAL',
+        url: '/servicios/marketing-digital',
+    },
+    {
+        title: 'SITIOS WEB / APLICACIONES',
+        url: '/servicios/desarrollo-web-aplicaciones',
+    },
+    {
+        title: 'AUDIOVISUALES',
+        url: '/servicios/audiovisuales',
+    },
+    {
+        title: 'MATERIAL POP',
+        url: '/servicios/material-pop',
+    }
+]
 
 export default function ServicioPage() {
     const { detail } = useParams();
@@ -45,6 +65,17 @@ export default function ServicioPage() {
     }
 
 
+    // Menu control
+    const [anchorEl, setAnchorEl] = useState(null);
+    const open = Boolean(anchorEl);
+    const handleClick = (event) => {
+        setAnchorEl(event.currentTarget);
+    };
+    const handleClose = () => {
+        setAnchorEl(null);
+    };
+
+
     return (
         <AppLayout>
             {/* SEO */}
@@ -57,7 +88,8 @@ export default function ServicioPage() {
             <div style={cssMainDetail.mainContent}>
                 <div style={{
                     marginTop: window.screen.width > 900 ? (window.screen.width > 1536 ? '8em' : 'none') : '-2em',
-                    display:'flex', flexDirection:window.screen.width > 900 ? 'column' : 'row', justifyContent:'center', alignItems:'center'}}>
+                    display: 'flex', flexDirection: window.screen.width > 900 ? 'column' : 'row', justifyContent: 'center', alignItems: 'center'
+                }}>
                     <div style={cssMainDetail.contentTitles}>
                         <div style={cssMainDetail.contentDescription}>
                             <p style={cssMainDetail.titleDescription}>{subtitle}</p>
@@ -124,10 +156,51 @@ export default function ServicioPage() {
                 position: 'fixed', zIndex: '2',
                 width: window.screen.width > 900 ? (window.screen.width > 1536 ? '30em' : '20em') : '10em',
                 top: window.screen.width > 900 ? (window.screen.width > 1536 ? '28em' : '16em') : '37em',
-                left: window.screen.width > 900 ? (window.screen.width > 1536 ? '20em' : '5em') : '0em',
+                left: window.screen.width > 900 ? (window.screen.width > 1536 ? '20em' : '0em') : '0em',
                 transform: 'rotateZ(90deg)'
             }} animationData={rocket} />
             <GalaxyBg />
+
+
+
+            <div style={{
+                position: 'fixed', zIndex: '10',
+                top: '2em',
+                left: '35em'
+            }}>
+                <Button
+                    color="info"
+                    style={{ fontSize: '1.2em', fontWeight: 700, color: '#fff' }}
+                    id="basic-button"
+                    variant="outlined"
+                    aria-controls={open ? 'basic-menu' : undefined}
+                    aria-haspopup="true"
+                    aria-expanded={open ? 'true' : undefined}
+                    onClick={handleClick}
+                >
+                    VER MÁS SERVICIOS
+                </Button>
+                <Menu
+                    id="basic-menu"
+                    anchorEl={anchorEl}
+                    open={open}
+                    onClose={handleClose}
+                    MenuListProps={{
+                        'aria-labelledby': 'basic-button',
+                    }}
+                >
+                    {
+                        optionsMenu.map((item, i) => <MenuItem key={i} ><a style={{
+                            textDecoration:'none',
+                            fontWeight:700,
+                            width:'100%',
+                            textAlign:'center'
+                        }}
+                         href={item.url}>{item.title}</a></MenuItem>)
+                    }
+
+                </Menu>
+            </div>
         </AppLayout >
     )
 }
