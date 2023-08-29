@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react"
-import { motion,useMotionValueEvent, useScroll } from "framer-motion"
-import Lottie from "lottie-react";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion"
 import { cssBgAnimated } from "../../helpers/StyleBgAnimated"
 
 export const BackgroundAnimated = () => {
@@ -64,7 +63,6 @@ export const BackgroundAnimated = () => {
         <div style={cssBgAnimated.backgroundContent}>
             <motion.div style={{ scaleX: scrollYProgress, ...cssBgAnimated.progressBar }} />
             <img src={cssBgAnimated.bgCreativa} alt="bgCreativa" style={cssBgAnimated.imgCreativa} />
-
             <motion.div
                 layout transition={{ duration: 0.5 }}
                 style={{ ...cssBgAnimated.contentTwister, right: isOpen ? `calc(-1 * ${cssBgAnimated.xTwister})` : 0 }}>
@@ -76,10 +74,9 @@ export const BackgroundAnimated = () => {
 
             <motion.div layout ref={ref} transition={{ duration: 0.5 }} style={{ ...cssBgAnimated.contentText, right: isOpen ? 0 : `calc(-1 * ${cssBgAnimated.xTwister})` }}>
                 {textBg.map((e, i) => <p key={i} style={cssBgAnimated.textAnimated}>{e.title}</p>)}
-                <Lottie style={{ ...cssBgAnimated.lottieAnimation, opacity: section == 1 ? 1 : 0 }} animationData={cssBgAnimated.scrollarrow} />
             </motion.div>
 
             <img style={cssBgAnimated.bgStarsImg} src={cssBgAnimated.bgStars} alt="Fondo estrellas" />
-        </div>
+        </div >
     )
 }

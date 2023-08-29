@@ -1,7 +1,6 @@
 // Intro section
 // Images
 import astro from '../assets/animations/astro.json'
-import scrollWhite from '../assets/animations/scroll-white.json'
 
 import aplicaciones from "../assets/iconosServicios/Aplicaciones.svg";
 import audiovisuales from "../assets/iconosServicios/AudioVisuales.svg";
@@ -60,9 +59,7 @@ const astroIcon = {
     marginBottom: window.screen.width > 900 ? '0em' : '-5em'
 }
 
-const scrollAnimated = {
-    position: 'absolute', zIndex: 3, width:'5em', bottom:'0em', left:'calc( 50vw - 2.5em )'
-}
+
 
 export const cssIntro = {
     contentBgIcons,
@@ -73,10 +70,8 @@ export const cssIntro = {
     contentTitle,
     mainTitle,
     astroIcon,
-    scrollAnimated,
     //========
     astro,
-    scrollWhite,
     aplicaciones,
     audiovisuales,
     bellowtheline,

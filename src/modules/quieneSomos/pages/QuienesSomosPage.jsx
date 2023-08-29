@@ -1,4 +1,5 @@
 import { AppLayout } from "../../../layouts/AppLayout"
+import { ScrollIndicator } from "../../../layouts/utils/ScrollIndicator"
 import { AstronautJump } from "../components/AstronautJump"
 import { BackgroundAnimated } from "../components/background/BackgroundAnimated"
 import { TarjetasQuinesSomos } from "../components/tarjetas/TarjetasQuinesSomos"
@@ -16,6 +17,7 @@ export default function QuienesSomosPage() {
       </Helmet>
       {/* SEO END =============================================================================== */}
       <div style={{ height: '500vh', width: '100vw', overflowX: 'hidden' }}>
+        <ScrollIndicator />
         <AstronautJump />
         <BackgroundAnimated />
         <TarjetasQuinesSomos />

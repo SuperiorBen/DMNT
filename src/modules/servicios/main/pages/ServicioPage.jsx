@@ -7,6 +7,7 @@ import bgMenu from "../../../../assets/backgroundMenu.svg"
 import { useState } from "react"
 import { InfoSection } from "../components/InfoSection"
 import { Helmet } from 'react-helmet-async'
+import { ScrollIndicator } from "../../../../layouts/utils/ScrollIndicator"
 
 
 
@@ -39,6 +40,7 @@ export default function ServicioPage() {
             </Helmet>
             {/* SEO END =============================================================================== */}
             <div style={{ height: '370vh', width: '100vw', overflowX: 'hidden' }}>
+                <ScrollIndicator />
                 <IntroSection />
                 <motion.div style={whiteSpace}>
                     <InfoSection />

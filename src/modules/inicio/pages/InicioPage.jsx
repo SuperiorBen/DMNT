@@ -33,10 +33,10 @@ export default function InicioPage() {
             </div>
             <h1 style={cssInicio.titleMain}>IDEAS</h1>
             <p style={{ ...cssInicio.subtitleMain, marginLeft: '0.3em' }}>Marketing fuera de este mundo</p>
-            {window.screen.width > 900 && <a href="/" style={cssInicio.btnDesk}>VER SERVICIOS  DMNT</a>}
+            {window.screen.width > 900 && <a href="/servicios" style={cssInicio.btnDesk}>VER SERVICIOS  DMNT</a>}
           </div>
           <div style={{ width: '100%', height: '50%', position: 'relative' }}>
-            {window.screen.width < 900 && <a href="/" style={cssInicio.btnMobil}>VER SERVICIOS  DMNT</a>}
+            {window.screen.width < 900 && <a href="/servicios" style={cssInicio.btnMobil}>VER SERVICIOS  DMNT</a>}
             <img src={DEMENTElogo} alt="DEMENTE" style={cssInicio.logoDemente} />
             <img src={creativaLogo} alt="creativa agency" style={cssInicio.logoCreativa} />
           </div>

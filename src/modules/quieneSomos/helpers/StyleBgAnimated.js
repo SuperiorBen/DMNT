@@ -7,8 +7,7 @@ import bgCSmall from "../assets/background/bgTeamWorkSmall.webp"
 import bgTwist from "../assets/background/psycoTwister.svg"
 import bgS from "../../../assets/stars-bg.webp"
 import bgSSmall from "../../../assets/stars-bgSmall.webp"
-// Animation JSON
-import scrollarrow from "../assets/background/animations/scrollarrow.json"
+
 
 const bgCreativa = window.screen.width > 900 ? bgC : bgCSmall
 const bgStars = window.screen.width > 900 ? bgS : bgSSmall
@@ -44,7 +43,5 @@ export const cssBgAnimated = {
     // ========================
     bgCreativa,
     bgTwist,
-    bgStars,
-    // ========================
-    scrollarrow
+    bgStars
 }
