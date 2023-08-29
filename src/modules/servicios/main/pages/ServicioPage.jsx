@@ -1,19 +1,18 @@
 import { AppLayout } from "../../../../layouts/AppLayout"
-import { IntroSection } from "../components/IntroSection"
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
-
-
 import bgMenu from "../../../../assets/backgroundMenu.svg"
-import { useState } from "react"
-import { InfoSection } from "../components/InfoSection"
+import { lazy, useState } from "react"
+
+const ScrollIndicator = lazy(() => import("../../../../layouts/utils/ScrollIndicator"))
+const IntroSection = lazy(() => import("../components/IntroSection"))
+const InfoSection = lazy(() => import("../components/InfoSection"))
+
+
 import { Helmet } from 'react-helmet-async'
-import { ScrollIndicator } from "../../../../layouts/utils/ScrollIndicator"
 
 
 
 export default function ServicioPage() {
-
-
     const [isShow, setIsShow] = useState(0)
 
     // Control scroll 

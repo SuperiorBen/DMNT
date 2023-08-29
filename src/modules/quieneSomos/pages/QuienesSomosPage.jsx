@@ -1,10 +1,12 @@
 import { AppLayout } from "../../../layouts/AppLayout"
-import { ScrollIndicator } from "../../../layouts/utils/ScrollIndicator"
-import { AstronautJump } from "../components/AstronautJump"
-import { BackgroundAnimated } from "../components/background/BackgroundAnimated"
-import { TarjetasQuinesSomos } from "../components/tarjetas/TarjetasQuinesSomos"
-import { TeamWork } from "../components/teamWork/TeamWork"
+import {lazy } from "react"
 import { Helmet } from 'react-helmet-async'
+
+const ScrollIndicator = lazy(() => import("../../../layouts/utils/ScrollIndicator"))
+const AstronautJump = lazy(() => import("../components/AstronautJump"))
+const BackgroundAnimated = lazy(() => import("../components/background/BackgroundAnimated"))
+const TarjetasQuinesSomos = lazy(() => import("../components/tarjetas/TarjetasQuinesSomos"))
+const TeamWork = lazy(() => import("../components/teamWork/TeamWork"))
 
 
 export default function QuienesSomosPage() {
@@ -17,11 +19,11 @@ export default function QuienesSomosPage() {
       </Helmet>
       {/* SEO END =============================================================================== */}
       <div style={{ height: '500vh', width: '100vw', overflowX: 'hidden' }}>
-        <ScrollIndicator />
-        <AstronautJump />
-        <BackgroundAnimated />
-        <TarjetasQuinesSomos />
-        <TeamWork />
+          <ScrollIndicator />
+          <AstronautJump />
+          <BackgroundAnimated />
+          <TarjetasQuinesSomos />
+          <TeamWork />
       </div>
     </AppLayout>
   )

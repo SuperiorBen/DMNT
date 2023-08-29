@@ -1,13 +1,13 @@
-import { useState } from 'react'
+import { lazy, useState } from 'react'
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
 import Marquee from "react-fast-marquee";
 
-import { TarjetaContenedor } from './TarjetaContenedor'
+const TarjetaContenedor = lazy(() => import('./TarjetaContenedor'))
 import { cssCardsQS } from "../../helpers/StyleCardsQuienesSomos"
 
 
 
-export const TarjetasQuinesSomos = () => {
+export default function TarjetasQuinesSomos () {
 
   const [section, setSection] = useState(3)
 

@@ -6,7 +6,7 @@ import { useState } from "react";
 import { GalaxyBg } from "../../../../layouts/utils/GalaxyBg";
 
 
-export const IntroSection = () => {
+export default function IntroSection() {
     const [actions, setMove] = useState(['100vh', 1, 0])
     // Control scroll 
     const { scrollYProgress } = useScroll()

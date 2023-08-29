@@ -14,7 +14,7 @@ import { cssInfo } from '../helpers/StylesInfoService'
 
 
 
-export const InfoSection = () => {
+export default function InfoSection () {
     const contentFooter = {
         position: 'relative', display: 'flex', justifyContent: 'space-evenly',
         flexDirection: window.screen.width > 900 ? 'row' : 'column',

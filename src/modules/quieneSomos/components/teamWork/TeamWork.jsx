@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import { lazy, useState } from 'react'
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
-import { CarnetsTeam } from './CarnetsTeam'
+const CarnetsTeam = lazy(() => import('./CarnetsTeam'))
 import { cssTeamWork } from "../../helpers/StyleTeamWork"
 
-export const TeamWork = () => {
+export default function TeamWork() {
     const [isRun, setRun] = useState(true)
     // Control scroll 
     const { scrollYProgress } = useScroll()

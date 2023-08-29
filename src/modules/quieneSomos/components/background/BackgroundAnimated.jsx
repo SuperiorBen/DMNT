@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from "react"
 import { motion, useMotionValueEvent, useScroll } from "framer-motion"
 import { cssBgAnimated } from "../../helpers/StyleBgAnimated"
 
-export const BackgroundAnimated = () => {
+export default function BackgroundAnimated() {
     const [section, setSection] = useState(1)
     // Twister background control 
     const [isOpen, setOpen] = useState(false)

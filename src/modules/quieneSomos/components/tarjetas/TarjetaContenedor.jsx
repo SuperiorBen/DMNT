@@ -23,7 +23,7 @@ const tarjeta = [
   }
 ]
 
-export const TarjetaContenedor = ({ children, option, visible }) => {
+export default function TarjetaContenedor ({ children, option, visible }) {
 
   return (
     <motion.div

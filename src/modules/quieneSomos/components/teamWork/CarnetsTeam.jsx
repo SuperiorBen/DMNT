@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { motion, useMotionValueEvent, useScroll, useTransform } from 'framer-motion'
 import { cssCarnets } from "../../helpers/StyleTeamWork"
-export const CarnetsTeam = () => {
+export default function CarnetsTeam () {
     const [move, setMove] = useState('0vw')
     // Control scroll 
     const { scrollYProgress } = useScroll()

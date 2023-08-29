@@ -14,7 +14,7 @@ const bgWhite = {
     width: '11em', height: '11em', position: 'absolute', top: 0, left: 0, zIndex: -1
 }
 
-export const ScrollIndicator = () => {
+export default function ScrollIndicator () {
     return (
         <motion.div
             initial={{ transform: 'scale(0.85)', opacity: 0 }}

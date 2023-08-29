@@ -1,12 +1,9 @@
 // Tarjetas Quienes Somos
 // Images
 import logoDmnt from '../../../assets/logoFull.svg'
-import sitA from '../assets/tarjetas/normal/sitAstronaut.webp'
-import sitASmall from '../assets/tarjetas/small/sitAstronautSmall.webp'
-import flyA from '../assets/tarjetas/normal/psyco-halo.webp'
-import flyASmall from '../assets/tarjetas/small/psyco-haloSmall.webp'
-import w from '../assets/tarjetas/normal/world.webp'
-import wSmall from '../assets/tarjetas/small/worldSmall.webp'
+import sitAstronaut from '../assets/tarjetas/normal/sitAstronaut.webp'
+import flyAstronaut from '../assets/tarjetas/normal/psyco-halo.webp'
+import world from '../assets/tarjetas/normal/world.webp'
 import glitchAstronaut from '../assets/tarjetas/psyco-astro.gif'
 import ck1 from '../assets/tarjetas/chunksVision/chunk-1.webp'
 import ck2 from '../assets/tarjetas/chunksVision/chunk-2.webp'
@@ -20,10 +17,6 @@ import ck3Small from '../assets/tarjetas/chunksVision/small/chunk-3Small.webp'
 import ck4Small from '../assets/tarjetas/chunksVision/small/chunk-4Small.webp'
 import ck5Small from '../assets/tarjetas/chunksVision/small/chunk-5Small.webp'
 import ck6Small from '../assets/tarjetas/chunksVision/small/chunk-6Small.webp'
-
-const sitAstronaut = window.screen.width > 900 ? sitA : sitASmall
-const flyAstronaut = window.screen.width > 900 ? flyA : flyASmall
-const world = window.screen.width > 900 ? w : wSmall
 
 const chunk1 = window.screen.width > 900 ? ck1 : ck1Small
 const chunk2 = window.screen.width > 900 ? ck2 : ck2Small
