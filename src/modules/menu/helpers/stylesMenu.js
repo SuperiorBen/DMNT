@@ -1,6 +1,8 @@
-import { QuienesSomosMenu } from '../components/QuienesSomosMenu';
-import { ServicioMenu } from '../components/ServicioMenu';
-import { ContactoMenu } from '../components/ContactoMenu';
+import { lazy } from 'react'
+
+const QuienesSomosMenu = lazy(() => import('../components/QuienesSomosMenu'))
+const ServicioMenu = lazy(() => import('../components/ServicioMenu'))
+const ContactoMenu = lazy(() => import('../components/ContactoMenu'))
 
 // Styles
 // Togle btn

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react"
+import { useCallback, useEffect, useRef, useState } from "react"
 import { motion, useMotionValueEvent, useScroll } from "framer-motion"
 import { cssBgAnimated } from "../../helpers/StyleBgAnimated"
 
@@ -37,15 +37,25 @@ export default function BackgroundAnimated() {
         return () => clearTimeout(timer);
     }, [section]);
 
-    const runTextAnimate = () => {
-        ref.current.children[textAnimate].style.color = 'transparent'
-        if (textAnimate < controlTime) {
-            setTextAnimate(textAnimate + 1)
-        } else {
-            setTextAnimate(0)
-        }
-    }
-    setTimeout(runTextAnimate, 500);
+    const runTextAnimate = useCallback(
+        () => {
+            ref.current.children[textAnimate].style.color = 'transparent'
+            if (textAnimate < controlTime) {
+                setTextAnimate(textAnimate + 1)
+            } else {
+                setTextAnimate(0)
+            }
+        },
+        [controlTime, textAnimate],
+    )
+
+    useEffect(() => {
+        const timer = setTimeout(runTextAnimate, 500)
+        return () => clearTimeout(timer);
+    }, [runTextAnimate])
+
+
+
     // END Letter animated funtions ===========================================================
 
 
@@ -61,7 +71,6 @@ export default function BackgroundAnimated() {
 
     return (
         <div style={cssBgAnimated.backgroundContent}>
-            <motion.div style={{ scaleX: scrollYProgress, ...cssBgAnimated.progressBar }} />
             <img src={cssBgAnimated.bgCreativa} alt="bgCreativa" style={cssBgAnimated.imgCreativa} />
             <motion.div
                 layout transition={{ duration: 0.5 }}

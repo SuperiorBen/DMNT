@@ -9,7 +9,7 @@ import { cssMenu } from "../helpers/stylesMenu"
 
 const screen = window.screen.width > 900 ? true : false
 
-export const QuienesSomosMenu = () => {
+export default function QuienesSomosMenu () {
 
   return (
     <div style={{ ...cssMenu.imgContent, backgroundImage: `url(${screen ? bgWhoiam : bgWhoiamSmall})` }}>

@@ -1,5 +1,5 @@
 import Lottie from "lottie-react";
-import { motion } from 'framer-motion'
+import { motion, useScroll } from 'framer-motion'
 // Animation JSON
 import scroll from "../../assets/animation/scroll.json"
 
@@ -14,15 +14,21 @@ const bgWhite = {
     width: '11em', height: '11em', position: 'absolute', top: 0, left: 0, zIndex: -1
 }
 
-export default function ScrollIndicator () {
+const progressBar = { position: 'fixed', height: '8px', bottom: 0, left: 0, right: 0, zIndex: 99, background: '#94CED9', transformOrigin: '0%' }
+
+export default function ScrollIndicator() {
+    const { scrollYProgress } = useScroll()
     return (
-        <motion.div
-            initial={{ transform: 'scale(0.85)', opacity: 0 }}
-            animate={{ transform: 'scale(1)', opacity: 1 }}
-            transition={{ duration: 1, ease: "linear", transform: { duration: 0.5, repeat: Infinity, repeatType: "reverse" } }}
-            style={contentMessage}>
-            <Lottie style={animation} animationData={scroll} />
-            <div style={bgWhite} />
-        </motion.div>
+        <>
+            <motion.div
+                initial={{ transform: 'scale(0.85)', opacity: 0 }}
+                animate={{ transform: 'scale(1)', opacity: 1 }}
+                transition={{ duration: 1, ease: "linear", transform: { duration: 0.5, repeat: Infinity, repeatType: "reverse" } }}
+                style={contentMessage}>
+                <Lottie style={animation} animationData={scroll} />
+                <div style={bgWhite} />
+            </motion.div>
+            <motion.div style={{ scaleX: scrollYProgress, ...progressBar }} />
+        </>
     )
 }

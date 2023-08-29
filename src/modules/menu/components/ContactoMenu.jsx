@@ -8,7 +8,7 @@ import { cssMenu } from "../helpers/stylesMenu"
 
 const screen = window.screen.width > 900 ? true : false
 
-export const ContactoMenu = () => {
+export default function ContactoMenu () {
   return (
     <div style={{ ...cssMenu.imgContent, backgroundImage: `url(${screen ? bgContact : bgContactSmall})` }}>
       <p style={cssMenu.pTitle}>“Saber lo que hay que hacer elimina el miedo”</p>

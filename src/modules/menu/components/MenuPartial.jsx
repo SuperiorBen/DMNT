@@ -4,7 +4,7 @@ import { cssMenu, optionMenu } from '../helpers/stylesMenu'
 import Marquee from "react-fast-marquee";
 import { AnimatePresence, motion } from "framer-motion"
 
-export const MenuPartial = () => {
+export default function MenuPartial () {
     const [isOpen, setIsOpen] = useState(false)
     const [moveLayer, setMoveLayer] = useState()
     const [valueHover, setValueHover] = useState(0)
