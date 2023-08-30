@@ -15,8 +15,7 @@ export default function StepsProcess() {
                 {
                     // Reuse the array to show the 3 buttons
                     positionSteps.map((e, i) => <motion.div key={i}
-                        initial={{ scale: 0 }}
-                        whileInView={{ scale: [1.3, 0.9, 1] }}
+                        whileInView={{ scale: [0, 1.3, 0.9, 1] }}
                         transition={{ duration: 0.6, delay: 1 }}
                         onClick={() => setStep(i)}
                         style={{

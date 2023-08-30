@@ -1,6 +1,6 @@
 import { AppLayout } from "../../../../layouts/AppLayout"
 import { Helmet } from 'react-helmet-async'
-// import { motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { servicesDMNT } from "../helpers/infoServices";
 import { useParams } from "react-router-dom";
 import { GalaxyBg } from "../../../../layouts/utils/GalaxyBg";
@@ -10,11 +10,8 @@ import { EndSVG, EndSVGmobil } from "../components/stepsSVG/EndSVG";
 import { useState } from "react";
 import { cssMainDetail } from "../helpers/StyleDetail";
 import Lottie from "lottie-react";
-import planet from "../assets/planet.json";
-import satelite from "../assets/satelite.json";
-import astronaut from "../assets/astronaut.json";
-import rocket from "../assets/rocket.json";
 import { Button, Menu, MenuItem } from "@mui/material";
+import Marquee from "react-fast-marquee";
 
 const showService = (val) => {
     switch (val) {
@@ -64,16 +61,15 @@ export default function ServicioPage() {
         return activeStep == val ? cssMainDetail.isActive : cssMainDetail.notActive
     }
 
-
     // Menu control
-    const [anchorEl, setAnchorEl] = useState(null);
-    const open = Boolean(anchorEl);
+    const [anchorEl, setAnchorEl] = useState(null)
+    const open = Boolean(anchorEl)
     const handleClick = (event) => {
-        setAnchorEl(event.currentTarget);
-    };
+        setAnchorEl(event.currentTarget)
+    }
     const handleClose = () => {
-        setAnchorEl(null);
-    };
+        setAnchorEl(null)
+    }
 
 
     return (
@@ -85,11 +81,12 @@ export default function ServicioPage() {
             </Helmet>
             {/* SEO END =============================================================================== */}
             {/* Title and description */}
-            <div style={cssMainDetail.mainContent}>
-                <div style={{
-                    marginTop: window.screen.width > 900 ? (window.screen.width > 1536 ? '8em' : 'none') : '-2em',
-                    display: 'flex', flexDirection: window.screen.width > 900 ? 'column' : 'row', justifyContent: 'center', alignItems: 'center'
-                }}>
+            <div className="Main" style={cssMainDetail.mainContent}>
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: [0, 1] }}
+                    transition={{ duration: 0.6, delay: 0.5, ease: 'easeIn' }}
+                    style={cssMainDetail.overContentTitles}>
                     <div style={cssMainDetail.contentTitles}>
                         <div style={cssMainDetail.contentDescription}>
                             <p style={cssMainDetail.titleDescription}>{subtitle}</p>
@@ -103,71 +100,64 @@ export default function ServicioPage() {
                         {
                             steps.map((step, i) => {
                                 if (i == 0) {
-                                    return <div onClick={() => clickStep(i)} key={i} style={{ cursor: 'pointer' }}>
+                                    return <motion.div
+                                        initial={{ opacity: 0 }}
+                                        whileInView={{ opacity: [0, 1] }}
+                                        transition={{ duration: 0.6, delay: i + 1, ease: 'easeIn' }}
+                                        onClick={() => clickStep(i)} key={i} style={{ cursor: 'pointer' }}>
                                         {
                                             window.screen.width > 900 ? <BeginSVG item={stepSelected(i)} title={step.title} /> : <BeginSVGmobil item={stepSelected(i)} title={step.title} />
                                         }
-                                    </div>
+                                    </motion.div>
 
                                 }
                                 if (i == 4) {
-                                    return <div onClick={() => clickStep(i)} key={i} style={cssMainDetail.contentBtn}>{
-                                        window.screen.width > 900 ? <EndSVG item={stepSelected(i)} title={step.title} /> : <EndSVGmobil item={stepSelected(i)} title={step.title} />
-                                    }</div>
+                                    return <motion.div
+                                        initial={{ opacity: 0 }}
+                                        whileInView={{ opacity: [0, 1] }}
+                                        transition={{ duration: 0.6, delay: i + 1, ease: 'easeIn' }}
+                                        onClick={() => clickStep(i)} key={i} style={cssMainDetail.contentBtn}>{
+                                            window.screen.width > 900 ? <EndSVG item={stepSelected(i)} title={step.title} /> : <EndSVGmobil item={stepSelected(i)} title={step.title} />
+                                        }</motion.div>
                                 }
-                                return <div onClick={() => clickStep(i)} key={i} style={cssMainDetail.contentBtn}>{
-                                    window.screen.width > 900 ? <MiddleSVG item={stepSelected(i)} title={step.title} /> : <MiddleSVGmobil item={stepSelected(i)} title={step.title} />
-                                }</div>
+                                return <motion.div
+                                    initial={{ opacity: 0 }}
+                                    whileInView={{ opacity: [0, 1] }}
+                                    transition={{ duration: 0.6, delay: i + 1, ease: 'easeIn' }}
+                                    onClick={() => clickStep(i)} key={i} style={cssMainDetail.contentBtn}>{
+                                        window.screen.width > 900 ? <MiddleSVG item={stepSelected(i)} title={step.title} /> : <MiddleSVGmobil item={stepSelected(i)} title={step.title} />
+                                    }</motion.div>
                             })
                         }
                     </div>
-                </div>
+                </motion.div>
 
                 {/* Info Step */}
-                <div style={cssMainDetail.contentInfoStep}>
+                <motion.div
+                    initial={{ opacity: 0, y: '5vh' }}
+                    whileInView={{ opacity: [0, 1], y: ['5vh', '0vh'] }}
+                    transition={{ duration: 1, delay: 1.5 }}
+                    style={cssMainDetail.contentInfoStep}>
                     <div style={cssMainDetail.headerInfo}>
                         <p style={cssMainDetail.titleHeader}> {steps[activeStep].title}</p></div>
                     <div style={cssMainDetail.bodyInfo}>
                         <p style={cssMainDetail.textInfo}> {steps[activeStep].description}</p>
                     </div>
-                </div>
-
+                </motion.div>
             </div>
 
-            <Lottie style={{
-                position: 'fixed', zIndex: '2',
-                width: window.screen.width > 900 ? (window.screen.width > 1536 ? '35em' : '25em') : '15em',
-                top: window.screen.width > 900 ? (window.screen.width > 1536 ? '-4em' : '0em') : '8em',
-                right: window.screen.width > 900 ? (window.screen.width > 1536 ? '1em' : '0em') : '2em',
-            }} animationData={planet} />
-            <Lottie style={{
-                position: 'fixed', zIndex: '2',
-                width: window.screen.width > 900 ? (window.screen.width > 1536 ? '15em' : '7em') : '8em',
-                top: window.screen.width > 900 ? (window.screen.width > 1536 ? '1em' : '5em') : '0em',
-                right: window.screen.width > 900 ? (window.screen.width > 1536 ? '50em' : '40em') : '5em',
-            }} animationData={satelite} />
-            <Lottie style={{
-                position: 'fixed', zIndex: '3',
-                width: window.screen.width > 900 ? (window.screen.width > 1536 ? '10em' : '5em') : '6em',
-                top: window.screen.width > 900 ? (window.screen.width > 1536 ? '8em' : '5em') : '15em',
-                right: '5em'
-            }} animationData={astronaut} />
-            <Lottie style={{
-                position: 'fixed', zIndex: '2',
-                width: window.screen.width > 900 ? (window.screen.width > 1536 ? '30em' : '20em') : '10em',
-                top: window.screen.width > 900 ? (window.screen.width > 1536 ? '28em' : '16em') : '37em',
-                left: window.screen.width > 900 ? (window.screen.width > 1536 ? '20em' : '0em') : '0em',
-                transform: 'rotateZ(90deg)'
-            }} animationData={rocket} />
+            <Lottie style={cssMainDetail.planetAnimate} animationData={cssMainDetail.planet} />
+            <Lottie style={cssMainDetail.sateliteAnimate} animationData={cssMainDetail.satelite} />
+            <Lottie style={cssMainDetail.astronautAnimate} animationData={cssMainDetail.astronaut} />
+            <Marquee speed={35} direction="right" style={cssMainDetail.marqueeCss}>
+                <Lottie style={cssMainDetail.rocketAnimate} animationData={cssMainDetail.rocket} /></Marquee>
             <GalaxyBg />
 
-
-
-            <div style={{
-                position: 'fixed', zIndex: '10',
-                top: '2em',
-                left: '35em'
-            }}>
+            <motion.div
+                initial={{ scale: 0 }}
+                whileInView={{ scale: [1.3, 0.9, 1] }}
+                transition={{ duration: 0.6, delay: 1 }}
+                style={cssMainDetail.btnMoreContent}>
                 <Button
                     color="info"
                     style={{ fontSize: '1.2em', fontWeight: 700, color: '#fff' }}
@@ -191,16 +181,16 @@ export default function ServicioPage() {
                 >
                     {
                         optionsMenu.map((item, i) => <MenuItem key={i} ><a style={{
-                            textDecoration:'none',
-                            fontWeight:700,
-                            width:'100%',
-                            textAlign:'center'
+                            textDecoration: 'none',
+                            fontWeight: 700,
+                            width: '100%',
+                            textAlign: 'center'
                         }}
-                         href={item.url}>{item.title}</a></MenuItem>)
+                            href={item.url}>{item.title}</a></MenuItem>)
                     }
 
                 </Menu>
-            </div>
+            </motion.div>
         </AppLayout >
     )
 }

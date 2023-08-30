@@ -1,3 +1,8 @@
+// Json animations
+import planet from "../assets/planet.json";
+import satelite from "../assets/satelite.json";
+import astronaut from "../assets/astronaut.json";
+import rocket from "../assets/rocket.json";
 // Main detail
 // buttons steps styles
 const isActive = {
@@ -23,6 +28,10 @@ const mainContent = {
 }
 
 // Title and description
+const overContentTitles = {
+    marginTop: window.screen.width > 900 ? (window.screen.width > 1536 ? '8em' : 'none') : '-2em',
+    display: 'flex', flexDirection: window.screen.width > 900 ? 'column' : 'row', justifyContent: 'center', alignItems: 'center'
+}
 const contentTitles = {
     display: 'flex', position: 'relative',
     width: window.screen.width > 900 ? (window.screen.width > 1536 ? '80vw' : '80vw') : '60vw',
@@ -30,7 +39,7 @@ const contentTitles = {
     flexDirection: window.screen.width > 900 ? 'row' : 'column-reverse',
     justifyContent: window.screen.width > 900 ? 'center' : 'flex-end',
     alignItems: window.screen.width > 900 ? 'flex-start' : 'flex-end',
-    marginTop: window.screen.width > 900 ? (window.screen.width > 1536 ? '10em' : '4em') : '0em',
+    marginTop: window.screen.width > 900 ? (window.screen.width > 1536 ? '0em' : '4em') : '0em',
     marginLeft: window.screen.width > 900 ? (window.screen.width > 1536 ? '8em' : 'none') : '1em'
 }
 
@@ -60,7 +69,7 @@ const contentSteps = {
     display: 'flex', justifyContent: 'center', alignItems: 'flex-end',
     position: 'relative', zIndex: 3,
     flexDirection: window.screen.width > 900 ? 'row' : 'column',
-    marginTop: window.screen.width > 900 ? (window.screen.width > 1536 ? '8em' : '-2em') : '-6em',
+    marginTop: window.screen.width > 900 ? (window.screen.width > 1536 ? '2em' : '-2em') : '-6em',
     marginLeft: window.screen.width > 900 ? (window.screen.width > 1536 ? '8em' : 'none') : '1em',
 }
 const contentBtn = {
@@ -74,7 +83,7 @@ const contentInfoStep = {
     width: window.screen.width > 900 ? (window.screen.width > 1536 ? '50em' : '45em') : '90vw',
     height: window.screen.width > 900 ? (window.screen.width > 1536 ? '10em' : '8em') : '10em',
     position: 'relative', zIndex: 3,
-    marginTop: window.screen.width > 900 ? (window.screen.width > 1536 ? '-25em' : '1em') : '2em',
+    marginTop: window.screen.width > 900 ? (window.screen.width > 1536 ? '2em' : '1em') : '2em',
     marginLeft: window.screen.width > 900 ? (window.screen.width > 1536 ? '8em' : 'none') : '1em',
 }
 const headerInfo = {
@@ -93,11 +102,52 @@ const textInfo = {
     fontWeight: 500, color: '#fff', margin: 0, lineHeight: '1em', width: '90%', marginTop: '1.5em', textAlign: 'center',
     fontSize: window.screen.width > 900 ? (window.screen.width > 1536 ? '2em' : '1.2em') : '1em'
 }
+
+const btnMoreContent = {
+    position: 'fixed', zIndex: '10', left: 'calc( 50vw - 7em )', width: '14em',
+    top: window.screen.width > 900 ? '2em' : 'none',
+    bottom: window.screen.width > 900 ? 'none' : '2em',
+}
+
+// animations
+const planetAnimate = {
+    position: 'fixed', zIndex: '2',
+    width: window.screen.width > 900 ? (window.screen.width > 1536 ? '35em' : '25em') : '15em',
+    top: window.screen.width > 900 ? (window.screen.width > 1536 ? '4em' : '0em') : '8em',
+    right: window.screen.width > 900 ? (window.screen.width > 1536 ? '1em' : '0em') : '2em',
+}
+const sateliteAnimate = {
+    position: 'fixed', zIndex: '2',
+    width: window.screen.width > 900 ? (window.screen.width > 1536 ? '15em' : '7em') : '8em',
+    top: window.screen.width > 900 ? (window.screen.width > 1536 ? '3em' : '5em') : '0em',
+    right: window.screen.width > 900 ? (window.screen.width > 1536 ? '50em' : '40em') : '5em',
+}
+const astronautAnimate = {
+    position: 'fixed', zIndex: '3', right: '5em',
+    width: window.screen.width > 900 ? (window.screen.width > 1536 ? '10em' : '5em') : '6em',
+    top: window.screen.width > 900 ? (window.screen.width > 1536 ? '8em' : '5em') : '15em'
+
+}
+
+const rocketAnimate = {
+    transform: 'rotateZ(90deg)', width: window.screen.width > 900 ? (window.screen.width > 1536 ? '20em' : '10em') : '10em'
+}
+const marqueeCss = {
+    width: '100vw', position: 'fixed', zIndex: '2', left: '0em',
+    top: window.screen.width > 900 ? (window.screen.width > 1536 ? '45em' : '19em') : '37em'
+}
+
 export const cssMainDetail = {
+    planet,
+    satelite,
+    astronaut,
+    rocket,
+    // ==============
     isActive,
     notActive,
     // ==============
     mainContent,
+    overContentTitles,
     contentTitles,
     contentDescription,
     titleDescription,
@@ -111,5 +161,12 @@ export const cssMainDetail = {
     headerInfo,
     titleHeader,
     bodyInfo,
-    textInfo
+    textInfo,
+    btnMoreContent,
+    // =============
+    planetAnimate,
+    sateliteAnimate,
+    astronautAnimate,
+    rocketAnimate,
+    marqueeCss
 }
