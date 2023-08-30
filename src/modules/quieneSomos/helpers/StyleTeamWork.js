@@ -15,7 +15,7 @@ const pTitle = { fontFamily: "'Roboto', sans-serif", fontWeight: 700, fontSize: 
 const pTitle2 = { fontFamily: "'Roboto', sans-serif", fontWeight: 700, fontSize: sizeAniText2, lineHeight: '0.8em', color: 'rgb(150 101 253 / 90%)', userSelect: 'none', margin: 0 }
 const stickerGoat = { width: window.screen.width > 900 ? '15vw' : '40vw', height: window.screen.width > 900 ? '27vh' : '18vh', position: 'absolute', transition: '1s ease-in-out', transitionDelay: '1.5s' }
 
-const divContentCarnets = { width: window.screen.width > 900 ? `calc(100vw - 29em)` : '100vw', overflow: 'hidden', position: 'absolute', bottom: 0, display: 'flex', alignItems: 'center', justifyContent: 'flex-start', transition: '1s ease-in-out', transitionDelay: '1.5s' }
+
 
 
 export const cssTeamWork = {
@@ -24,7 +24,6 @@ export const cssTeamWork = {
     pTitle,
     pTitle2,
     stickerGoat,
-    divContentCarnets,
     //============
     sticker
 }
@@ -42,16 +41,12 @@ import carnet2 from '../assets/carnets/gafeteRojo.webp'
 import carnet1 from '../assets/carnets/gafeteRodrigoHernandez.webp'
 
 // CSS Variable
-const carnetStyle = { width: window.screen.width > 900 ? (window.screen.width > 1536 ? '20em' : '14em') : '15em', height:'auto', marginLeft: '1em' }
-const widthContent = window.screen.width > 900 ? (window.screen.width > 1536 ? '80em' : '65em') : '110em'
+const carnetStyle = { width: window.screen.width > 900 ? (window.screen.width > 1536 ? '20em' : '14em') : '15em', height: 'auto', marginLeft: '1em', userSelect:'none' }
 
-// Styles
-const contentCarnets = { display: 'flex', justifyContent: 'space-between', alignItems: 'center', position: 'relative', width: widthContent }
+
 
 export const cssCarnets = {
     carnetStyle,
-    widthContent,
-    contentCarnets,
     //================
     carnet1,
     carnet2,

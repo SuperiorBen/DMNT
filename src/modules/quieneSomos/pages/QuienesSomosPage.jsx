@@ -18,7 +18,7 @@ export default function QuienesSomosPage() {
         <meta name="description" content="Inicio" />
       </Helmet>
       {/* SEO END =============================================================================== */}
-      <div style={{ height: '500vh', width: '100vw', overflowX: 'hidden' }}>
+      <div style={{ height: '300vh', width: '100vw', overflowX: 'hidden' }}>
           <ScrollIndicator />
           <AstronautJump />
           <BackgroundAnimated />

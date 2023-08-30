@@ -15,11 +15,11 @@ export default function TarjetasQuinesSomos () {
   const { scrollYProgress } = useScroll()
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     const scrollPosition = latest.toFixed(2)
-    scrollPosition < 0.10 && setSection(3)
-    scrollPosition > 0.15 && setSection(0)
-    scrollPosition > 0.26 && setSection(1)
-    scrollPosition > 0.37 && setSection(2)
-    scrollPosition > 0.50 && setSection(3)
+    scrollPosition < 0.20 && setSection(3)
+    scrollPosition > 0.25 && setSection(0)
+    scrollPosition > 0.40 && setSection(1)
+    scrollPosition > 0.65 && setSection(2)
+    scrollPosition > 0.85 && setSection(3)
   })
 
   return (

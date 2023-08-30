@@ -63,9 +63,9 @@ export default function BackgroundAnimated() {
     const { scrollYProgress } = useScroll()
     useMotionValueEvent(scrollYProgress, "change", (latest) => {
         const scrollPosition = latest.toFixed(2)
-        if (scrollPosition <= 0.10 && section != 1) setSection(1)
-        scrollPosition > 0.10 && setSection(2)
-        scrollPosition > 0.50 && setSection(3)
+        if (scrollPosition <= 0.20 && section != 1) setSection(1)
+        scrollPosition > 0.20 && setSection(2)
+        scrollPosition > 0.80 && setSection(3)
     })
 
 
