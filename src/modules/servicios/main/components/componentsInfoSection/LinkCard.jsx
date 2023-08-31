@@ -5,12 +5,12 @@ import { cssLinkCard } from '../../helpers/StylesInfoService3'
 import { SvgBlob } from "../svgComponents/SvgBlob";
 
 
-export default function LinkCard () {
+export default function LinkCard() {
     const [isHover, setHover] = useState(false)
     return (
         <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
+            initial={{ opacity: 0, y: '10vh' }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.5 }}
             style={cssLinkCard.contentCard}>

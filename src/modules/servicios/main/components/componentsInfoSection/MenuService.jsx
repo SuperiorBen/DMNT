@@ -1,8 +1,15 @@
 import { cssMenuService } from '../../helpers/StylesInfoService2'
 import '../../assets/css/bannerStyle.css'
-export default function MenuService () {
+import { motion } from "framer-motion";
+
+export default function MenuService() {
     return (
-        <div style={cssMenuService.contentMain}>
+        <motion.div
+            initial={{ opacity: 0, y: '10vh' }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            style={cssMenuService.contentMain}>
             <p style={cssMenuService.titleAction}>Consulta y cotiza</p>
             <div style={cssMenuService.contentMenu}>
                 {/* Options =======================================================================================*/}
@@ -14,6 +21,6 @@ export default function MenuService () {
                     </a>)
                 }
             </div>
-        </div>
+        </motion.div>
     )
 }

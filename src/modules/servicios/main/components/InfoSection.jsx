@@ -1,5 +1,6 @@
 import { Suspense, lazy } from "react";
 import Marquee from "react-fast-marquee";
+import { motion } from "framer-motion";
 
 
 const AstroPose = lazy(() => import("./componentsInfoSection/AstroPose"))
@@ -14,7 +15,7 @@ import { cssInfo } from '../helpers/StylesInfoService'
 
 
 
-export default function InfoSection () {
+export default function InfoSection() {
     const contentFooter = {
         position: 'relative', display: 'flex', justifyContent: 'space-evenly',
         flexDirection: window.screen.width > 900 ? 'row' : 'column',
@@ -35,10 +36,17 @@ export default function InfoSection () {
                 {/* Banner title */}
                 <BannerTitle />
 
-                <Marquee speed={5} autoFill style={cssInfo.marqueeBanner}>
-                    <p style={cssInfo.titleBanner}
-                    >¡Hacemos <span style={{ fontSize: '2em', fontWeight: 700 }}>realidad</span> tus ideas!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </p>
-                </Marquee>
+                <motion.div
+                    initial={{ opacity: 0, y: '10vh' }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 1}}
+                >
+                    <Marquee speed={5} autoFill style={cssInfo.marqueeBanner}>
+                        <p style={cssInfo.titleBanner}
+                        >¡Hacemos <span style={{ fontSize: '2em', fontWeight: 700 }}>realidad</span> tus ideas!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  </p>
+                    </Marquee>
+                </motion.div>
 
                 {/* Gif slider */}
                 <GifSlider />

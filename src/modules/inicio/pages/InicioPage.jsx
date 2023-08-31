@@ -26,6 +26,8 @@ export default function InicioPage() {
       <div className="InicioPage" style={cssInicio.viewInicio}>
         {/* Titulos */}
         <div style={cssInicio.contentTitles}>
+
+
           <div style={{ width: '100%', height: '50%', position: 'relative', padding: '1em' }}>
             <div style={{ display: 'flex', alignItems: 'center' }}>
               <motion.div style={cssInicio.dotI} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ repeatType: "reverse", repeat: Infinity, duration: 0.4 }} />
@@ -33,13 +35,25 @@ export default function InicioPage() {
             </div>
             <h1 style={cssInicio.titleMain}>IDEAS</h1>
             <p style={{ ...cssInicio.subtitleMain, marginLeft: '0.3em' }}>Marketing fuera de este mundo</p>
-            {window.screen.width > 900 && <a href="/servicios" style={cssInicio.btnDesk}>VER SERVICIOS  DMNT</a>}
+            {window.screen.width > 900 && <motion.a
+             initial={{ transform: 'scale(0.98)', opacity: 0 }}
+             animate={{ transform: 'scale(1)', opacity: 1 }}
+             transition={{ duration: 1, ease: "linear", transform: { duration: 0.5, repeat: Infinity, repeatType: "reverse" } }}
+              href="/servicios" style={cssInicio.btnDesk}>VER SERVICIOS  DMNT</motion.a>}
           </div>
+
+
           <div style={{ width: '100%', height: '50%', position: 'relative' }}>
-            {window.screen.width < 900 && <a href="/servicios" style={cssInicio.btnMobil}>VER SERVICIOS  DMNT</a>}
+            {window.screen.width < 900 && <motion.a
+              initial={{ transform: 'scale(0.98)', opacity: 0 }}
+              animate={{ transform: 'scale(1)', opacity: 1 }}
+              transition={{ duration: 1, ease: "linear", transform: { duration: 0.5, repeat: Infinity, repeatType: "reverse" } }}
+              href="/servicios" style={cssInicio.btnMobil}>VER SERVICIOS  DMNT</motion.a>}
             <img src={DEMENTElogo} alt="DEMENTE" style={cssInicio.logoDemente} />
             <img src={creativaLogo} alt="creativa agency" style={cssInicio.logoCreativa} />
           </div>
+
+
         </div>
         {/* Marco de camara */}
         <div style={cssInicio.contentCamera}>

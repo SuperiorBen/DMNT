@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { useMotionValueEvent, useScroll, useTransform } from "framer-motion";
+import { motion, useMotionValueEvent, useScroll, useTransform } from "framer-motion";
 import { cssAPose } from '../../helpers/StylesInfoService'
 
 
-export default function AstroPose () {
+export default function AstroPose() {
     const [valRest, setValRest] = useState(0)
     // Control scroll 
     const { scrollYProgress } = useScroll()
@@ -17,10 +17,15 @@ export default function AstroPose () {
         setValRest(latest)
     })
     return (
-        <div style={cssAPose.containerAstro}>
+        <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+            style={cssAPose.containerAstro}>
             {
                 cssAPose.printedtimes.map((item, i) => <img key={i} src={cssAPose.astroPose} style={{ ...cssAPose.innerImg, zIndex: i, transform: `scale(${item - valRest})` }} alt="astroPose" />)
             }
-        </div>
+        </motion.div>
     )
 }

@@ -40,13 +40,23 @@ import carnet3 from '../assets/carnets/gafeteGisel.webp'
 import carnet2 from '../assets/carnets/gafeteRojo.webp'
 import carnet1 from '../assets/carnets/gafeteRodrigoHernandez.webp'
 
+
+
 // CSS Variable
-const carnetStyle = { width: window.screen.width > 900 ? (window.screen.width > 1536 ? '20em' : '14em') : '15em', height: 'auto', marginLeft: '1em', userSelect:'none' }
+const widthCard = window.screen.width > 900 ? (window.screen.width > 1536 ? 20 : 14) : 15
+const carnetStyle = {
+    width: `${widthCard}em`, height: 'auto', marginLeft: '1em', userSelect: 'none',
+    position: 'relative', zIndex: 0
+}
 
-
+const marqueeCarnets = {
+    display: 'flex', alignItems: 'center', justifyContent: 'space-between',
+    width: '100%',
+}
 
 export const cssCarnets = {
     carnetStyle,
+    marqueeCarnets,
     //================
     carnet1,
     carnet2,
