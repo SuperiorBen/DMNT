@@ -11,7 +11,12 @@ import { useState } from "react";
 import { cssMainDetail } from "../helpers/StyleDetail";
 import Lottie from "lottie-react";
 import { Button, Menu, MenuItem } from "@mui/material";
+import shareSeo from "../../../../assets/shareSeo.webp";
 import Marquee from "react-fast-marquee";
+
+import ReactGA from "react-ga4";
+
+
 
 const showService = (val) => {
     switch (val) {
@@ -50,6 +55,8 @@ export default function ServicioPage() {
     const { detail } = useParams();
     const serviceActive = showService(detail)
     const { title, subtitle, description, steps } = servicesDMNT[serviceActive]
+    {/* Gtag */ }
+    ReactGA.send({ hitType: "pageview", page: `/servicios/${detail}`, title: `Servicios ${title}` })
 
     const [activeStep, setStep] = useState(0)
 
@@ -76,8 +83,17 @@ export default function ServicioPage() {
         <AppLayout>
             {/* SEO */}
             <Helmet>
-                <title>DMNT Creative Agency - {title}</title>
-                <meta name="description" content="Inicio" />
+                <meta charSet="utf-8" />
+                <title>DMNT Creative Agency - Servicios {title}</title>
+                <meta name="description" content={description} />
+                <link rel="canonical" href={`https://test.dmnt.com.sv/servicios/${detail}`} />
+                {/* Open graph */}
+                <meta property="og:title" content={`DMNT Creative Agency - Servicios ${title}`} />
+                <meta property="og:description" content={description} />
+                <meta property="og:image" content={shareSeo} />
+                <meta property="og:image:width" content="369" />
+                <meta property="og:image:height" content="300" />
+                <meta name="robots" content="index, follow"></meta>
             </Helmet>
             {/* SEO END =============================================================================== */}
             {/* Title and description */}

@@ -57,7 +57,7 @@ const contentMain = {
     position: window.screen.width > 900 ? 'absolute' : 'relative',
     width: window.screen.width > 1536 ? '74vw' : '100vw',
     height: window.screen.width > 900 ? '25em' : '35.5em',
-    top: window.screen.width > 900 ? (window.screen.width > 1536 ? '52em' : '47em') : '62em',
+    top: window.screen.width > 900 ? (window.screen.width > 1536 ? '60em' : '43em') : '62em',
     right: window.screen.width > 1536 ? '13vw' : 0
 }
 const contentMenu = {

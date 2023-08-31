@@ -9,12 +9,12 @@ import { cssMenu } from "../helpers/stylesMenu"
 
 const screen = window.screen.width > 900 ? true : false
 
-export default function QuienesSomosMenu () {
+export default function QuienesSomosMenu() {
 
   return (
     <div style={{ ...cssMenu.imgContent, backgroundImage: `url(${screen ? bgWhoiam : bgWhoiamSmall})` }}>
       <p style={cssMenu.pTitle}>“No existe realidad alguna excepto en la acción”</p>
-      <img src={screen ? astroWhoiam : astroWhoiamSmall} alt="imgInBg" style={{ ...cssMenu.imgItem, width:'auto' }} />
+      <img src={screen ? astroWhoiam : astroWhoiamSmall} alt="imgInBg" style={cssMenu.imgQS} />
 
 
     </div >

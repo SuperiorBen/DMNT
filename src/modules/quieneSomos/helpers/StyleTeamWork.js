@@ -13,7 +13,11 @@ const contentTeam = { height: '100vh', width: window.screen.width > 900 ? `calc(
 const contentTitle = { position: 'absolute', right: window.screen.width > 900 ? '20vw' : '0.5em', display: 'flex', flexDirection: window.screen.width > 900 ? 'column' : 'column-reverse', justifyContent: 'center', alignItems: window.screen.width > 900 ? 'flex-end' : 'flex-start', top: window.screen.width > 900 ? '2em' : '20vh', transition: '1s ease-in-out', transitionDelay: '2s', writingMode: window.screen.width > 900 ? 'horizontal-tb' : 'vertical-lr', textOrientation: 'mixed' }
 const pTitle = { fontFamily: "'Roboto', sans-serif", fontWeight: 700, fontSize: sizeAniText, lineHeight: '0.8em', WebkitTextStroke: 'rgb(150 101 253 / 90%) 2px', color: 'transparent', userSelect: 'none', margin: 0, WebkitBackgroundClip: 'text', backgroundImage: `url(${bgAnimated})`, backgroundPosition: 'center', backgroundRepeat: 'no-repeat', backgroundSize: 'cover' }
 const pTitle2 = { fontFamily: "'Roboto', sans-serif", fontWeight: 700, fontSize: sizeAniText2, lineHeight: '0.8em', color: 'rgb(150 101 253 / 90%)', userSelect: 'none', margin: 0 }
-const stickerGoat = { width: window.screen.width > 900 ? '15vw' : '40vw', height: window.screen.width > 900 ? '27vh' : '18vh', position: 'absolute', transition: '1s ease-in-out', transitionDelay: '1.5s' }
+const stickerGoat = {
+    width: window.screen.width > 900 ? (window.screen.width > 1536 ? '20em' : '13em') : '10em',
+    height: window.screen.width > 900 ? (window.screen.width > 1536 ? '19em' : '12em') : '9em',
+    position: 'absolute', transition: '1s ease-in-out', transitionDelay: '1.5s'
+}
 
 
 
@@ -43,9 +47,11 @@ import carnet1 from '../assets/carnets/gafeteRodrigoHernandez.webp'
 
 
 // CSS Variable
-const widthCard = window.screen.width > 900 ? (window.screen.width > 1536 ? 20 : 14) : 15
+const widthCard = window.screen.width > 900 ? (window.screen.width > 1536 ? 24 : 12.5) : 14
 const carnetStyle = {
-    width: `${widthCard}em`, height: 'auto', marginLeft: '1em', userSelect: 'none',
+    width: `${widthCard}em`,
+    height: window.screen.width > 900 ? (window.screen.width > 1536 ? '45em' : '24em') : '27em',
+    marginLeft: '1em', userSelect: 'none',
     position: 'relative', zIndex: 0
 }
 

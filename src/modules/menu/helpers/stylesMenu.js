@@ -15,7 +15,7 @@ const contentToggle = {
     display: 'flex',
     justifyContent: 'flex-start',
     alignItems: 'center',
-    backdropFilter:'blur(2px)',
+    backdropFilter: 'blur(2px)',
     backgroundColor: 'rgba(255,255,255,0.1)',
     padding: '0.8em',
     borderRadius: '10px',
@@ -124,7 +124,6 @@ const pTitle = {
     position: 'absolute', left: '1em', top: '1em'
 }
 
-const imgItem = { height: window.screen.width > 900 ? '33vw' : '90vw' }
 
 // =========================================================================================================
 // Variants for animations
@@ -151,6 +150,22 @@ const textVariants = {
 }
 
 
+const imgContacto = {
+    marginBottom: window.screen.width > 900 ? (window.screen.width > 1536 ? '30%' : '20%') : '30%',
+    height: window.screen.width > 900 ? (window.screen.width > 1536 ? '20em' : '12em') : '8em',
+    width: '100%',
+}
+
+const imgQS = {
+    height: window.screen.width > 900 ? (window.screen.width > 1536 ? '45em' : '25em') : '22em',
+    width: window.screen.width > 900 ? (window.screen.width > 1536 ? '80%' : '70%') : '90%'
+}
+
+const imgServicio = {
+    height: window.screen.width > 900 ? (window.screen.width > 1536 ? '36em' : '22em') : '25em',
+    width: window.screen.width > 900 ? '100%' : '150%'
+}
+
 
 export const cssMenu = {
     contentToggle,
@@ -164,7 +179,9 @@ export const cssMenu = {
     marqueStyle,
     imgContent,
     pTitle,
-    imgItem,
+    imgContacto,
+    imgQS,
+    imgServicio,
     // Variants animations
     btnVariants,
     bgSectionVariants,
@@ -174,6 +191,6 @@ export const cssMenu = {
 
 export const optionMenu = [
     { id: 0, text: '¿QUIÉNES SOMOS?', url: '/quienesSomos', component: QuienesSomosMenu },
-    { id: 1, text: 'SERVICIOS', url: '/servicios',  component: ServicioMenu},
-    { id: 2, text: 'CONTACTO', url: '/contacto', component: ContactoMenu},
-  ]
+    { id: 1, text: 'SERVICIOS', url: '/servicios', component: ServicioMenu },
+    { id: 2, text: 'CONTACTO', url: '/contacto', component: ContactoMenu },
+]

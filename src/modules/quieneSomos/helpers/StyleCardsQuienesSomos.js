@@ -26,7 +26,10 @@ const chunk5 = window.screen.width > 900 ? ck5 : ck5Small
 const chunk6 = window.screen.width > 900 ? ck6 : ck6Small
 
 // Css variable
-const chunkStyle = { height: '8em', width:'auto', borderRadius: '5px', opacity: 0.8, margin: '0em 1.5em', boxShadow: '0px 0px 2px rgba(150, 101, 253, 0.8), 0px 0px 10px rgba(150, 101, 253, 0.3)' }
+const chunkStyle = {
+    height: '8em', width: '6em',
+    borderRadius: '5px', opacity: 0.8, margin: '0em 1.5em', boxShadow: '0px 0px 2px rgba(150, 101, 253, 0.8), 0px 0px 10px rgba(150, 101, 253, 0.3)'
+}
 
 // Styles
 const contentCards = { height: '100vh', width: window.screen.width > 900 ? `calc(100vw - 29em)` : '100vw', position: 'fixed', top: 0, right: 0, zIndex: 2, display: 'flex', justifyContent: 'center', alignItems: 'center' }
@@ -36,8 +39,17 @@ const astroGlitch = { width: '10em', height: '20em', position: 'absolute', botto
 const astroSit = { width: '75%', margin: '3em', position: 'absolute', bottom: '-5em', left: '-5em', zIndex: 2 }
 
 const card3Content = { width: '100%', height: '100%', display: 'flex', justifyContent: 'center', alignItems: 'end', position: 'absolute', top: 0 }
-const astroFly = { height: '60%', width:'auto', margin: 'auto', marginBottom: '2em', position: 'absolute', zIndex: 1 }
-const dmntWorld = { width: window.screen.width > 900 ? '50vw' : '200vw', height:'auto', margin: 'auto', opacity: 0.9, position: 'absolute', zIndex: 0, bottom: window.screen.width > 900 ? '-25vw' : '-100vw' }
+const astroFly = {
+    height: '60%',
+    width: window.screen.width > 900 ? (window.screen.width > 1536 ? '20em' : '16em') : '20em',
+    margin: 'auto', marginBottom: '2em', position: 'absolute', zIndex: 1
+}
+
+const dmntWorld = {
+    width: window.screen.width > 900 ? '50vw' : '200vw',
+    height:  window.screen.width > 900 ? '50vw' : '200vw',
+    margin: 'auto', opacity: 0.9, position: 'absolute', zIndex: 0, bottom: window.screen.width > 900 ? '-25vw' : '-100vw'
+}
 
 export const cssCardsQS = {
     chunkStyle,

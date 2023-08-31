@@ -8,7 +8,7 @@ import { cssCarnets } from "../../helpers/StyleTeamWork"
 export default function CarnetsTeam({ isRun }) {
     return (
         <motion.div style={{
-            position: 'absolute', bottom: '2em',
+            position: 'absolute', bottom: '0em',
             width: window.screen.width > 900 ? `calc(100vw - 29.2em)` : '100vw',
             transition: '1s ease-in-out', transitionDelay: '1.5s', right: isRun ? '-100vw' : 0,
         }}

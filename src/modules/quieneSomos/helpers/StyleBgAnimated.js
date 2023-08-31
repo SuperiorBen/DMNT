@@ -13,12 +13,15 @@ const bgCreativa = window.screen.width > 900 ? bgC : bgCSmall
 const bgStars = window.screen.width > 900 ? bgS : bgSSmall
 
 // CSS Variables 
-const backgroundContent = { height: '100vh', width: '100vw', position: 'fixed', top: 0, left: 0, zIndex: 0, backgroundColor:'#fff'}
+const backgroundContent = { height: '100vh', width: '100vw', position: 'fixed', top: 0, left: 0, zIndex: 0, backgroundColor: '#fff' }
 
 const imgCreativa = { height: '100vh', width: window.screen.width > 900 ? '29em' : '13em', position: 'absolute', top: 0, left: "0em", zIndex: 1, mixBlendMode: 'multiply' }
 
 const contentTwister = { height: '100vh', width: xTwister, position: 'absolute', top: 0, zIndex: 2, display: 'flex', justifyContent: 'center', alignItems: 'center', overflow: 'hidden' }
-const twisterImage = { height: window.screen.width > 900 ? '200%' : '120%', width:'auto' }
+const twisterImage = {
+    height: window.screen.width > 900 ? '200%' : '500%',
+    width: window.screen.width > 900 ? '200%' : '500%'
+}
 
 const contentText = { height: '100vh', width: xTwister, position: 'absolute', top: 0, zIndex: 1, display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column-reverse', overflow: 'hidden', writingMode: window.screen.width > 900 ? 'horizontal-tb' : 'vertical-lr', textOrientation: 'mixed' }
 const textAnimated = { margin: '0px', fontFamily: "'Roboto', sans-serif", fontWeight: 700, fontSize: sizeAniText, lineHeight: '1em', WebkitTextStroke: 'rgb(150 101 253 / 60%) 2px', color: 'transparent', userSelect: 'none' }

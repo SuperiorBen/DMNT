@@ -3,9 +3,18 @@ import { useState } from "react";
 import Lottie from "lottie-react";
 import { cssLinkCard } from '../../helpers/StylesInfoService3'
 import { SvgBlob } from "../svgComponents/SvgBlob";
-
+import ReactGA from "react-ga4";
 
 export default function LinkCard() {
+
+    const eventHandler = () => {
+        ReactGA.event({
+            category: 'Consulta',
+            action: 'Consulta de cotización'
+        })
+        console.log('Report consult!')
+    }
+
     const [isHover, setHover] = useState(false)
     return (
         <motion.div
@@ -28,7 +37,9 @@ export default function LinkCard() {
                         background: isHover ? 'rgba(150,101,253,0.6)' : 'rgba(150,101,253,0.8)',
                         boxShadow: isHover ? '0px 3px 1px rgba(150, 101, 253, 0.8)' : 'none',
                     }}>
-                    <p style={{ ...cssLinkCard.buttonText, marginLeft: isHover ? '2em' : '0em' }}>Realizar consulta</p>
+                    <p
+                        onClick={(e) => { e.preventDefault(); eventHandler }}
+                        style={{ ...cssLinkCard.buttonText, marginLeft: isHover ? '2em' : '0em' }}>Realizar consulta</p>
                     <img src={cssLinkCard.arrow} alt="arrow" style={{
                         ...cssLinkCard.arrowCss,
                         left: window.screen.width > 900 ? (window.screen.width > 1536 ? isHover ? '4em' : '-2em' : isHover ? '4em' : '-2em') : isHover ? '2em' : '-2em',

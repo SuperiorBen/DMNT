@@ -2,6 +2,9 @@ import { AppLayout } from "../../../../layouts/AppLayout"
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
 import bgMenu from "../../../../assets/backgroundMenu.svg"
 import { lazy, useState } from "react"
+import ReactGA from "react-ga4";
+import shareSeo from "../../../../assets/shareSeo.webp";
+
 
 const ScrollIndicator = lazy(() => import("../../../../layouts/utils/ScrollIndicator"))
 const IntroSection = lazy(() => import("../components/IntroSection"))
@@ -13,8 +16,10 @@ import { Helmet } from 'react-helmet-async'
 
 
 export default function ServicioPage() {
-    const [isShow, setIsShow] = useState(0)
+    {/* Gtag */ }
+    ReactGA.send({ hitType: "pageview", page: "/servicios", title: "Servicios" })
 
+    const [isShow, setIsShow] = useState(0)
     // Control scroll 
     const { scrollYProgress } = useScroll()
 
@@ -28,14 +33,23 @@ export default function ServicioPage() {
     const whiteSpace = {
         overflow: 'hidden', width: '100vw', zIndex: 3, position: 'absolute', top: '200vh', left: 0, backgroundColor: '#fff', transition: '1s ease-in-out',
         borderRadius: window.screen.width > 900 ? '40px 40px 0px 0px' : '10px 10px 0px 0px',
-        height: window.screen.width > 900 ? (window.screen.width > 1536 ? '200vh' : '225vh') : '350vh'
+        height: window.screen.width > 900 ? (window.screen.width > 1536 ? '185vh' : '265vh') : '350vh'
     }
     return (
         <AppLayout>
             {/* SEO */}
             <Helmet>
-                <title>DMNT Creative Agency - Servicios</title>
-                <meta name="description" content="Inicio" />
+                <meta charSet="utf-8" />
+                <title>DMNT Creative Agency - Nuestros servicios</title>
+                <meta name="description" content="Creamos experiencias digitales con tu marca, generando contenido de valor con un alto grado de responsabilidad y calidad. Creemos que si se puede soñar, se puede lograr" />
+                <link rel="canonical" href="https://test.dmnt.com.sv/servicios" />
+                {/* Open graph */}
+                <meta property="og:title" content="DMNT Creative Agency - ¿Quiénes somos? Conócenos" />
+                <meta property="og:description" content="Creamos experiencias digitales con tu marca, generando contenido de valor con un alto grado de responsabilidad y calidad. Creemos que si se puede soñar, se puede lograr" />
+                <meta property="og:image" content={shareSeo} />
+                <meta property="og:image:width" content="369" />
+                <meta property="og:image:height" content="300" />
+                <meta name="robots" content="index, follow"></meta>
             </Helmet>
             {/* SEO END =============================================================================== */}
             <div style={{ height: '370vh', width: '100vw', overflowX: 'hidden' }}>
