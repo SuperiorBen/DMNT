@@ -46,9 +46,6 @@ export default function InicioPage() {
             <h1 style={cssInicio.titleMain}>IDEAS</h1>
             <p style={{ ...cssInicio.subtitleMain, marginLeft: '0.3em' }}>Marketing fuera de este mundo</p>
             {window.screen.width > 900 && <motion.a
-              initial={{ transform: 'scale(0.98)', opacity: 0 }}
-              animate={{ transform: 'scale(1)', opacity: 1 }}
-              transition={{ duration: 1, ease: "linear", transform: { duration: 0.5, repeat: Infinity, repeatType: "reverse" } }}
               href="/servicios" style={cssInicio.btnDesk}>VER SERVICIOS  DMNT</motion.a>}
           </div>
 

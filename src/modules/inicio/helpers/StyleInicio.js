@@ -13,10 +13,10 @@ const dotI = { borderRadius: '50%', background: '#ff4147', border: '1px solid #f
 const subtitleMain = { margin: 0, fontFamily: "'Roboto', sans-serif", fontWeight: 400, fontSize: '1.2em', lineHeight: '1.2em', color: '#fff' }
 const titleMain = { margin: 0, fontFamily: "'Roboto', sans-serif", fontWeight: 700, fontSize: '7em', lineHeight: '0.8em', color: '#fff' }
 const btnDesk = {
-  textDecoration: 'none', background: degradadoPurple, color: '#fff', borderRadius: '20px',
+  textDecoration: 'none', background: degradadoPurple, color: '#fff', borderRadius: '5px',
   padding: '0.5em 1em', fontWeight: 700, border: "3px solid rgba(0,0,0,0.1)",
-  boxShadow: '0px 0px 5px 1px rgba(255,255,255,0.6)', position: 'absolute', marginLeft: '0.3em',
-  bottom: window.screen.width > 1536 ? '50%' : '1em'
+  boxShadow: '0px 0px 5px 1px rgba(255,255,255,0.6)', position: 'relative', marginLeft: '0.3em',
+  bottom: window.screen.width > 1536 ? '-1em' : '1em'
 }
 const btnMobil = {
   ...btnDesk, position: 'absolute',

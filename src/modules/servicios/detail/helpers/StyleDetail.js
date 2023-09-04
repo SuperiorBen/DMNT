@@ -104,7 +104,7 @@ const textInfo = {
 }
 
 const btnMoreContent = {
-    position: 'fixed', zIndex: '10', left: 'calc( 50vw - 7em )', width: '14em',
+    position: 'fixed', zIndex: '10', left: 'calc( 50vw - 7em )', width: '15em',
     top: window.screen.width > 900 ? '2em' : 'none',
     bottom: window.screen.width > 900 ? 'none' : '2em',
 }

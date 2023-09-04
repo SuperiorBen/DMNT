@@ -54,11 +54,10 @@ const optionsMenu = [
 // Css variables
 const contentMain = {
     backgroundColor: 'rgb(150, 101, 253,0.8)', zIndex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center',
-    position: window.screen.width > 900 ? 'absolute' : 'relative',
+    position: 'relative',
     width: window.screen.width > 1536 ? '74vw' : '100vw',
     height: window.screen.width > 900 ? '25em' : '35.5em',
-    top: window.screen.width > 900 ? (window.screen.width > 1536 ? '60em' : '43em') : '62em',
-    right: window.screen.width > 1536 ? '13vw' : 0
+    marginTop:'5em'
 }
 const contentMenu = {
     display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center', alignItems: 'center', position: 'relative',

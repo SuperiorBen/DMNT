@@ -3,19 +3,29 @@
 // Styles
 const containerBanner = {
     zIndex: 1,
-    position: window.screen.width > 900 ? 'absolute' : 'relative',
+    position: 'relative',
     width: window.screen.width > 900 ? '60vw' : '100vw',
-    top: window.screen.width > 900 ? '3em' : '-0.4em',
-    right: window.screen.width > 900 ? '2vw' : 0
+    height: 'auto',
+    marginTop: '1em',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignItems: 'center'
+}
+const contentMarquee = {
+    position: 'relative', height: '5em', zIndex: 1, overflow: 'hidden',
+    width: window.screen.width > 900 ? '60vw' : '100vw',
 }
 const marqueeBanner = {
-    height: '5em', right: '0em', zIndex: 1, position: 'absolute', overflow: 'hidden',
-    width: window.screen.width > 900 ? '60vw' : '100vw',
-    top: window.screen.width > 900 ? (window.screen.width > 1536 ? '27em' : '19.5em') : '78vh'
+    position: 'relative',
+    height: '5em', zIndex: 1, overflow: 'hidden',
+    width: '100%',
+
 }
 const titleBanner = { fontSize: window.screen.width > 900 ? '1.5em' : '1.5em', fontWeight: 500, margin: 0, color: '#9665FD' }
 export const cssInfo = {
     containerBanner,
+    contentMarquee,
     marqueeBanner,
     titleBanner
 }
@@ -33,8 +43,7 @@ const containerAstro = {
     borderRadius: window.screen.width > 900 ? '20px' : '10px 10px 0px 0px',
     width: window.screen.width > 900 ? (window.screen.width > 1536 ? '30vw' : '35vw') : '98vw',
     height: window.screen.width > 900 ? (window.screen.width > 1536 ? '75vh' : '90vh') : '60vh',
-    left: window.screen.width > 900 ? '2vw' : '1vw',
-    top: window.screen.width > 900 ? '3em' : '0.5em',
+    marginTop: '1em'
 }
 const innerImg = {
     boxShadow: 'rgb(150, 101, 253, 0.5) 2px 2px 2px',
@@ -58,14 +67,16 @@ import diskText from "../assets/img/text.svg";
 
 // css Variables
 const purpleBanner = {
-    backgroundColor: 'rgb(150, 101, 253,0.8)', zIndex: 1, position: 'absolute', display: 'flex', justifyContent: 'space-around', alignItems: 'center',
+    // position: 'absolute',
+    position: 'relative',
+    backgroundColor: 'rgb(150, 101, 253,0.8)', zIndex: 1, display: 'flex', justifyContent: 'space-around', alignItems: 'center',
     borderRadius: window.screen.width > 900 ? '20px' : '0px 0px 10px 10px',
     flexDirection: window.screen.width > 900 ? 'row' : 'column',
-    top: window.screen.width > 900 ? '0em' : '1em',
-    right: window.screen.width > 900 ? '0em' : '1vw',
     width: window.screen.width > 900 ? '60vw' : '98vw',
     height: window.screen.width > 900 ? (window.screen.width > 1536 ? '26em' : '20em') : '75vh',
-    fontSize: window.screen.width > 900 ? '1em' : '1.2em'
+    fontSize: window.screen.width > 900 ? '1em' : '1.2em',
+    // top: window.screen.width > 900 ? '0em' : '1em',
+    // right: window.screen.width > 900 ? '0em' : '1vw',
 }
 const titleContainer = {
     display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center', position: 'relative',
@@ -115,10 +126,13 @@ const gifList = [
 ]
 // Styles
 const parentContainer = {
-    right: '0em', zIndex: 1, position: 'absolute',
+    // position: 'absolute',
+    // top: window.screen.width > 900 ? (window.screen.width > 1536 ? '32em' : '24em') : '90vh',
+    position: 'relative',
+    right: '0em',
+    zIndex: 1,
     width: window.screen.width > 900 ? '60vw' : '100vw',
-    height: window.screen.width > 900 ? (window.screen.width > 1536 ? '12em' : '8em') : '10em',
-    top: window.screen.width > 900 ? (window.screen.width > 1536 ? '32em' : '24em') : '90vh'
+    height: window.screen.width > 900 ? (window.screen.width > 1536 ? '12em' : '8em') : '10em'
 }
 const imgGifStyle = {
     width: window.screen.width > 900 ? (window.screen.width > 1536 ? '12em' : '8em') : '10em',

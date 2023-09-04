@@ -23,7 +23,7 @@ const tarjeta = [
   }
 ]
 
-export default function TarjetaContenedor ({ children, option, visible }) {
+export default function TarjetaContenedor({ children, option, visible }) {
 
   return (
     <motion.div
@@ -43,7 +43,10 @@ export default function TarjetaContenedor ({ children, option, visible }) {
       <div style={cssCardContainer.contentTitle}>
         <p style={cssCardContainer.title}>{tarjeta[option].title}</p>
         <div style={cssCardContainer.contentInfo}>
-          <img style={{ width: '7em' }} src={tarjeta[option].icon} alt="icon" />
+          <img style={{
+            width: '7em',
+            height: '7em' 
+          }} src={tarjeta[option].icon} alt="icon" />
           <p style={cssCardContainer.textInfo}>{tarjeta[option].text}</p>
         </div>
       </div>

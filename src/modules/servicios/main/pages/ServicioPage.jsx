@@ -31,9 +31,9 @@ export default function ServicioPage() {
 
     // css variable
     const whiteSpace = {
-        overflow: 'hidden', width: '100vw', zIndex: 3, position: 'absolute', top: '200vh', left: 0, backgroundColor: '#fff', transition: '1s ease-in-out',
+        overflow: 'hidden', width: '100vw', zIndex: 3, position: 'absolute', top: '200vh', left: 0, backgroundColor: '#fff', transition: '1s ease-in-out', height: 'auto',
+        display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'space-evenly', alignItems: 'flex-start',
         borderRadius: window.screen.width > 900 ? '40px 40px 0px 0px' : '10px 10px 0px 0px',
-        height: window.screen.width > 900 ? (window.screen.width > 1536 ? '185vh' : '265vh') : '350vh'
     }
     return (
         <AppLayout>

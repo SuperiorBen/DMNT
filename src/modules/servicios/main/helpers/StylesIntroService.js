@@ -37,7 +37,8 @@ const itemStyle = {
     margin: window.screen.width > 900 ? '0em' : '2em 0em'
 }
 const imgItem = {
-    width: window.screen.width > 900 ? (window.screen.width > 1536 ? '12em' : '10em') : '7em'
+    width: window.screen.width > 900 ? (window.screen.width > 1536 ? '12em' : '10em') : '7em',
+    height: window.screen.width > 900 ? (window.screen.width > 1536 ? '5em' : '4em') : '3em'
 }
 const titleItem = {
     fontWeight: 700, margin: '0em', color: '#fff',

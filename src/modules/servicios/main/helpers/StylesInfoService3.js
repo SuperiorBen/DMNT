@@ -5,14 +5,15 @@ import arrow from "../assets/multimediaForm/rightArrow.svg";
 
 // Variable
 const contentCard = {
-    position: 'relative',
+    position: 'relative', zIndex:3,
     width: window.screen.width > 900 ? (window.screen.width > 1536 ? '30vw' : '40vw') : '100vw',
-    height: window.screen.width > 900 ? (window.screen.width > 1536 ? '14em' : '14em') : '22em'
+    height: window.screen.width > 900 ? (window.screen.width > 1536 ? '30em' : '22em') : '22em'
 }
 const contentTitle = {
-    position: 'absolute', top: '0em', zIndex: 2, display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', flexWrap: 'wrap', borderRadius: '5px',
+    position: 'absolute', zIndex:2, display: 'flex', flexDirection: 'row', justifyContent: 'flex-start', alignItems: 'center', flexWrap: 'wrap', borderRadius: '5px',
     width: window.screen.width > 900 ? (window.screen.width > 1536 ? '30vw' : '40vw') : '100vw',
     height: window.screen.width > 900 ? (window.screen.width > 1536 ? '14em' : '14em') : '13em',
+    top: window.screen.width > 900 ? (window.screen.width > 1536 ? 'calc( 40% - 7em )' : 'calc( 40% - 7em )') : 'calc( 40% - 7em )'
 }
 const texts = {
     position: 'relative', zIndex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between',
@@ -38,12 +39,13 @@ const buttonContact = {
 }
 const buttonText = { transition: '1s', color: '#fff', fontSize: '1.2em', fontWeight: 700, textShadow: '1px 1px 2px #9665FD', width: '8em' }
 const arrowCss = { position: 'absolute', top: '0.5em', width: '2em', height: '2em', transition: '1s', }
+
 const avatarAnimate = {
-    position: 'absolute', zIndex: 2,
+    position: 'relative', zIndex: 1,
     width: window.screen.width > 900 ? (window.screen.width > 1536 ? '14em' : '10em') : '10em',
     height: window.screen.width > 900 ? (window.screen.width > 1536 ? '30em' : '22em') : '22em',
-    top: window.screen.width > 900 ? (window.screen.width > 1536 ? '-4em' : '-1em') : '-2em',
-    right: window.screen.width > 900 ? (window.screen.width > 1536 ? '1em' : '1em') : '0.5em'
+    top: window.screen.width > 900 ? (window.screen.width > 1536 ? '0em' : '-1em') : '-2em',
+    left:  window.screen.width > 900 ? (window.screen.width > 1536 ? 'calc( 30vw - 14em )' : 'calc( 40vw - 10em )') : 'calc( 100vw - 10em )',
 }
 const bgBlur = {
     background: 'linear-gradient(360deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.7) 50%, rgba(255,255,255,0.4) 100%)',
