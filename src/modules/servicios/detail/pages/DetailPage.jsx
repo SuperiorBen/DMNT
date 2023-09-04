@@ -1,5 +1,4 @@
 import { AppLayout } from "../../../../layouts/AppLayout"
-import { Helmet } from 'react-helmet-async'
 import { motion } from 'framer-motion'
 import { servicesDMNT } from "../helpers/infoServices";
 import { useParams } from "react-router-dom";
@@ -11,10 +10,10 @@ import { useState } from "react";
 import { cssMainDetail } from "../helpers/StyleDetail";
 import Lottie from "lottie-react";
 import { Button, Menu, MenuItem } from "@mui/material";
-import shareSeo from "../../../../assets/shareSeo.webp";
 import Marquee from "react-fast-marquee";
 
 import ReactGA from "react-ga4";
+import { SeoHelmet } from "../../../../layouts/utils/SeoHelmet";
 
 
 
@@ -82,19 +81,11 @@ export default function ServicioPage() {
     return (
         <AppLayout>
             {/* SEO */}
-            <Helmet>
-                <meta charSet="utf-8" />
-                <title>DMNT Creative Agency - Servicios {title}</title>
-                <meta name="description" content={description} />
-                <link rel="canonical" href={`https://test.dmnt.com.sv/servicios/${detail}`} />
-                {/* Open graph */}
-                <meta property="og:title" content={`DMNT Creative Agency - Servicios ${title}`} />
-                <meta property="og:description" content={description} />
-                <meta property="og:image" content={shareSeo} />
-                <meta property="og:image:width" content="369" />
-                <meta property="og:image:height" content="300" />
-                <meta name="robots" content="index, follow"></meta>
-            </Helmet>
+            <SeoHelmet
+                title={`DMNT Creative Agency - Servicios ${title}`}
+                description={description}
+                canonical={`https://test.dmnt.com.sv/servicios/${detail}`}
+            />
             {/* SEO END =============================================================================== */}
             {/* Title and description */}
             <div className="Main" style={cssMainDetail.mainContent}>

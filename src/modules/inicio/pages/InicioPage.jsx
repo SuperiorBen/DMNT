@@ -2,12 +2,12 @@ import { AppLayout } from "../../../layouts/AppLayout"
 import creativaLogo from "../assets/creativa-agency.svg";
 import DEMENTElogo from "../assets/DEMENTE.svg";
 import { cssInicio } from "../helpers/StyleInicio"
-import { Helmet } from 'react-helmet-async'
+
 import { motion } from "framer-motion"
 import videoSea from '../assets/bg.mp4'
 import videoSeaSmall from '../assets/bgMobil.mp4'
 import ReactGA from "react-ga4";
-import shareSeo from "../../../assets/shareSeo.webp";
+import { SeoHelmet } from "../../../layouts/utils/SeoHelmet";
 
 
 const screen = window.screen.width > 900 ? true : false
@@ -19,19 +19,11 @@ export default function InicioPage() {
   return (
     <AppLayout>
       {/* SEO */}
-      <Helmet>
-        <meta charSet="utf-8" />
-        <title>DMNT Creative Agency - ¡La mejor agencia publicitaria!</title>
-        <meta name="description" content="Creamos experiencias digitales con tu marca, generando contenido de valor con un alto grado de responsabilidad y calidad. Creemos que si se puede soñar, se puede lograr" />
-        <link rel="canonical" href="https://test.dmnt.com.sv/" />
-        {/* Open graph */}
-        <meta property="og:title" content="DMNT Creative Agency - ¡La mejor agencia publicitaria!" />
-        <meta property="og:description" content="Creamos experiencias digitales con tu marca, generando contenido de valor con un alto grado de responsabilidad y calidad. Creemos que si se puede soñar, se puede lograr" />
-        <meta property="og:image" content={shareSeo} />
-        <meta property="og:image:width" content="369" />
-        <meta property="og:image:height" content="300" />
-        <meta name="robots" content="index, follow"></meta>
-      </Helmet>
+
+      <SeoHelmet
+        title="DMNT Creative Agency - ¡La mejor agencia publicitaria!"
+        canonical="https://test.dmnt.com.sv/"
+      />
       {/* SEO END =============================================================================== */}
       <div className="InicioPage" style={cssInicio.viewInicio}>
         {/* Titulos */}

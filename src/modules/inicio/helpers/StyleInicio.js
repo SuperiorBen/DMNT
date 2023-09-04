@@ -16,10 +16,12 @@ const btnDesk = {
   textDecoration: 'none', background: degradadoPurple, color: '#fff', borderRadius: '5px',
   padding: '0.5em 1em', fontWeight: 700, border: "3px solid rgba(0,0,0,0.1)",
   boxShadow: '0px 0px 5px 1px rgba(255,255,255,0.6)', position: 'relative', marginLeft: '0.3em',
-  bottom: window.screen.width > 1536 ? '-1em' : '1em'
+  top: '1em'
 }
 const btnMobil = {
-  ...btnDesk, position: 'absolute',
+  textDecoration: 'none', background: degradadoPurple, color: '#fff', borderRadius: '5px',
+  padding: '0.5em 1em', fontWeight: 700, border: "3px solid rgba(0,0,0,0.1)",
+  boxShadow: '0px 0px 5px 1px rgba(255,255,255,0.6)', position: 'absolute',
   bottom: '5em',
   marginLeft: '5%', textAlign: 'center', fontSize: '1.5em', width: '90%'
 }
